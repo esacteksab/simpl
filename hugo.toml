@@ -1,0 +1,67 @@
+baseURL = 'https://example.org/'
+languageCode = 'en-US'
+title = 'My New Hugo Site'
+
+[[menus.main]]
+name = 'Home'
+pageRef = '/'
+weight = 10
+
+[[menus.main]]
+name = 'Posts'
+pageRef = '/posts'
+weight = 20
+
+# [[menus.main]]
+# name = 'Tags'
+# pageRef = '/tags'
+# weight = 30
+
+[[menus.main]]
+name = 'Tailwind'
+pageRef = '/tw'
+weight = 25
+
+#[module]
+#  [module.hugoVersion]
+#    extended = false
+#    min = "0.116.0"
+[outputs]
+home = ["html"]
+
+[module]
+[module.hugoVersion]
+min = "0.128.0"
+[[module.mounts]]
+source = "assets"
+target = "assets"
+[[module.mounts]]
+source = "content"
+target = "content"
+[[module.mounts]]
+source = "hugo_stats.json"
+target = "assets/notwatching/hugo_stats.json"
+disableWatch = true
+
+[build.buildStats]
+enable = true
+[[build.cachebusters]]
+source = "assets/notwatching/hugo_stats\\.json"
+target = "css"
+[[build.cachebusters]]
+source = "(postcss|tailwind)\\.config\\.js"
+target = "css"
+[[build.cachebusters]]
+source = 'layouts/.*'
+target = 'css'
+
+[markup]
+[markup.highlight]
+anchorLineNos = true
+#style = "github-dark"
+codeFences = true
+guessSyntax = false
+lineNos = false
+#lineNumbersInTable = true
+noClasses = false
+tabWidth = 4

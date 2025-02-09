@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="{{ site.Language.LanguageCode }}" dir="{{ or site.Language.LanguageDirection `ltr` }}"
+  class="bg-neutral-50 text-neutral-900 dark:bg-neutral-900 dark:text-neutral-50">
+
+  <head>
+    {{ partial "head.html" . }}
+  </head>
+
+  <body class="@container w-full font-simpl">
+    <div class="flex flex-col justify-center items-center justify-items-center">
+      <header class="flex flex-col justify-center items-center justify-items-center">
+        {{ partial "header.html" . }}
+      </header>
+    </div>
+    <main class="flex flex-col flex-nowrap w-full p-16">
+      {{ block "main" . }}{{ end }}
+    </main>
+    <footer class="flex flex-col flex-nowrap justify-center items-center justify-items-center">
+      {{ partial "footer.html" . }}
+    </footer>
+  </body>
+
+</html>

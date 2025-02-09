@@ -1,0 +1,9 @@
+{{ define "main" }}
+{{ range site.RegularPages }}
+<div class="home-preview flex flex-col flex-1">
+  <h2><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></h2>
+  {{ .Summary }}
+</div>
+{{ end }}
+
+{{ end }}
