@@ -1,12 +1,6 @@
 {
-  "name": "simpl",
-  "version": "0.0.1",
-  "description": "A simpl(e) Hugo Theme",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "author": "@esacteksab",
+  "description": "A simpl(e) Hugo Theme",
   "devDependencies": {
     "@tailwindcss/cli": "^4.0.0",
     "autoprefixer": "^10.4.20",
@@ -15,5 +9,11 @@
     "prettier": "^3.4.2",
     "prettier-plugin-tailwindcss": "^0.6.11",
     "tailwindcss": "^4.0.0"
-  }
+  },
+  "main": "index.js",
+  "name": "simpl",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "version": "0.0.1"
 }
