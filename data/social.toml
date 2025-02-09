@@ -233,12 +233,6 @@ title = "Weibo"
 icon = "fab fa-weibo"
 
 [[social_icons]]
-id = "whatsapp"
-url = ""
-title = "WhatsApp"
-icon = "fab fa-whatsapp"
-
-[[social_icons]]
 id = "xing"
 url = "https://www.xing.com/profile/%s"
 title = "Xing"
