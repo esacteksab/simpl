@@ -6,6 +6,12 @@
       "options": {
         "parser": "go-template"
       }
+    },
+    {
+      "files": ["*.md"],
+      "options": {
+        "tabWidth": 4
+      }
     }
   ],
   "tailwindStylesheet": "./assets/css/main.css"

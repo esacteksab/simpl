@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="{{ site.Language.LanguageCode }}" dir="{{ or site.Language.LanguageDirection `ltr` }}"
-  class="bg-neutral-50 text-neutral-900 dark:bg-neutral-900 dark:text-neutral-50">
+  class="bg-neutral-50 text-neutral-900 dark:bg-neutral-800 dark:text-neutral-50">
 
   <head>
     {{ partial "head.html" . }}
@@ -12,7 +12,7 @@
         {{ partial "header.html" . }}
       </header>
     </div>
-    <main class="flex flex-col flex-nowrap w-full p-16">
+    <main class="main flex flex-col flex-nowrap w-full p-16">
       {{ block "main" . }}{{ end }}
     </main>
     <footer class="flex flex-col flex-nowrap justify-center items-center justify-items-center">

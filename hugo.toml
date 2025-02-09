@@ -22,6 +22,15 @@ name = 'Tailwind'
 pageRef = '/tw'
 weight = 25
 
+[Params]
+socialShare = true
+
+[Params.Author]
+name = "Barry Morrison"
+github = "esacteksab"
+linkedin = "morrisonbarry"
+gitlab = "esacteksab"
+
 #[module]
 #  [module.hugoVersion]
 #    extended = false
@@ -65,3 +74,13 @@ lineNos = false
 #lineNumbersInTable = true
 noClasses = false
 tabWidth = 4
+
+[[server]]
+[[headers]]
+for = '/*'
+[headers.values]
+Content-Security-Policy = 'script-src localhost:1313'
+Referrer-Policy = 'strict-origin-when-cross-origin'
+X-Content-Type-Options = 'nosniff'
+X-Frame-Options = 'DENY'
+X-XSS-Protection = '1; mode=block'

@@ -43,12 +43,43 @@ import json
 import date
 
 foo ():
+    with open("file.text):
+        read foo.var
     printf("Your shit is broke!")
 ```
 
 ```bash
 # Another Comment
 echo "foo" >> bar.txt
+```
+
+```css
+@media (prefers-color-scheme: dark) {
+  body {
+    background: #121212;
+    color: #bdc1c6;
+  }
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  margin-right: 0;
+  margin-left: 0;
+  width: 100%;
+}
+
+.container[role="main"] {
+  display: flex;
+  flex-direction: column;
+}
+
+@media only screen and (max-width: 767px) {
+  .container[role="main"] {
+    display: flex;
+    flex-direction: column;
+  }
+}
 ```
 
 ## Block Elements
@@ -137,11 +168,13 @@ Unordered lists use asterisks, pluses, and hyphens -- interchangably
 
 * Red
 * Green
+	* Pink
 * Blue
 
 is equivalent to:
 
 * Red
+	* Yellow
 * Green
 * Blue
 
@@ -164,8 +197,12 @@ Markdown produces from the above list is:
 If you instead wrote the list in Markdown like this:
 
 1. Bird
+	1. Cow
 1. McHale
+	1. Dog
 1. Parish
+	1. Cat
+	1. Turtle
 
 or even:
 
@@ -231,9 +268,20 @@ delimiters need to be indented:
 To put a code block within a list item, the code block needs
 to be indented *twice* -- 8 spaces or two tabs:
 
-* A list item with a code block:
+- A list item with a code block:
+	- `<code goes here>`
+- Another item on the list
 
-        <code goes here>
+## Another List Test
+
+- One
+	- One A
+	- One B
+- Two
+	- Two A
+		- Two A.a
+- Three
+- Four
 
 ### Code Blocks
 
@@ -247,13 +295,15 @@ block by at least 4 spaces or 1 tab.
 
 This is a normal paragraph:
 
-    This is a code block.
+`This is a code block.`
 
 Here is an example of AppleScript:
 
+```applescript
     tell application "Foo"
         beep
     end tell
+```
 
 A code block continues until it reaches a line that is not indented
 (or the end of the article).
@@ -264,15 +314,17 @@ easy to include example HTML source code using Markdown -- just paste
 it and indent it, and Markdown will handle the hassle of encoding the
 ampersands and angle brackets. For example, this:
 
+```html
     <div class="footer">
         &copy; 2004 Foo Corporation
     </div>
+```
 
 Regular Markdown syntax is not processed within code blocks. E.g.,
 asterisks are just literal asterisks within a code block. This means
 it's also easy to use Markdown to write about Markdown's own syntax.
 
-```
+```bash
 tell application "Foo"
     beep
 end tell
