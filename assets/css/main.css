@@ -83,8 +83,6 @@ blockquote {
         @apply text-sky-300;
     }
 
-
-
     .main h2 a {
         @apply text-neutral-50;
     }
