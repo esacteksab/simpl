@@ -1,0 +1,17 @@
+{{ define "main" }}
+  {{- $taxonomy := .taxonomy }}
+
+  {{- with $page.GetTerms $taxonomy }}
+    {{- $label := (index . 0).Parent.LinkTitle }}
+    <div class="flex-column mt-8 flex flex-wrap">
+      <strong>{{ $label }}:</strong>
+      <ul class="list-none">
+        {{- range . }}
+          <li class="tags inline-flex pt-1 pr-2 text-sm">
+            <a href="{{ .RelPermalink }}">[{{ .LinkTitle }}]</a>
+          </li>
+        {{- end }}
+      </ul>
+    </div>
+  {{- end }}
+{{ end }}
