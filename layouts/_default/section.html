@@ -1,0 +1,23 @@
+{{ define "main" }}
+  <!-- {{ .Content }} -->
+
+  {{ $pages := where site.RegularPages "Type" "posts" }}
+  {{ $paginator := .Paginate $pages }}
+
+  {{ range $paginator.Pages }}
+    <h2>{{ .LinkTitle }}</h2>
+    {{ .Summary }}
+    <div class="pager mt-8 ml-auto flex flex-1 flex-col">
+      <h2>
+        <a href="{{ .RelPermalink }}">[Read More]</a>
+      </h2>
+    </div>
+    <hr />
+  {{ end }}
+  {{ template "_internal/pagination.html" . }}
+  <!-- <p>Page: {{ $paginator.PageNumber }} of {{ $paginator.TotalPages }}</p>
+  <p>Pages: {{ $paginator.Pagers }}</p>
+  <a href="{{ $paginator.Prev }}">Previous Page</a>
+  <a href="{{ $paginator.Next }}">Next Page</a> -->
+  section.html
+{{ end }}

@@ -2,28 +2,32 @@ baseURL = 'https://example.org/'
 languageCode = 'en-US'
 title = 'My New Hugo Site'
 
-[[menus.main]]
-name = 'Home'
-pageRef = '/'
-weight = 10
+# [[menus.main]]
+# name = 'Home'
+# pageRef = '/'
+# weight = 10
 
-[[menus.main]]
-name = 'Posts'
-pageRef = '/posts'
-weight = 20
+# [[menus.main]]
+# name = 'Posts'
+# pageRef = '/posts'
+# weight = 20
 
 # [[menus.main]]
 # name = 'Tags'
 # pageRef = '/tags'
 # weight = 30
 
-[[menus.main]]
-name = 'Tailwind'
-pageRef = '/tw'
-weight = 25
+# [[menus.main]]
+# name = 'Tailwind'
+# pageRef = '/tw'
+# weight = 25
+[pagination]
+pagerSize = 3
+path = "page"
 
 [Params]
 socialShare = true
+
 
 [Params.Author]
 name = "Barry Morrison"
@@ -70,8 +74,8 @@ anchorLineNos = true
 #style = "github-dark"
 codeFences = true
 guessSyntax = false
-lineNos = false
-#lineNumbersInTable = true
+lineNos = true
+lineNumbersInTable = true
 noClasses = false
 tabWidth = 4
 

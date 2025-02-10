@@ -1,19 +1,14 @@
-<!-- +++
-title = 'Home'
++++
+title = 'TailwindCSS 4 CLI Defer with Hugo'
 date = 2023-01-01T08:00:00-07:00
 draft = false
 +++
 
 Laborum voluptate pariatur ex culpa magna nostrud est incididunt fugiat
 pariatur do dolor ipsum enim. Consequat tempor do dolor eu. Non id id anim anim
-excepteur excepteur pariatur nostrud qui irure ullamco. -->
+excepteur excepteur pariatur nostrud qui irure ullamco.
 
----
-
-title: TailwindCSS 4 CLI Defer
----
-
-## Some Markdown Sample Text
+<!--more-->
 
 ### Philosophy
 
@@ -55,30 +50,30 @@ echo "foo" >> bar.txt
 
 ```css
 @media (prefers-color-scheme: dark) {
-  body {
-    background: #121212;
-    color: #bdc1c6;
-  }
+    body {
+        background: #121212;
+        color: #bdc1c6;
+    }
 }
 
 .container {
-  display: flex;
-  flex-direction: column;
-  margin-right: 0;
-  margin-left: 0;
-  width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-right: 0;
+    margin-left: 0;
+    width: 100%;
 }
 
 .container[role="main"] {
-  display: flex;
-  flex-direction: column;
+    display: flex;
+    flex-direction: column;
 }
 
 @media only screen and (max-width: 767px) {
-  .container[role="main"] {
-    display: flex;
-    flex-direction: column;
-  }
+    .container[role="main"] {
+        display: flex;
+        flex-direction: column;
+    }
 }
 ```
 
@@ -97,7 +92,7 @@ significantly from most other text-to-HTML formatters (including Movable
 Type's "Convert Line Breaks" option) which translate every line break
 character in a paragraph into a `<br />` tag.
 
-When you *do* want to insert a `<br />` break tag using Markdown, you
+When you _do_ want to insert a `<br />` break tag using Markdown, you
 end a line with two or more spaces, then type return.
 
 ### Headers
@@ -128,11 +123,11 @@ Markdown allows you to be lazy and only put the `>` before the first
 line of a hard-wrapped paragraph:
 
 > This is a blockquote with two paragraphs. Lorem ipsum dolor sit amet,
-consectetuer adipiscing elit. Aliquam hendrerit mi posuere lectus.
-Vestibulum enim wisi, viverra nec, fringilla in, laoreet vitae, risus.
+> consectetuer adipiscing elit. Aliquam hendrerit mi posuere lectus.
+> Vestibulum enim wisi, viverra nec, fringilla in, laoreet vitae, risus.
 
 > Donec sit amet nisl. Aliquam semper ipsum sit amet velit. Suspendisse
-id sem consectetuer libero luctus adipiscing.
+> id sem consectetuer libero luctus adipiscing.
 
 Blockquotes can be nested (i.e. a blockquote-in-a-blockquote) by
 adding additional levels of `>`:
@@ -166,23 +161,23 @@ Markdown supports ordered (numbered) and unordered (bulleted) lists.
 Unordered lists use asterisks, pluses, and hyphens -- interchangably
 -- as list markers:
 
-* Red
-* Green
-	* Pink
-* Blue
+- Red
+- Green
+    - Pink
+- Blue
 
 is equivalent to:
 
-* Red
-	* Yellow
-* Green
-* Blue
+- Red
+    - Yellow
+- Green
+- Blue
 
 and:
 
-* Red
-* Green
-* Blue
+- Red
+- Green
+- Blue
 
 Ordered lists use numbers followed by periods:
 
@@ -197,18 +192,18 @@ Markdown produces from the above list is:
 If you instead wrote the list in Markdown like this:
 
 1. Bird
-	1. Cow
+    1. Cow
 1. McHale
-	1. Dog
+    1. Dog
 1. Parish
-	1. Cat
-	1. Turtle
+    1. Cat
+    1. Turtle
 
 or even:
 
 3. Bird
 1. McHale
-8. Parish
+1. Parish
 
 you'd get the exact same HTML output. The point is, if you want to,
 you can use ordinal numbers in your ordered Markdown lists, so that
@@ -217,27 +212,27 @@ But if you want to be lazy, you don't have to.
 
 To make lists look nice, you can wrap items with hanging indents:
 
-* Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-    Aliquam hendrerit mi posuere lectus. Vestibulum enim wisi,
-    viverra nec, fringilla in, laoreet vitae, risus.
-* Donec sit amet nisl. Aliquam semper ipsum sit amet velit.
-    Suspendisse id sem consectetuer libero luctus adipiscing.
+- Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+  Aliquam hendrerit mi posuere lectus. Vestibulum enim wisi,
+  viverra nec, fringilla in, laoreet vitae, risus.
+- Donec sit amet nisl. Aliquam semper ipsum sit amet velit.
+  Suspendisse id sem consectetuer libero luctus adipiscing.
 
 But if you want to be lazy, you don't have to:
 
-* Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-Aliquam hendrerit mi posuere lectus. Vestibulum enim wisi,
-viverra nec, fringilla in, laoreet vitae, risus.
-* Donec sit amet nisl. Aliquam semper ipsum sit amet velit.
-Suspendisse id sem consectetuer libero luctus adipiscing.
+- Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+  Aliquam hendrerit mi posuere lectus. Vestibulum enim wisi,
+  viverra nec, fringilla in, laoreet vitae, risus.
+- Donec sit amet nisl. Aliquam semper ipsum sit amet velit.
+  Suspendisse id sem consectetuer libero luctus adipiscing.
 
 List items may consist of multiple paragraphs. Each subsequent
 paragraph in a list item must be indented by either 4 spaces
 or one tab:
 
 1. This is a list item with two paragraphs. Lorem ipsum dolor
-    sit amet, consectetuer adipiscing elit. Aliquam hendrerit
-    mi posuere lectus.
+   sit amet, consectetuer adipiscing elit. Aliquam hendrerit
+   mi posuere lectus.
 
     Vestibulum enim wisi, viverra nec, fringilla in, laoreet
     vitae, risus. Donec sit amet nisl. Aliquam semper ipsum
@@ -249,37 +244,38 @@ It looks nice if you indent every line of the subsequent
 paragraphs, but here again, Markdown will allow you to be
 lazy:
 
-* This is a list item with two paragraphs.
+- This is a list item with two paragraphs.
 
-    This is the second paragraph in the list item. You're
-only required to indent the first line. Lorem ipsum dolor
-sit amet, consectetuer adipiscing elit.
+                    This is the second paragraph in the list item. You're
 
-* Another item in the same list.
+    only required to indent the first line. Lorem ipsum dolor
+    sit amet, consectetuer adipiscing elit.
+
+- Another item in the same list.
 
 To put a blockquote within a list item, the blockquote's `>`
 delimiters need to be indented:
 
-* A list item with a blockquote:
+- A list item with a blockquote:
 
     > This is a blockquote
     > inside a list item.
 
 To put a code block within a list item, the code block needs
-to be indented *twice* -- 8 spaces or two tabs:
+to be indented _twice_ -- 8 spaces or two tabs:
 
 - A list item with a code block:
-	- `<code goes here>`
+    - `<code goes here>`
 - Another item on the list
 
 ## Another List Test
 
 - One
-	- One A
-	- One B
+    - One A
+    - One B
 - Two
-	- Two A
-		- Two A.a
+    - Two A
+        - Two A.a
 - Three
 - Four
 
@@ -315,9 +311,7 @@ it and indent it, and Markdown will handle the hassle of encoding the
 ampersands and angle brackets. For example, this:
 
 ```html
-    <div class="footer">
-        &copy; 2004 Foo Corporation
-    </div>
+<div class="footer">&copy; 2004 Foo Corporation</div>
 ```
 
 Regular Markdown syntax is not processed within code blocks. E.g.,
@@ -334,13 +328,13 @@ end tell
 
 ### Links
 
-Markdown supports two style of links: *inline* and *reference*.
+Markdown supports two style of links: _inline_ and _reference_.
 
 In both styles, the link text is delimited by [square brackets].
 
 To create an inline link, use a set of regular parentheses immediately
 after the link text's closing square bracket. Inside the parentheses,
-put the URL where you want the link to point, along with an *optional*
+put the URL where you want the link to point, along with an _optional_
 title for the link, surrounded in quotes. For example:
 
 This is [an example](http://example.com/) inline link.
@@ -354,9 +348,9 @@ emphasis. Text wrapped with one `*` or `_` will be wrapped with an
 HTML `<em>` tag; double `*`'s or `_`'s will be wrapped with an HTML
 `<strong>` tag. E.g., this input:
 
-*single asterisks*
+_single asterisks_
 
-*single underscores*
+_single underscores_
 
 **double asterisks**
 
