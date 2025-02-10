@@ -21,70 +21,70 @@ title = 'My New Hugo Site'
 # name = 'Tailwind'
 # pageRef = '/tw'
 # weight = 25
+
 [pagination]
-pagerSize = 3
-path = "page"
+ pagerSize = 3
+ path = "page"
 
 [Params]
-socialShare = true
-
+ socialShare = true
 
 [Params.Author]
-name = "Barry Morrison"
-github = "esacteksab"
-linkedin = "morrisonbarry"
-gitlab = "esacteksab"
+ name = "Barry Morrison"
+ github = "esacteksab"
+ linkedin = "morrisonbarry"
+ gitlab = "esacteksab"
+
+[markup]
+[markup.highlight]
+ anchorLineNos = true
+ #style = "github-dark"
+ codeFences = true
+ guessSyntax = false
+ lineNos = true
+ lineNumbersInTable = true
+ noClasses = false
+ tabWidth = 4
 
 #[module]
 #  [module.hugoVersion]
 #    extended = false
 #    min = "0.116.0"
 [outputs]
-home = ["html"]
+ home = ["html"]
 
 [module]
 [module.hugoVersion]
-min = "0.128.0"
+ min = "0.128.0"
 [[module.mounts]]
-source = "assets"
-target = "assets"
+ source = "assets"
+ target = "assets"
 [[module.mounts]]
-source = "content"
-target = "content"
+ source = "content"
+ target = "content"
 [[module.mounts]]
-source = "hugo_stats.json"
-target = "assets/notwatching/hugo_stats.json"
-disableWatch = true
+ source = "hugo_stats.json"
+ target = "assets/notwatching/hugo_stats.json"
+ disableWatch = true
 
 [build.buildStats]
-enable = true
+ enable = true
 [[build.cachebusters]]
-source = "assets/notwatching/hugo_stats\\.json"
-target = "css"
+ source = "assets/notwatching/hugo_stats\\.json"
+ target = "css"
 [[build.cachebusters]]
-source = "(postcss|tailwind)\\.config\\.js"
-target = "css"
+ source = "(postcss|tailwind)\\.config\\.js"
+ target = "css"
 [[build.cachebusters]]
-source = 'layouts/.*'
-target = 'css'
-
-[markup]
-[markup.highlight]
-anchorLineNos = true
-#style = "github-dark"
-codeFences = true
-guessSyntax = false
-lineNos = true
-lineNumbersInTable = true
-noClasses = false
-tabWidth = 4
+ source = 'layouts/.*'
+ target = 'css'
 
 [[server]]
 [[headers]]
-for = '/*'
+ for = '/*'
 [headers.values]
-Content-Security-Policy = 'script-src localhost:1313'
-Referrer-Policy = 'strict-origin-when-cross-origin'
-X-Content-Type-Options = 'nosniff'
-X-Frame-Options = 'DENY'
-X-XSS-Protection = '1; mode=block'
+ Content-Security-Policy = 'script-src localhost:1313'
+ Referrer-Policy = 'strict-origin-when-cross-origin'
+ X-Content-Type-Options = 'nosniff'
+ X-Frame-Options = 'DENY'
+ X-XSS-Protection = '1; mode=block'

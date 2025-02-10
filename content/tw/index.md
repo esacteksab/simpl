@@ -246,7 +246,7 @@ lazy:
 
 - This is a list item with two paragraphs.
 
-                    This is the second paragraph in the list item. You're
+                                  This is the second paragraph in the list item. You're
 
     only required to indent the first line. Lorem ipsum dolor
     sit amet, consectetuer adipiscing elit.
@@ -363,3 +363,41 @@ Unlike a pre-formatted code block, a code span indicates code within a
 normal paragraph. For example:
 
 Use the `printf()` function.
+
+## GitHub Markdown
+
+- [.] Period. Does that work?
+- [ ] Empty
+- [x] X
+
+> [!NOTE]+
+> This is a note.
+
+> [!TIP]+
+> This is a tip.
+
+> [!IMPORTANT]+
+> This is important.
+
+> [!WARNING]+
+> This is a warning.
+
+> [!CAUTION]+
+> This is a caution.
+
+### render-hooks
+
+> [!NOTE]
+> Useful information that users should know, even when skimming content.
+
+> [!TIP]
+> Helpful advice for doing things better or more easily.
+
+> [!IMPORTANT]
+> Key information users need to know to achieve their goal.
+
+> [!WARNING]
+> Urgent info that needs immediate user attention to avoid problems.
+
+> [!CAUTION]
+> Advises about risks or negative outcomes of certain actions.
