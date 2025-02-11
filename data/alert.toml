@@ -1,0 +1,6 @@
+# Use this similar to how we use social.toml for blockquote alert icons
+# [[alert_icon]]
+#   id = "about"
+#   url = "%s"
+#   title = "About"
+#   icon = "fas fa-at"

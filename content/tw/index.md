@@ -274,7 +274,7 @@ lazy:
 
 - This is a list item with two paragraphs.
 
-                                                                                This is the second paragraph in the list item. You're
+                                                                                    This is the second paragraph in the list item. You're
 
     only required to indent the first line. Lorem ipsum dolor
     sit amet, consectetuer adipiscing elit.
@@ -407,13 +407,13 @@ Use the `printf()` function.
 > [!IMPORTANT]+
 > This is important.
 
-> [!WARNING]+
-> This is a warning.
-
 > [!CAUTION]+
 > This is a caution.
 
-### render-hooks
+> [!WARNING]+
+> This is a warning.
+
+##### render-hooks
 
 > [!NOTE]
 > Useful information that users should know, even when skimming content.
@@ -424,11 +424,11 @@ Use the `printf()` function.
 > [!IMPORTANT]
 > Key information users need to know to achieve their goal.
 
-> [!WARNING]
-> Urgent info that needs immediate user attention to avoid problems.
-
 > [!CAUTION]
 > Advises about risks or negative outcomes of certain actions.
+
+> [!WARNING]
+> Urgent info that needs immediate user attention to avoid problems.
 
 ##### Details
 
