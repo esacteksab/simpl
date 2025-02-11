@@ -4,11 +4,39 @@ date = 2023-01-01T08:00:00-07:00
 draft = false
 +++
 
-Laborum voluptate pariatur ex culpa magna nostrud est incididunt fugiat
-pariatur do dolor ipsum enim. Consequat tempor do dolor eu. Non id id anim anim
-excepteur excepteur pariatur nostrud qui irure ullamco.
+Laborum voluptate pariatur ex culpa magna nostrud est incididunt fugiat pariatur do dolor ipsum enim. Consequat tempor do dolor eu. Non id id anim anim excepteur excepteur pariatur nostrud qui irure ullamco.
 
 <!--more-->
+
+#### Warning
+
+`<i class="fa-solid fa-triangle-exclamation"></i>`
+
+#### Caution
+
+`<i class="fa-solid fa-circle-exclamation"></i>`
+
+#### Important
+
+`<i class="fa-solid fa-star"></i>`
+
+#### Note
+
+`<i class="fa-solid fa-note-sticky"></i>` or `<i class="fa-regular fa-note-sticky"></i>`
+
+#### Tip
+
+`<i class="fa-solid fa-lightbulb"></i>` or `<i class="fa-regular fa-lightbulb"></i>`
+
+#### Emojify
+
+`{{ transform.Emojify (index $emojis .AlertType) }}`
+
+---
+
+## Style This
+
+{{< toc >}}
 
 ### Philosophy
 
@@ -246,7 +274,7 @@ lazy:
 
 - This is a list item with two paragraphs.
 
-                                  This is the second paragraph in the list item. You're
+                                                                                This is the second paragraph in the list item. You're
 
     only required to indent the first line. Lorem ipsum dolor
     sit amet, consectetuer adipiscing elit.
@@ -401,3 +429,21 @@ Use the `printf()` function.
 
 > [!CAUTION]
 > Advises about risks or negative outcomes of certain actions.
+
+##### Details
+
+###### Summary
+
+Don't use `summary`. Details is good enough.
+
+{{< details summary="Grouped Details" name="my-details" >}}
+Specifying a `name` allows elements to be connected, with only one able to be open at a time.
+{{< /details >}}
+
+{{< details name="my-details" >}}
+Another one. No summary, but `name` matches the one above, `my-details`
+{{< / details >}}
+
+{{< details >}}
+Another one. No Summary. No Name
+{{< /details >}}

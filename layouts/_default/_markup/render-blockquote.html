@@ -3,13 +3,21 @@
   "important" ":information_source:"
   "note" ":information_source:"
   "tip" ":bulb:"
-  "warning" ":information_source:"
+  "warning" ":warning:"
+}}
+
+{{ $svgs := dict
+  "caution" "fa-circle-exclamation"
+  "important" "fa-star"
+  "note" "fa-note-sticky"
+  "tip" "fa-lightbulb"
+  "warning" "fa-triangle-exclamation"
 }}
 
 {{ if eq .Type "alert" }}
   <blockquote class="alert alert-{{ .AlertType }}">
     <p class="alert-heading">
-      {{ transform.Emojify (index $emojis .AlertType) }}
+      <i class="fa-solid {{ index $svgs .AlertType }} pr-1"></i>
       {{ with .AlertTitle }}
         {{ . }}
       {{ else }}

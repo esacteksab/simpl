@@ -609,18 +609,18 @@ Generated using: hugo gen chromastyles --style=github
 @media (prefers-color-scheme: light) {
   /* Background */
   .bg {
-    background-color: var(--bg-neutral-50);
+    background-color: inherit;
   }
   /* PreWrapper */
   .chroma {
-    background-color: var(--bg-neutral-50);
+    background-color: inherit;
   }
   /* Other */
   .chroma .x {
   }
   /* Error */
   .chroma .err {
-    color: #f6f8fa;
+    color: inherit;
     background-color: #82071e;
   }
   /* CodeLine */
@@ -648,7 +648,7 @@ Generated using: hugo gen chromastyles --style=github
   }
   /* LineHighlight */
   .chroma .hl {
-    background-color: #e5e5e5;
+    background-color: inherit;
   }
   /* LineNumbersTable */
   .chroma .lnt {
@@ -657,7 +657,6 @@ Generated using: hugo gen chromastyles --style=github
     user-select: none;
     margin-right: 0.4em;
     padding: 0 0.4em 0 0.4em;
-    color: inherit;
   }
   /* LineNumbers */
   .chroma .ln {
@@ -666,7 +665,6 @@ Generated using: hugo gen chromastyles --style=github
     user-select: none;
     margin-right: 0.4em;
     padding: 0 0.4em 0 0.4em;
-    color: inherit;
   }
   /* Line */
   .chroma .line {
@@ -884,31 +882,31 @@ Generated using: hugo gen chromastyles --style=github
   }
   /* Comment */
   .chroma .c {
-    color: inherit;
+    color: #57606a;
   }
   /* CommentHashbang */
   .chroma .ch {
-    color: inherit;
+    color: #57606a;
   }
   /* CommentMultiline */
   .chroma .cm {
-    color: inherit;
+    color: #57606a;
   }
   /* CommentSingle */
   .chroma .c1 {
-    color: inherit;
+    color: #57606a;
   }
   /* CommentSpecial */
   .chroma .cs {
-    color: inherit;
+    color: #57606a;
   }
   /* CommentPreproc */
   .chroma .cp {
-    color: inherit;
+    color: #57606a;
   }
   /* CommentPreprocFile */
   .chroma .cpf {
-    color: inherit;
+    color: #57606a;
   }
   /* Generic */
   .chroma .g {
@@ -916,7 +914,6 @@ Generated using: hugo gen chromastyles --style=github
   /* GenericDeleted */
   .chroma .gd {
     color: #82071e;
-    background-color: #ffebe9;
   }
   /* GenericEmph */
   .chroma .ge {
@@ -931,7 +928,6 @@ Generated using: hugo gen chromastyles --style=github
   /* GenericInserted */
   .chroma .gi {
     color: #116329;
-    background-color: #dafbe1;
   }
   /* GenericOutput */
   .chroma .go {
@@ -955,10 +951,8 @@ Generated using: hugo gen chromastyles --style=github
   }
   /* TextWhitespace */
   .chroma .w {
-    color: var(---bg-neutral-100);
   }
 }
-
 /*
 
 GitHub's Markdown CSS
