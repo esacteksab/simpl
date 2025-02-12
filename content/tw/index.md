@@ -274,7 +274,7 @@ lazy:
 
 - This is a list item with two paragraphs.
 
-                                                                                    This is the second paragraph in the list item. You're
+                                                                                                This is the second paragraph in the list item. You're
 
     only required to indent the first line. Lorem ipsum dolor
     sit amet, consectetuer adipiscing elit.
@@ -348,7 +348,7 @@ it's also easy to use Markdown to write about Markdown's own syntax.
 
 ```bash
 tell application "Foo"
-    beep
+beep
 end tell
 ```
 

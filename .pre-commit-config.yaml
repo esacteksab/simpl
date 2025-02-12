@@ -40,3 +40,9 @@ repos:
         types:
           - yaml
         args: ["--schemafile", "schemas/pre-commit-config.json"]
+      - id: check-jsonschema
+        name: "Validate Hugo"
+        files: ^hugo.toml+$
+        types:
+          - yaml
+        args: ["--schemafile", "schemas/hugo.json"]

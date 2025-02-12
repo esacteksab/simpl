@@ -7,15 +7,24 @@
 
 @layer components {
   h1 {
-    @apply text-3xl font-bold;
+    @apply text-5xl font-bold;
   }
 
   h2 {
-    @apply text-2xl font-bold;
+    @apply text-4xl font-bold;
   }
 
   h3 {
+    @apply text-3xl font-bold;
+  }
+  h4 {
+    @apply text-2xl font-bold;
+  }
+  h5 {
     @apply text-xl font-bold;
+  }
+  h6 {
+    @apply text-lg font-bold;
   }
 
   a:hover {
@@ -84,82 +93,68 @@ Dark Mode
 
 @media (prefers-color-scheme: dark) {
   blockquote {
-    @apply mt-3 mb-4 pl-3;
+    @apply mb-4 mt-3 pl-3;
   }
+
+  .alert p {
+    @apply pl-16;
+    @apply font-semibold;
+  }
+
   .alert-note {
-    @apply border-1 border-l-4;
     @apply border-neutral-600;
     @apply bg-neutral-100;
     @apply text-neutral-900;
-    @apply rounded-r-lg;
     h3 {
       @apply text-neutral-900;
     }
     p {
       @apply text-neutral-900;
-      @apply font-semibold;
-      @apply pl-16;
     }
   }
   .alert-tip {
-    @apply border-1 border-l-4;
     @apply border-sky-700;
     @apply bg-sky-100;
     @apply text-sky-700;
-    @apply rounded-r-lg;
     h3 {
       @apply text-sky-700;
     }
     p {
       @apply text-sky-700;
-      @apply font-semibold;
-      @apply pl-16;
     }
   }
   .alert-important {
-    @apply border-1 border-l-4;
     @apply border-green-700;
     @apply bg-green-100;
     @apply text-green-700;
-    @apply rounded-r-lg;
     h3 {
       @apply text-green-700;
     }
     p {
       @apply text-green-700;
-      @apply font-semibold;
-      @apply pl-16;
     }
   }
 
   .alert-caution {
-    @apply border-1 border-l-4;
     @apply border-yellow-700;
     @apply bg-yellow-100;
     @apply text-yellow-700;
-    @apply rounded-r-lg;
     h3 {
       @apply text-yellow-700;
     }
     p {
       @apply text-yellow-700;
-      @apply font-semibold;
-      @apply pl-16;
     }
   }
   .alert-warning {
-    @apply border-1 border-l-4;
     @apply border-red-700;
     @apply bg-red-100;
     @apply text-red-700;
-    @apply rounded-r-lg;
     h3 {
       @apply text-red-700;
     }
     p {
       @apply text-red-700;
-      @apply font-semibold;
-      @apply pl-16;
     }
   }
 
@@ -174,7 +169,7 @@ Dark Mode
   .highlight {
     @apply my-1.5;
     .chroma {
-      @apply my-3 rounded-2xl border-1 border-neutral-600;
+      @apply border-1 my-3 rounded-2xl border-neutral-600;
       .lntd {
         @apply border-r-1 border-neutral-600;
         @apply last:border-none;
@@ -240,6 +235,71 @@ Light Mode
 */
 
 @media (prefers-color-scheme: light) {
+  blockquote {
+    @apply mb-4 mt-3 pl-3;
+  }
+
+  .alert p {
+    @apply pl-16;
+    @apply font-semibold;
+  }
+
+  .alert-note {
+    @apply border-neutral-600;
+    @apply bg-neutral-100;
+    @apply text-neutral-900;
+    h3 {
+      @apply text-neutral-900;
+    }
+    p {
+      @apply text-neutral-900;
+    }
+  }
+  .alert-tip {
+    @apply border-sky-700;
+    @apply bg-sky-100;
+    @apply text-sky-700;
+    h3 {
+      @apply text-sky-700;
+    }
+    p {
+      @apply text-sky-700;
+    }
+  }
+  .alert-important {
+    @apply border-green-700;
+    @apply bg-green-100;
+    @apply text-green-700;
+    h3 {
+      @apply text-green-700;
+    }
+    p {
+      @apply text-green-700;
+    }
+  }
+
+  .alert-caution {
+    @apply border-yellow-700;
+    @apply bg-yellow-100;
+    @apply text-yellow-700;
+    h3 {
+      @apply text-yellow-700;
+    }
+    p {
+      @apply text-yellow-700;
+    }
+  }
+  .alert-warning {
+    @apply border-red-700;
+    @apply bg-red-100;
+    @apply text-red-700;
+    h3 {
+      @apply text-red-700;
+    }
+    p {
+      @apply text-red-700;
+    }
+  }
   .main a {
     @apply text-blue-700;
   }
@@ -251,7 +311,7 @@ Light Mode
   .highlight {
     @apply my-1.5;
     .chroma {
-      @apply my-3 rounded-2xl border-1 border-neutral-600;
+      @apply border-1 my-3 rounded-2xl border-neutral-600;
       .lntd {
         @apply border-r-1 border-neutral-600;
         @apply last:border-none;

@@ -1,23 +1,25 @@
-<!DOCTYPE html>
-<html lang="{{ site.Language.LanguageCode }}" dir="{{ or site.Language.LanguageDirection `ltr` }}"
-    class="bg-neutral-50 text-neutral-900 dark:bg-dark-bg-primary dark:text-white">
+<!doctype html>
+<html
+  class="bg-neutral-50 text-neutral-900 dark:bg-dark-bg-primary dark:text-white"
+  lang="{{ site.Language.LanguageCode }}"
+  dir="{{ or site.Language.LanguageDirection `ltr` }}">
+  <head>
+    {{ partial "head.html" . }}
+  </head>
 
-    <head>
-        {{ partial "head.html" . }}
-    </head>
-
-    <body class="@container w-full font-simpl">
-        <div class="flex flex-col justify-center items-center justify-items-center">
-            <header class="flex flex-col justify-center items-center justify-items-center mt-5">
-                {{ partial "header.html" . }}
-            </header>
-        </div>
-        <main class="main flex flex-col flex-nowrap w-full p-16">
-            {{ block "main" . }}{{ end }}
-        </main>
-        <footer class="flex flex-col flex-nowrap justify-center items-center justify-items-center mb-25">
-            {{ partial "footer.html" . }}
-        </footer>
-    </body>
-
+  <body class="font-simpl @container w-full">
+    <div class="flex flex-col items-center justify-center justify-items-center">
+      <header
+        class="mt-5 flex flex-col items-center justify-center justify-items-center">
+        {{ partial "header.html" . }}
+      </header>
+    </div>
+    <main class="main flex w-full flex-col flex-nowrap p-16">
+      {{ block "main" . }}{{ end }}
+    </main>
+    <footer
+      class="mb-25 flex flex-col flex-nowrap items-center justify-center justify-items-center">
+      {{ partial "footer.html" . }}
+    </footer>
+  </body>
 </html>

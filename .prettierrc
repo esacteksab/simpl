@@ -1,18 +1,42 @@
 {
-  "plugins": ["prettier-plugin-go-template", "prettier-plugin-tailwindcss"],
+  "plugins": [
+    "prettier-plugin-organize-attributes",
+    "prettier-plugin-toml",
+    "prettier-plugin-sh",
+    "prettier-plugin-pkg",
+    "prettier-plugin-go-template",
+    "prettier-plugin-tailwindcss"
+  ],
   "overrides": [
     {
       "files": ["*.html"],
       "options": {
-        "parser": "go-template"
+        "parser": "go-template",
+        "goTemplateBracketSpacing": true,
+        "bracketSameLine": true
       }
     },
     {
       "files": ["*.md"],
       "options": {
-        "tabWidth": 4
+        "tabWidth": 4,
+        "embeddedLanguageFormatting": "off"
+      }
+    },
+    {
+      "files": ["*.toml"],
+      "options": {
+        "indentTables": true,
+        "indentEntries": true,
+        "reorderKeys": true,
+        "trailingComma": "es5",
+        "tabWidth": 4,
+        "semi": false,
+        "singleQuote": true
       }
     }
   ],
-  "tailwindStylesheet": "./assets/css/main.css"
+  "tailwindStylesheet": "./assets/css/main.css",
+  "tailwindConfig": "./tailwind.config.js",
+  "tailwindFunctions": ["tw"]
 }

@@ -1,6 +1,4 @@
 {{ define "main" }}
-  <!-- {{ .Content }} -->
-
   {{ $pages := where site.RegularPages "Type" "posts" }}
   {{ $paginator := .Paginate $pages }}
 
@@ -15,9 +13,5 @@
     <hr />
   {{ end }}
   {{ template "_internal/pagination.html" . }}
-  <!-- <p>Page: {{ $paginator.PageNumber }} of {{ $paginator.TotalPages }}</p>
-  <p>Pages: {{ $paginator.Pagers }}</p>
-  <a href="{{ $paginator.Prev }}">Previous Page</a>
-  <a href="{{ $paginator.Next }}">Next Page</a> -->
   section.html
 {{ end }}
