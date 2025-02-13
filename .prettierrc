@@ -42,7 +42,8 @@
         "goTemplateBracketSpacing": true,
         "bracketSameLine": true,
         "embeddedLanguageFormatting": "off",
-        "htmlWhitespaceSensitivity": "strict"
+        "htmlWhitespaceSensitivity": "strict",
+        "rangeStart": 198
       }
     },
     {
