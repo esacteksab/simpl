@@ -1,67 +1,115 @@
 baseURL = 'https://example.org/'
+enableEmoji = true
+enableGitInfo = true
 languageCode = 'en-US'
 title = 'My New Hugo Site'
 
-[[menus.main]]
-name = 'Home'
-pageRef = '/'
-weight = 10
-
-[[menus.main]]
-name = 'Posts'
-pageRef = '/posts'
-weight = 20
-
-# [[menus.main]]
-# name = 'Tags'
-# pageRef = '/tags'
-# weight = 30
-
-[[menus.main]]
-name = 'Tailwind'
-pageRef = '/tw'
-weight = 25
-
-#[module]
-#  [module.hugoVersion]
-#    extended = false
-#    min = "0.116.0"
-[outputs]
-home = ["html"]
-
-[module]
-[module.hugoVersion]
-min = "0.128.0"
-[[module.mounts]]
-source = "assets"
-target = "assets"
-[[module.mounts]]
-source = "content"
-target = "content"
-[[module.mounts]]
-source = "hugo_stats.json"
-target = "assets/notwatching/hugo_stats.json"
-disableWatch = true
-
-[build.buildStats]
-enable = true
-[[build.cachebusters]]
-source = "assets/notwatching/hugo_stats\\.json"
-target = "css"
-[[build.cachebusters]]
-source = "(postcss|tailwind)\\.config\\.js"
-target = "css"
-[[build.cachebusters]]
-source = 'layouts/.*'
-target = 'css'
+[taxonomies]
+    tags = "tags"
 
 [markup]
+    [markup.goldmark]
+        [markup.goldmark.parser]
+            [markup.goldmark.parser.attribute]
+                block = true
+                title = true
 [markup.highlight]
-anchorLineNos = true
-#style = "github-dark"
-codeFences = true
-guessSyntax = false
-lineNos = false
-#lineNumbersInTable = true
-noClasses = false
-tabWidth = 4
+    anchorLineNos = false
+    codeFences = true
+    guessSyntax = false
+    lineNos = true
+    lineNumbersInTable = true
+    noClasses = false
+[markup.tableOfContents]
+    endLevel = 6
+    ordered = false
+    startLevel = 2
+
+[outputs]
+    home = ["html"]
+
+[module]
+    [module.hugoVersion]
+        min = "0.128.0"
+    [[module.mounts]]
+        source = 'content'
+        target = 'content'
+    [[module.mounts]]
+        source = 'static'
+        target = 'static'
+    [[module.mounts]]
+        source = 'layouts'
+        target = 'layouts'
+    [[module.mounts]]
+        source = 'data'
+        target = 'data'
+    [[module.mounts]]
+        source = 'assets'
+        target = 'assets'
+    [[module.mounts]]
+        source = 'i18n'
+        target = 'i18n'
+    [[module.mounts]]
+        source = 'archetypes'
+        target = 'archetypes'
+    [[module.mounts]]
+        disableWatch = true
+        source = "hugo_stats.json"
+        target = "assets/notwatching/hugo_stats.json"
+
+[build.buildStats]
+    enable = true
+
+[[build.cachebusters]]
+    source = "assets/notwatching/hugo_stats\\.json"
+    target = "css"
+
+[[build.cachebusters]]
+    source = "(postcss|tailwind)\\.config\\.js"
+    target = "css"
+
+[[build.cachebusters]]
+    source = 'layouts/.*'
+    target = 'css'
+
+[[server]]
+[[headers]]
+    for = '/*'
+    [headers.values]
+        Content-Security-Policy = 'script-src localhost:1313'
+        Referrer-Policy = 'strict-origin-when-cross-origin'
+        X-Content-Type-Options = 'nosniff'
+        X-Frame-Options = 'DENY'
+        X-XSS-Protection = '1; mode=block'
+
+[pagination]
+    pagerSize = 3
+    path = "page"
+
+[Params]
+
+    [Params.Author]
+        github = "esacteksab"
+        gitlab = "esacteksab"
+        linkedin = "morrisonbarry"
+        name = "Barry Morrison"
+
+        # [[menus.main]]
+        # name = 'Home'
+        # pageRef = '/'
+        # weight = 10
+
+        # [[menus.main]]
+        # name = 'Posts'
+        # pageRef = '/posts'
+        # weight = 20
+
+        # [[menus.main]]
+        # name = 'Tags'
+        # pageRef = '/tags'
+        # weight = 30
+
+        # [[menus.main]]
+        # name = 'Tailwind'
+        # pageRef = '/tw'
+        # weight = 25

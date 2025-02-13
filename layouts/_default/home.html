@@ -1,9 +1,14 @@
 {{ define "main" }}
-{{ range site.RegularPages }}
-<div class="home-preview flex flex-col flex-1">
-  <h2><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></h2>
-  {{ .Summary }}
-</div>
-{{ end }}
-
+  {{ range site.RegularPages }}
+    <div class="home-preview flex flex-1 flex-col">
+      <h2><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></h2>
+      {{ .Summary }}
+    </div>
+    <div class="pager mt-8 ml-auto flex flex-1 flex-col">
+      {{ if .Truncated }}
+        <a href="{{ .RelPermalink }}">[Read More]</a>
+      {{ end }}
+    </div>
+    <hr />
+  {{ end }}
 {{ end }}
