@@ -1,7 +1,0 @@
-{{ $pages := where .Site.RegularPages "Type" "posts" }}
-{{ $pages = $pages.ByTitle }}
-{{ range (.Paginate $pages 3).Pages }}
-  <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
-  list.html
-{{ end }}
-{{ template "_internal/pagination.html" . }}

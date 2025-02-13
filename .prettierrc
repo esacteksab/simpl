@@ -1,6 +1,5 @@
 {
   "plugins": [
-    "prettier-plugin-organize-attributes",
     "prettier-plugin-toml",
     "prettier-plugin-sh",
     "prettier-plugin-pkg",
@@ -9,11 +8,41 @@
   ],
   "overrides": [
     {
+      "files": ["./layouts/_default/_markup/render-blockquote.html"],
+      "options": {
+        "arrowParens": "always",
+        "bracketSameLine": true,
+        "objectWrap": "preserve",
+        "bracketSpacing": true,
+        "semi": true,
+        "experimentalOperatorPosition": "end",
+        "experimentalTernaries": false,
+        "singleQuote": false,
+        "jsxSingleQuote": false,
+        "quoteProps": "as-needed",
+        "trailingComma": "all",
+        "singleAttributePerLine": false,
+        "htmlWhitespaceSensitivity": "strict",
+        "vueIndentScriptAndStyle": false,
+        "proseWrap": "preserve",
+        "insertPragma": true,
+        "printWidth": 80,
+        "requirePragma": false,
+        "tabWidth": 2,
+        "useTabs": false,
+        "embeddedLanguageFormatting": "off",
+        "rangeStart": 0,
+        "rangeEnd": 196
+      }
+    },
+    {
       "files": ["*.html"],
       "options": {
         "parser": "go-template",
         "goTemplateBracketSpacing": true,
-        "bracketSameLine": true
+        "bracketSameLine": true,
+        "embeddedLanguageFormatting": "off",
+        "htmlWhitespaceSensitivity": "strict"
       }
     },
     {

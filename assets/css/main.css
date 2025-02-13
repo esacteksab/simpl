@@ -85,6 +85,11 @@ p {
   margin-top: 5px;
 }
 
+.pagination li {
+  display: inline;
+  background-color: orange;
+}
+
 /*
 
 Dark Mode

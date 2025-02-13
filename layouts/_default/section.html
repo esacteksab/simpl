@@ -5,13 +5,13 @@
   {{ range $paginator.Pages }}
     <h2>{{ .LinkTitle }}</h2>
     {{ .Summary }}
-    <div class="pager mt-8 ml-auto flex flex-1 flex-col">
+    <span class="pager mt-8 ml-auto flex flex-1 flex-col">
       <h2>
         <a href="{{ .RelPermalink }}">[Read More]</a>
       </h2>
-    </div>
+    </span>
     <hr />
   {{ end }}
-  {{ template "_internal/pagination.html" . }}
+  {{ template "_internal/pagination.html" (dict "page" . "format" "terse") }}
   section.html
 {{ end }}
