@@ -1,0 +1,350 @@
+@media (prefers-color-scheme: light) {
+  /* Generated using: hugo gen chromastyles --style=monokailight */
+
+  /* Background */
+  .bg {
+    color: inherit;
+  }
+  /* PreWrapper */
+  .chroma {
+    color: inherit;
+  }
+  /* Other */
+  .chroma .x {
+  }
+  /* Error */
+  .chroma .err {
+    color: #960050;
+  }
+  /* CodeLine */
+  .chroma .cl {
+  }
+  /* LineLink */
+  .chroma .lnlinks {
+    outline: none;
+    text-decoration: none;
+    color: inherit;
+  }
+  /* LineTableTD */
+  .chroma .lntd {
+    vertical-align: top;
+    padding: 0;
+    margin: 0;
+    border: 0;
+  }
+  /* LineTable */
+  .chroma .lntable {
+    border-spacing: 0;
+    padding: 0;
+    margin: 0;
+    border: 0;
+  }
+  /* LineHighlight */
+  .chroma .hl {
+  }
+  /* LineNumbersTable */
+  .chroma .lnt {
+    white-space: pre;
+    -webkit-user-select: none;
+    user-select: none;
+    margin-right: 0.4em;
+    padding: 0 0.4em 0 0.4em;
+  }
+  /* LineNumbers */
+  .chroma .ln {
+    white-space: pre;
+    -webkit-user-select: none;
+    user-select: none;
+    margin-right: 0.4em;
+    padding: 0 0.4em 0 0.4em;
+  }
+  /* Line */
+  .chroma .line {
+    display: flex;
+  }
+  /* Keyword */
+  .chroma .k {
+    @apply text-sky-700;
+  }
+  /* KeywordConstant */
+  .chroma .kc {
+    @apply text-sky-700;
+  }
+  /* KeywordDeclaration */
+  .chroma .kd {
+    @apply text-sky-700;
+  }
+  /* KeywordNamespace */
+  .chroma .kn {
+    @apply text-pink-700;
+  }
+  /* KeywordPseudo */
+  .chroma .kp {
+    @apply text-sky-700;
+  }
+  /* KeywordReserved */
+  .chroma .kr {
+    @apply text-sky-700;
+  }
+  /* KeywordType */
+  .chroma .kt {
+    @apply text-sky-700;
+  }
+  /* Name */
+  .chroma .n {
+    color: inherit;
+  }
+  /* NameAttribute */
+  .chroma .na {
+    @apply text-lime-700;
+  }
+  /* NameBuiltin */
+  .chroma .nb {
+    color: inherit;
+  }
+  /* NameBuiltinPseudo */
+  .chroma .bp {
+    color: inherit;
+  }
+  /* NameClass */
+  .chroma .nc {
+    @apply text-lime-700;
+  }
+  /* NameConstant */
+  .chroma .no {
+    @apply text-sky-700;
+  }
+  /* NameDecorator */
+  .chroma .nd {
+    @apply text-lime-700;
+  }
+  /* NameEntity */
+  .chroma .ni {
+    color: inherit;
+  }
+  /* NameException */
+  .chroma .ne {
+    @apply text-lime-700;
+  }
+  /* NameFunction */
+  .chroma .nf {
+    @apply text-lime-700;
+  }
+  /* NameFunctionMagic */
+  .chroma .fm {
+    color: inherit;
+  }
+  /* NameLabel */
+  .chroma .nl {
+    color: inherit;
+  }
+  /* NameNamespace */
+  .chroma .nn {
+    color: inherit;
+  }
+  /* NameOther */
+  .chroma .nx {
+    @apply text-lime-700;
+  }
+  /* NameProperty */
+  .chroma .py {
+    color: inherit;
+  }
+  /* NameTag */
+  .chroma .nt {
+    @apply text-pink-700;
+  }
+  /* NameVariable */
+  .chroma .nv {
+    color: inherit;
+  }
+  /* NameVariableClass */
+  .chroma .vc {
+    color: inherit;
+  }
+  /* NameVariableGlobal */
+  .chroma .vg {
+    color: inherit;
+  }
+  /* NameVariableInstance */
+  .chroma .vi {
+    color: inherit;
+  }
+  /* NameVariableMagic */
+  .chroma .vm {
+    color: inherit;
+  }
+  /* Literal */
+  .chroma .l {
+    @apply text-violet-600;
+  }
+  /* LiteralDate */
+  .chroma .ld {
+    @apply text-orange-700;
+  }
+  /* LiteralString */
+  .chroma .s {
+    @apply text-orange-700;
+  }
+  /* LiteralStringAffix */
+  .chroma .sa {
+    @apply text-orange-700;
+  }
+  /* LiteralStringBacktick */
+  .chroma .sb {
+    @apply text-orange-700;
+  }
+  /* LiteralStringChar */
+  .chroma .sc {
+    @apply text-orange-700;
+  }
+  /* LiteralStringDelimiter */
+  .chroma .dl {
+    @apply text-orange-700;
+  }
+  /* LiteralStringDoc */
+  .chroma .sd {
+    @apply text-orange-700;
+  }
+  /* LiteralStringDouble */
+  .chroma .s2 {
+    @apply text-orange-700;
+  }
+  /* LiteralStringEscape */
+  .chroma .se {
+    @apply text-violet-700;
+  }
+  /* LiteralStringHeredoc */
+  .chroma .sh {
+    @apply text-orange-700;
+  }
+  /* LiteralStringInterpol */
+  .chroma .si {
+    @apply text-orange-700;
+  }
+  /* LiteralStringOther */
+  .chroma .sx {
+    @apply text-orange-700;
+  }
+  /* LiteralStringRegex */
+  .chroma .sr {
+    @apply text-orange-700;
+  }
+  /* LiteralStringSingle */
+  .chroma .s1 {
+    @apply text-orange-700;
+  }
+  /* LiteralStringSymbol */
+  .chroma .ss {
+    @apply text-orange-700;
+  }
+  /* LiteralNumber */
+  .chroma .m {
+    @apply text-violet-600;
+  }
+  /* LiteralNumberBin */
+  .chroma .mb {
+    @apply text-violet-600;
+  }
+  /* LiteralNumberFloat */
+  .chroma .mf {
+    @apply text-violet-600;
+  }
+  /* LiteralNumberHex */
+  .chroma .mh {
+    @apply text-violet-600;
+  }
+  /* LiteralNumberInteger */
+  .chroma .mi {
+    @apply text-violet-600;
+  }
+  /* LiteralNumberIntegerLong */
+  .chroma .il {
+    @apply text-violet-600;
+  }
+  /* LiteralNumberOct */
+  .chroma .mo {
+    @apply text-violet-600;
+  }
+  /* Operator */
+  .chroma .o {
+    @apply text-pink-700;
+  }
+  /* OperatorWord */
+  .chroma .ow {
+    @apply text-pink-700;
+  }
+  /* Punctuation */
+  .chroma .p {
+    color: inherit;
+  }
+  /* Comment */
+  .chroma .c {
+    color: inherit;
+  }
+  /* CommentHashbang */
+  .chroma .ch {
+    color: inherit;
+  }
+  /* CommentMultiline */
+  .chroma .cm {
+    color: inherit;
+  }
+  /* CommentSingle */
+  .chroma .c1 {
+    color: inherit;
+  }
+  /* CommentSpecial */
+  .chroma .cs {
+    color: inherit;
+  }
+  /* CommentPreproc */
+  .chroma .cp {
+    color: inherit;
+  }
+  /* CommentPreprocFile */
+  .chroma .cpf {
+    color: inherit;
+  }
+  /* Generic */
+  .chroma .g {
+  }
+  /* GenericDeleted */
+  .chroma .gd {
+  }
+  /* GenericEmph */
+  .chroma .ge {
+    font-style: italic;
+  }
+  /* GenericError */
+  .chroma .gr {
+  }
+  /* GenericHeading */
+  .chroma .gh {
+  }
+  /* GenericInserted */
+  .chroma .gi {
+  }
+  /* GenericOutput */
+  .chroma .go {
+  }
+  /* GenericPrompt */
+  .chroma .gp {
+  }
+  /* GenericStrong */
+  .chroma .gs {
+    font-weight: bold;
+  }
+  /* GenericSubheading */
+  .chroma .gu {
+  }
+  /* GenericTraceback */
+  .chroma .gt {
+  }
+  /* GenericUnderline */
+  .chroma .gl {
+  }
+  /* TextWhitespace */
+  .chroma .w {
+  }
+}

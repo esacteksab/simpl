@@ -1,0 +1,25 @@
+<!doctype html>
+<html
+  class="bg-neutral-50 text-neutral-900 dark:bg-dark-bg-primary dark:text-white"
+  lang="{{ site.Language.LanguageCode }}"
+  dir="{{ or site.Language.LanguageDirection `ltr` }}">
+  <head>
+    {{ partial "head.html" . }}
+  </head>
+
+  <body class="font-simpl @container w-full">
+    <div class="flex flex-col items-center justify-center justify-items-center">
+      <header
+        class="mt-5 flex flex-col items-center justify-center justify-items-center">
+        {{ partial "header.html" . }}
+      </header>
+    </div>
+    <main class="main flex w-full flex-col flex-nowrap p-16">
+      {{ block "main" . }}{{ end }}
+    </main>
+    <footer
+      class="mb-25 flex flex-col flex-nowrap items-center justify-center justify-items-center">
+      {{ partial "footer.html" . }}
+    </footer>
+  </body>
+</html>
