@@ -13,6 +13,8 @@ met/installed.
 
 I've extended that post-merge script more and I wanted to share!
 
+<!--more-->
+
 Let me break it down in pieces and explain the parts
 
 ```bash

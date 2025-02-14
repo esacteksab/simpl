@@ -9,7 +9,11 @@ new imports. A necessary part of ensuring those new files are being used
 is restarting the uWSGI service. That's simple enough with service uwsgi
 restart but what I had failed to do was a `pip install -Ur
 prod-requirements.txt` after I had done a git pull to ensure that I had
-all my dependancies installed. So after restarting uWSGI I had errors in
+all my dependancies installed.
+
+<!--more-->
+
+So after restarting uWSGI I had errors in
 my app's log file like so:
 
 ```bash
