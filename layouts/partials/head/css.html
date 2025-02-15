@@ -36,21 +36,3 @@
     {{- end }}
   {{- end }}
 {{- end }}
-
-{{- range resources.Match "fontawesome/webfonts/*" }}
-  {{- if eq hugo.Environment "development" }}
-    <link rel="stylesheet" href="{{ .RelPermalink }}" />
-  {{- else }}
-    {{- with . }}
-      <link
-        rel="stylesheet"
-        href="{{ .RelPermalink }}"
-        integrity="{{ .Data.Integrity }}"
-        crossorigin="anonymous" />
-    {{- end }}
-  {{- end }}
-{{- end }}
-
-
-<!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.7.2/css/all.css"
-  integrity="sha384-h/hnnw1Bi4nbpD6kE7nYfCXzovi622sY5WBxww8ARKwpdLj5kUWjRuyiXaD1U2JT" crossorigin="anonymous" /> -->
