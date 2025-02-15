@@ -11,7 +11,7 @@
 {{- $menuID := .menuID }}
 
 {{- with index site.Menus $menuID }}
-  <nav class="flex-column flex">
+  <nav class="inline-flex pt-8">
     <ul class="flex list-outside list-none">
       {{- partial "inline/menu/walk.html" (dict "page" $page "menuEntries" .) }}
     </ul>

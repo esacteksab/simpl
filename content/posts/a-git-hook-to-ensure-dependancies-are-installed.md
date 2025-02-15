@@ -1,7 +1,6 @@
 ---
 title: A Git hook to ensure dependancies are installed
 date: 2013-03-02
-draft: true
 ---
 
 I was fiddling with Django today, I updated an app's model.py and it had

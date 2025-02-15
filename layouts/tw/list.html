@@ -1,0 +1,23 @@
+{{ define "main" }}
+  {{ $pages := where site.RegularPages "Section" "tw" }}
+  {{ $paginator := .Paginate $pages }}
+
+  {{ range $paginator.Pages }}
+  <article>
+    <h2><a class="no-underline" href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></h2>
+    {{ if eq .Truncated false }}
+    <p>There is no summary. Someone got lazy.</p>
+    {{ else }}
+    {{ .Summary }}
+    {{ end }}
+    {{ if .Truncated }}
+    <span class="read-more mt-8 flex flew-row">
+        <a href="{{ .RelPermalink }}">Read more &rarr;</a>
+    </span>
+    {{ end }}
+  </article>
+    <hr />
+  {{ end }}
+  {{ template "_internal/pagination.html" (dict "page" . "format" "terse") }}
+  tw/list.html
+{{ end }}

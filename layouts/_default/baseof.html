@@ -1,24 +1,22 @@
 <!doctype html>
 <html
-  class="bg-neutral-50 text-neutral-900 dark:bg-dark-bg-primary dark:text-white"
+  class="bg-neutral-50 text-neutral-900 dark:bg-dark-primary dark:text-gray-300"
   lang="{{ site.Language.LanguageCode }}"
   dir="{{ or site.Language.LanguageDirection `ltr` }}">
   <head>
     {{ partial "head.html" . }}
   </head>
 
-  <body class="font-simpl @container w-full">
-    <div class="flex flex-col items-center justify-center justify-items-center">
+  <body class="@container">
       <header
-        class="mt-5 flex flex-col items-center justify-center justify-items-center">
+        class="py-8 flex flex-col items-center content-center">
         {{ partial "header.html" . }}
       </header>
-    </div>
-    <main class="main flex w-full flex-col flex-nowrap p-16">
+    <main class="main flex flex-col p-8 mx-64 rounded-2xl dark:bg-dark-secondary">
       {{ block "main" . }}{{ end }}
     </main>
     <footer
-      class="mb-25 flex flex-col flex-nowrap items-center justify-center justify-items-center">
+      class="mb-25 pt-8 flex flex-col items-center">
       {{ partial "footer.html" . }}
     </footer>
   </body>

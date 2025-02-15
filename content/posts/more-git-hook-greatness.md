@@ -1,7 +1,6 @@
 ---
 title: More Git hook greatness
 date: 2013-03-07
-draft: true
 ---
 
 In an earlier

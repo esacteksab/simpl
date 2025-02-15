@@ -1,8 +1,7 @@
-+++
-title = 'TailwindCSS 4 CLI Defer with Hugo'
-date = 2023-01-01T08:00:00-07:00
-draft = false
-+++
+---
+title: 'TW | TailwindCSS 4 CLI Defer with Hugo'
+date: 2023-01-01
+---
 
 Laborum voluptate pariatur ex culpa magna nostrud est incididunt fugiat pariatur do dolor ipsum enim. Consequat tempor do dolor eu. Non id id anim anim excepteur excepteur pariatur nostrud qui irure ullamco.
 
@@ -274,7 +273,7 @@ lazy:
 
 - This is a list item with two paragraphs.
 
-                                                                                                This is the second paragraph in the list item. You're
+                                                                                                          This is the second paragraph in the list item. You're
 
     only required to indent the first line. Lorem ipsum dolor
     sit amet, consectetuer adipiscing elit.

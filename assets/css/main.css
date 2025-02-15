@@ -1,39 +1,42 @@
 @import "tailwindcss";
 
 @theme {
-  --color-dark-bg-primary: #303030;
-  --color-dark-bg-secondary: #202020;
+  --color-dark-primary: #121212;
+  --color-dark-secondary: #1e1e1e;
 }
 
 @layer components {
   h1 {
-    @apply text-5xl font-bold;
+    @apply text-5xl font-semibold;
   }
 
   h2 {
-    @apply text-4xl font-bold;
+    @apply text-4xl font-semibold;
   }
 
   h3 {
-    @apply text-3xl font-bold;
+    @apply text-3xl font-semibold;
   }
   h4 {
-    @apply text-2xl font-bold;
+    @apply text-2xl font-semibold;
   }
   h5 {
-    @apply text-xl font-bold;
+    @apply text-xl font-semibold;
   }
   h6 {
-    @apply text-lg font-bold;
+    @apply text-lg font-semibold;
   }
 
-  a:hover {
+  a {
     @apply underline underline-offset-4;
   }
 
   p {
-    @apply mt-2 text-base/6 font-medium;
+    @apply mt-2 leading-relaxed;
   }
+  /*  p {
+    @apply mt-2 text-base/6 font-medium;
+  }*/
 
   .main :is(ul, ol) {
     @apply list-outside;
@@ -59,8 +62,8 @@
     @apply mt-8 pb-8;
   }
 
-  .pager a {
-    @apply text-xl font-bold;
+  .read-more a {
+    @apply font-semibold;
   }
 }
 
@@ -77,17 +80,8 @@ h2 + h3 {
   @apply mt-2;
 }
 
-p {
-  @apply mt-2 text-base leading-relaxed;
-}
-
-.home-preview {
-  margin-top: 5px;
-}
-
 .pagination li {
   display: inline;
-  background-color: orange;
 }
 
 /*
@@ -97,8 +91,16 @@ Dark Mode
 */
 
 @media (prefers-color-scheme: dark) {
+  main {
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.5);
+  }
   blockquote {
-    @apply mb-4 mt-3 pl-3;
+    @apply mt-3 mb-4 pl-3;
+  }
+
+  img {
+    @apply brightness-[.9];
+    @apply contrast-[1.1];
   }
 
   .alert p {
@@ -163,18 +165,17 @@ Dark Mode
     }
   }
 
-  .main a {
-    @apply text-blue-400;
-  }
-
   .main h2 a {
     @apply text-neutral-50;
   }
 
   .highlight {
     @apply my-1.5;
+    @apply rounded-2xl;
+    @apply shadow-md;
+    @apply shadow-neutral-700;
     .chroma {
-      @apply border-1 my-3 rounded-2xl border-neutral-600;
+      @apply my-3 rounded-2xl border-1 border-neutral-600;
       .lntd {
         @apply border-r-1 border-neutral-600;
         @apply last:border-none;
@@ -196,28 +197,28 @@ Dark Mode
     pre {
       @apply mt-1.5;
       code {
-        @apply p-1.5;
-        @apply rounded-sm font-mono;
-        @apply bg-dark-bg-secondary;
+        @apply p-1;
+        @apply rounded-lg font-mono text-sm;
+        @apply bg-neutral-900;
       }
     }
     code {
       @apply p-1.5;
-      @apply rounded-sm font-mono;
-      @apply bg-dark-bg-secondary;
+      @apply rounded-lg font-mono;
+      @apply bg-dark-secondary;
     }
   }
 
   .tags {
     @apply ml-2 p-0.5;
     @apply rounded-sm font-mono;
-    @apply bg-dark-bg-secondary;
+    @apply bg-dark-secondary;
   }
 
   .tags a {
     @apply text-neutral-50;
   }
-  .pager a {
+  .read-more a {
     @apply text-neutral-50;
   }
 
@@ -227,7 +228,7 @@ Dark Mode
   }
 
   footer .fa-inverse {
-    @apply text-dark-bg-primary;
+    @apply text-dark-primary;
   }
 }
 
@@ -241,7 +242,7 @@ Light Mode
 
 @media (prefers-color-scheme: light) {
   blockquote {
-    @apply mb-4 mt-3 pl-3;
+    @apply mt-3 mb-4 pl-3;
   }
 
   .alert p {
@@ -305,9 +306,6 @@ Light Mode
       @apply text-red-700;
     }
   }
-  .main a {
-    @apply text-blue-700;
-  }
 
   .main h2 a {
     @apply text-neutral-900;
@@ -315,8 +313,9 @@ Light Mode
 
   .highlight {
     @apply my-1.5;
+    @apply shadow-lg;
     .chroma {
-      @apply border-1 my-3 rounded-2xl border-neutral-600;
+      @apply my-3 rounded-2xl border-1 border-neutral-600;
       .lntd {
         @apply border-r-1 border-neutral-600;
         @apply last:border-none;
@@ -344,9 +343,9 @@ Light Mode
       }
     }
     code {
-      @apply p-1.5;
-      @apply rounded-sm font-mono;
-      @apply bg-neutral-200;
+      @apply p-1;
+      @apply rounded-lg font-mono text-sm;
+      @apply bg-gray-200;
     }
   }
   .tags {
@@ -359,7 +358,7 @@ Light Mode
     @apply text-neutral-900;
   }
 
-  .pager a {
+  .read-more a {
     @apply text-neutral-900;
   }
 
@@ -385,12 +384,12 @@ Generated using: hugo gen chromastyles --style=github-dark
   /* Background */
   .bg {
     color: var(--text-neutral-50);
-    @apply bg-dark-bg-secondary;
+    @apply bg-dark-secondary;
   }
   /* PreWrapper */
   .chroma {
     color: var(--text-neutral-50);
-    @apply bg-dark-bg-secondary;
+    @apply bg-dark-secondary;
   }
   /* Other */
   .chroma .x {
