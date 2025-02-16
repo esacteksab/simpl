@@ -1,8 +1,10 @@
 @import "tailwindcss";
 
 @theme {
-  --color-dark-primary: #121212;
-  --color-dark-secondary: #1e1e1e;
+  /*--color-dark-primary: #27272e;*/
+  --color-dark-primary: #171717;
+  /*--color-dark-secondary: #1e1e1e;*/
+  --color-dark-secondary: #272727;
 }
 
 @layer components {

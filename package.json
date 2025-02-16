@@ -8,6 +8,11 @@
     "commit": "cz",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  },
   "devDependencies": {
     "@tailwindcss/cli": "^4.0.0",
     "@tailwindcss/nesting": "^0.0.0-insiders.565cd3e",
@@ -27,9 +32,7 @@
     "prettier-plugin-toml": "^2.0.1",
     "tailwindcss": "^4.0.6"
   },
-  "config": {
-    "commitizen": {
-      "path": "./node_modules/cz-conventional-changelog"
-    }
+  "overrides": {
+    "glob": "9.3.5"
   }
 }
