@@ -1,0 +1,27 @@
+{{ define "main" }}
+  <article class="post flex-col flex-wrap">
+    <h2>{{ .Title }}</h2>
+
+    {{ $dateMachine := .Date | time.Format "2006-01-02T15:04:05-07:00" }}
+    {{ $dateHuman := .Date | time.Format ":date_long" }}
+    <time datetime="{{ $dateMachine }}"><p class="text-xs">{{ $dateHuman }}</p></time>
+    {{ .Content }}
+  {{ partial "terms.html" (dict "taxonomy" "tags" "page" .) }}
+  <hr />
+  </article>
+    <div class="pager flex flex-1 flex-col">
+    <ul class="bottom-8 flex list-none flex-wrap">
+      <li class="mr-auto">
+        {{ with .PrevInSection }}
+          <a href="{{ .RelPermalink }}">Previous Post</a>
+        {{ end }}
+      </li>
+      <li class="ml-auto">
+        {{ with .NextInSection }}
+          <a href="{{ .RelPermalink }}">Next Post</a>
+        {{ end }}
+      </li>
+    </ul>
+  </div>
+  "posts/single.html"
+{{ end }}

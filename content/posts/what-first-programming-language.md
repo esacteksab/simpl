@@ -1,7 +1,6 @@
 ---
 title: "What Programming Language Should I Learn First"
 date: 2023-06-27
-draft: true
 ---
 
 _First, **a disclaimer**. I'm not a polyglot programmer. I've touched a few languages in my career, read a few more, but professionally, I've only spent time with two'ish. It's also worth noting there are individuals who are incredibly passionate about their language of choice and have no problems telling you why the language you've chose is garbage. They will spend an inordinate amount of time during their career doing this. The rest of us will be off enjoying our time programming in a language that brings us joy, regardless of some stranger's opinion It's likely we're strangers. So do with this what you will._
@@ -39,13 +38,13 @@ Insert things here
 It still depends. My list goes like this in no particular order, for now.
 
 - Python
-  - After many failed attempts at various Microsoft languages (Visual Basic, .Net), Python was the first language that I sort of got. It didn't immediately click, I fought like hell to wrap my head around it and wrangle it, but the day finally came with things _did_ click. Python is dynamically typed and is often done is in an Object Oriented Manner, though it can be written in a Functional pattern (I've never done this).
+    - After many failed attempts at various Microsoft languages (Visual Basic, .Net), Python was the first language that I sort of got. It didn't immediately click, I fought like hell to wrap my head around it and wrangle it, but the day finally came with things _did_ click. Python is dynamically typed and is often done is in an Object Oriented Manner, though it can be written in a Functional pattern (I've never done this).
 - Ruby
-  - Ruby _can_ be like Python. It can also be like Perl. Don't write Ruby like Perl, write Ruby like Python. Ruby is a dynamically typed language with a lof of similarities to Python. I got hurt by Ruby's package management too many times and spent my entire career avoiding it.
+    - Ruby _can_ be like Python. It can also be like Perl. Don't write Ruby like Perl, write Ruby like Python. Ruby is a dynamically typed language with a lof of similarities to Python. I got hurt by Ruby's package management too many times and spent my entire career avoiding it.
 - TypeScript
-  - TypeScript is JavaScript with static types. I can't recommend JavaScript, but I will recommend TypeScript because of the static types.
+    - TypeScript is JavaScript with static types. I can't recommend JavaScript, but I will recommend TypeScript because of the static types.
 - Golang
-  - I know many individuals who started their career in Python and made the jump to Golang to never look back. Golang is statically typed. This was likely driven by (at the time), Python's poor concurrency support. Go (short for Golang) does this really well. Also, Go is a compiled language which in the end gives you a _single_ file to run. Python and Ruby are not compiled languages and this can have some rough edges around packaging for a production environment.
+    - I know many individuals who started their career in Python and made the jump to Golang to never look back. Golang is statically typed. This was likely driven by (at the time), Python's poor concurrency support. Go (short for Golang) does this really well. Also, Go is a compiled language which in the end gives you a _single_ file to run. Python and Ruby are not compiled languages and this can have some rough edges around packaging for a production environment.
 - Elixir
 - PHP
 

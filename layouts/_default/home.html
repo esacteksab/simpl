@@ -1,14 +1,23 @@
 {{ define "main" }}
-  {{ range site.RegularPages }}
-    <div class="home-preview flex flex-1 flex-col">
-      <h2><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></h2>
+  {{ $pages := site.RegularPages }}
+  {{ $paginator := .Paginate $pages }}
+
+  {{ range $paginator.Pages }}
+    <article class="flex-col">
+      <h2><a class="no-underline" href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></h2>
+      {{ if eq .Truncated false }}
+      <p>There is no summary. Someone got lazy.</p>
+      {{ else }}
       {{ .Summary }}
-    </div>
-    <div class="pager mt-8 ml-auto flex flex-1 flex-col">
-      {{ if .Truncated }}
-        <a href="{{ .RelPermalink }}">[Read More]</a>
       {{ end }}
-    </div>
+      {{ if .Truncated }}
+        <span class="read-more mt-8 flex flex-row">
+          <a href="{{ .RelPermalink }}">Read More &rarr;</a>
+        </span>
+      {{ end }}
+    </article>
     <hr />
   {{ end }}
-{{ end }}
+  {{ template "_internal/pagination.html" . }}
+  _default/home.html
+  {{ end }}

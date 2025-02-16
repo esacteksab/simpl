@@ -4,6 +4,27 @@ enableGitInfo = true
 languageCode = 'en-US'
 title = 'My New Hugo Site'
 
+[[menus.main]]
+name = 'Home'
+pageRef = '/'
+weight = 10
+
+[[menus.main]]
+name = 'Posts'
+pageRef = '/posts'
+weight = 20
+
+[[menus.main]]
+name = 'Tags'
+pageRef = '/tags'
+weight = 30
+
+[[menus.main]]
+name = 'Tailwind'
+pageRef = '/tw'
+weight = 25
+
+
 [taxonomies]
     tags = "tags"
 
@@ -83,6 +104,7 @@ title = 'My New Hugo Site'
         X-XSS-Protection = '1; mode=block'
 
 [pagination]
+    disableAliases = true
     pagerSize = 3
     path = "page"
 

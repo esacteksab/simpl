@@ -1,6 +1,6 @@
 ---
-title: "Posts | Foo"
+title: "_index.md in posts"
 author: "Barry Morrison"
 date: 2025-02-01T23:36:58-06:00
-tags: ["page", "posts", "foo"]
+tags: ["index", "posts"]
 ---
