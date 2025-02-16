@@ -1,10 +1,10 @@
-{{ $svgs := dict
+{{- $svgs := dict
 "caution" "fas fa-circle-exclamation"
 "important" "fas fa-star"
 "note" "fas fa-note-sticky"
 "tip" "fas fa-lightbulb"
-"warning" "fas fa-triangle-exclamation"
-}}
+"warning" "fas fa-triangle-exclamation" -}}
+
 {{ if eq .Type "alert" }}
     <blockquote class="alert alert-{{ .AlertType }} flex flex-col border-l-4 border-1 rounded-r-lg">
         <div class="inline-flex items-center">
@@ -16,14 +16,10 @@
             <h3>{{ . }}</h3>
         {{ else }}
             <h3>{{ or (i18n .AlertType) (title .AlertType) }}</h3>
+        {{ end }}
         </div>
         <div class="flex flex-col mb-2">
             {{ .Text }}
         </div>
-    </blockquote>
-    {{ end }}
-    {{ else }}
-    <blockquote>
-        {{ .Text }}
     </blockquote>
 {{ end }}

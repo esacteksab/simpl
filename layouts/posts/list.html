@@ -18,6 +18,6 @@
   </article>
     <hr />
   {{ end }}
-  {{ template "_internal/pagination.html" (dict "page" . "format" "terse") }}
+  {{ partial "pagination.html" . }}
   posts/list.html
 {{ end }}

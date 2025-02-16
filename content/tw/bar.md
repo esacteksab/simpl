@@ -5,39 +5,11 @@ date: 2023-01-01
 
 Laborum voluptate pariatur ex culpa magna nostrud est incididunt fugiat pariatur do dolor ipsum enim. Consequat tempor do dolor eu. Non id id anim anim excepteur excepteur pariatur nostrud qui irure ullamco.
 
-<!--more-->
-
-#### Warning
-
-`<i class="fa-solid fa-triangle-exclamation"></i>`
-
-#### Caution
-
-`<i class="fa-solid fa-circle-exclamation"></i>`
-
-#### Important
-
-`<i class="fa-solid fa-star"></i>`
-
-#### Note
-
-`<i class="fa-solid fa-note-sticky"></i>` or `<i class="fa-regular fa-note-sticky"></i>`
-
-#### Tip
-
-`<i class="fa-solid fa-lightbulb"></i>` or `<i class="fa-regular fa-lightbulb"></i>`
-
-#### Emojify
-
-`{{ transform.Emojify (index $emojis .AlertType) }}`
-
----
-
-## Style This
+## A Table of Conents via a shortcode
 
 {{< toc >}}
 
-### Philosophy
+## Philosophy
 
 Markdown is intended to be as easy-to-read and easy-to-write as is feasible.
 
@@ -273,10 +245,7 @@ lazy:
 
 - This is a list item with two paragraphs.
 
-                                                                                                          This is the second paragraph in the list item. You're
-
-    only required to indent the first line. Lorem ipsum dolor
-    sit amet, consectetuer adipiscing elit.
+    This is the second paragraph in the list item. You're only required to indent the first line. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
 
 - Another item in the same list.
 
@@ -393,26 +362,13 @@ Use the `printf()` function.
 
 ## GitHub Markdown
 
+### To Do List
+
 - [.] Period. Does that work?
 - [ ] Empty
 - [x] X
 
-> [!NOTE]+
-> This is a note.
-
-> [!TIP]+
-> This is a tip.
-
-> [!IMPORTANT]+
-> This is important.
-
-> [!CAUTION]+
-> This is a caution.
-
-> [!WARNING]+
-> This is a warning.
-
-##### render-hooks
+### Alerts
 
 > [!NOTE]
 > Useful information that users should know, even when skimming content.
@@ -429,11 +385,7 @@ Use the `printf()` function.
 > [!WARNING]
 > Urgent info that needs immediate user attention to avoid problems.
 
-##### Details
-
-###### Summary
-
-Don't use `summary`. Details is good enough.
+## Details
 
 {{< details summary="Grouped Details" name="my-details" >}}
 Specifying a `name` allows elements to be connected, with only one able to be open at a time.
@@ -446,3 +398,7 @@ Another one. No summary, but `name` matches the one above, `my-details`
 {{< details >}}
 Another one. No Summary. No Name
 {{< /details >}}
+
+### Summary
+
+Don't use `summary`. Details is good enough.
