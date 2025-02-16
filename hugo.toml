@@ -44,7 +44,7 @@ weight = 25
 [markup.tableOfContents]
     endLevel = 6
     ordered = false
-    startLevel = 2
+    startLevel = 1
 
 [outputs]
     home = ["html"]

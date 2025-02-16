@@ -7,13 +7,13 @@
       "optimize" (not hugo.IsDevelopment)
     }}
     {{ with . | css.TailwindCSS $opts }}
-      {{ if eq hugo.Environment "development" }}
-        <link rel="stylesheet" href="{{ .RelPermalink }}" />
+      {{ if hugo.IsDevelopment }}
+        <link rel="stylesheet" href="{{ .RelPermalink | absURL }}" />
       {{ else }}
         {{ with . | fingerprint }}
           <link
             rel="stylesheet"
-            href="{{ .RelPermalink }}"
+            href="{{ .RelPermalink | absURL }}"
             integrity="{{ .Data.Integrity }}"
             crossorigin="anonymous" />
         {{ end }}
@@ -24,13 +24,13 @@
 {{ end }}
 
 {{- with resources.Get "fontawesome/css/all.css" }}
-  {{- if eq hugo.Environment "development" }}
-    <link rel="stylesheet" href="{{ .RelPermalink }}" />
+  {{ if hugo.IsDevelopment }}
+    <link rel="stylesheet" href="{{ .RelPermalink | absURL }}" />
   {{- else }}
     {{- with . | postCSS | minify | fingerprint }}
       <link
         rel="stylesheet"
-        href="{{ .RelPermalink }}"
+        href="{{ .RelPermalink | absURL }}"
         integrity="{{ .Data.Integrity }}"
         crossorigin="anonymous" />
     {{- end }}

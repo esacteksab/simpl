@@ -67,6 +67,10 @@
   }
 }
 
+blockquote {
+  @apply border-l-4;
+}
+
 p + h2,
 p + h3,
 ul + h2,
@@ -95,7 +99,7 @@ Dark Mode
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.5);
   }
   blockquote {
-    @apply mt-3 mb-4 pl-3;
+    @apply mt-3 mb-4 border-l-3 pl-3;
   }
 
   img {
@@ -242,7 +246,7 @@ Light Mode
 
 @media (prefers-color-scheme: light) {
   blockquote {
-    @apply mt-3 mb-4 pl-3;
+    @apply mt-3 mb-4 border-l-3 pl-3;
   }
 
   .alert p {
@@ -313,7 +317,8 @@ Light Mode
 
   .highlight {
     @apply my-1.5;
-    @apply shadow-lg;
+    @apply rounded-2xl shadow-lg;
+
     .chroma {
       @apply my-3 rounded-2xl border-1 border-neutral-600;
       .lntd {
@@ -343,7 +348,7 @@ Light Mode
       }
     }
     code {
-      @apply p-1;
+      @apply p-1.5;
       @apply rounded-lg font-mono text-sm;
       @apply bg-gray-200;
     }

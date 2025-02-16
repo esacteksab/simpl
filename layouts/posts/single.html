@@ -9,19 +9,6 @@
   {{ partial "terms.html" (dict "taxonomy" "tags" "page" .) }}
   <hr />
   </article>
-    <div class="pager flex flex-1 flex-col">
-    <ul class="bottom-8 flex list-none flex-wrap">
-      <li class="mr-auto">
-        {{ with .PrevInSection }}
-          <a href="{{ .RelPermalink }}">Previous Post</a>
-        {{ end }}
-      </li>
-      <li class="ml-auto">
-        {{ with .NextInSection }}
-          <a href="{{ .RelPermalink }}">Next Post</a>
-        {{ end }}
-      </li>
-    </ul>
-  </div>
+{{ partial "pager.html" . }}
   "posts/single.html"
 {{ end }}
