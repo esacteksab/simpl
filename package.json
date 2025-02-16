@@ -5,17 +5,16 @@
   "author": "@esacteksab",
   "main": "index.js",
   "scripts": {
-    "commit": "commit",
+    "commit": "cz",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {
-    "@commitlint/cli": "^19.7.1",
-    "@commitlint/config-conventional": "^19.7.1",
-    "@commitlint/prompt-cli": "^19.7.1",
     "@tailwindcss/cli": "^4.0.0",
     "@tailwindcss/nesting": "^0.0.0-insiders.565cd3e",
     "@tailwindcss/postcss": "^4.0.6",
     "autoprefixer": "^10.4.20",
+    "commitizen": "^4.3.1",
+    "cz-conventional-changelog": "^3.3.0",
     "postcss": "^8.5.2",
     "postcss-cli": "^11.0.0",
     "postcss-import": "^16.1.0",
@@ -27,5 +26,10 @@
     "prettier-plugin-tailwindcss": "^0.6.11",
     "prettier-plugin-toml": "^2.0.1",
     "tailwindcss": "^4.0.6"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
   }
 }
