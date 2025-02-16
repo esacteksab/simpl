@@ -1,19 +1,29 @@
 {
+  "name": "simpl",
+  "version": "0.0.1",
+  "description": "A simpl(e) Hugo Theme",
   "author": "@esacteksab",
+  "main": "index.js",
+  "scripts": {
+    "commit": "cz",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
   "config": {
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
     }
   },
-  "description": "A simpl(e) Hugo Theme",
   "devDependencies": {
     "@commitlint/cli": "^19.7.1",
     "@commitlint/config-conventional": "^19.7.1",
+    "@commitlint/cz-commitlint": "^19.6.1",
     "@tailwindcss/cli": "^4.0.0",
     "@tailwindcss/nesting": "^0.0.0-insiders.565cd3e",
     "@tailwindcss/postcss": "^4.0.6",
     "autoprefixer": "^10.4.20",
+    "commitizen": "^4.3.1",
     "cz-conventional-changelog": "^3.3.0",
+    "inquirer": "^9.3.7",
     "postcss": "^8.5.2",
     "postcss-cli": "^11.0.0",
     "postcss-import": "^16.1.0",
@@ -25,12 +35,5 @@
     "prettier-plugin-tailwindcss": "^0.6.11",
     "prettier-plugin-toml": "^2.0.1",
     "tailwindcss": "^4.0.6"
-  },
-  "main": "index.js",
-  "name": "simpl",
-  "scripts": {
-    "commit": "cz",
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "version": "0.0.1"
+  }
 }
