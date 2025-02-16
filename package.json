@@ -1,11 +1,19 @@
 {
   "author": "@esacteksab",
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  },
   "description": "A simpl(e) Hugo Theme",
   "devDependencies": {
+    "@commitlint/cli": "^19.7.1",
+    "@commitlint/config-conventional": "^19.7.1",
     "@tailwindcss/cli": "^4.0.0",
     "@tailwindcss/nesting": "^0.0.0-insiders.565cd3e",
     "@tailwindcss/postcss": "^4.0.6",
     "autoprefixer": "^10.4.20",
+    "cz-conventional-changelog": "^3.3.0",
     "postcss": "^8.5.2",
     "postcss-cli": "^11.0.0",
     "postcss-import": "^16.1.0",
@@ -21,6 +29,7 @@
   "main": "index.js",
   "name": "simpl",
   "scripts": {
+    "commit": "cz",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "version": "0.0.1"

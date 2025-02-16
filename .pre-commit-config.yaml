@@ -1,4 +1,11 @@
 repos:
+  - repo: https://github.com/alessandrojcm/commitlint-pre-commit-hook
+    rev: v9.21.0
+    hooks:
+      - id: commitlint
+        stages: [commit-msg]
+        additional_dependencies: ["@commitlint/config-conventional"]
+
   - repo: https://github.com/google/keep-sorted
     rev: v0.6.0
     hooks:
@@ -16,10 +23,6 @@ repos:
           - --allow-multiple-documents
       - id: check-merge-conflict
         name: "Check Merge Conflicts"
-      - id: pretty-format-json
-        name: "Pretty Format JSON"
-        args:
-          - --autofix
       - id: trailing-whitespace
         name: "Trailing Whitespace"
         args:
