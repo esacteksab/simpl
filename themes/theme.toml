@@ -1,0 +1,19 @@
+name = 'simpl'
+license = 'MIT'
+licenselink = 'https://github.com/esacteksab/simpl/LICENSE'
+description = 'An attempt at a barebones theme.'
+
+# The home page of the theme, where the source can be found
+homepage = 'https://github.com/esacteksab/simpl'
+
+# If you have a running demo of the theme
+demosite = 'https://barrymorrison.com'
+
+# Taxonomy terms
+tags = ['blog']
+features = ['dark', 'i18n', 'a11y', 'tailwindcss']
+
+# If the theme has a single author
+[author]
+name = 'Barry Morrison'
+homepage = 'https://barrymorrison.com'

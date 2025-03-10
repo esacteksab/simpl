@@ -1,0 +1,37 @@
+# top-most EditorConfig file
+root = true
+
+# defaults
+[*]
+charset = utf-8
+end_of_line = lf
+insert_final_newline = true
+trim_trailing_whitespace = true
+max_line_length = 80
+indent_size = 2
+indent_style = space
+
+# CSS
+# https://google.github.io/styleguide/htmlcssguide.xml#General_Formatting_Rules
+# http://cssguidelin.es/#syntax-and-formatting
+[*.css]
+indent_size = 2
+indent_style = space
+trim_trailing_whitespace = true
+
+# TOML
+# https://github.com/toml-lang/toml/tree/master/examples
+[*.toml]
+indent_size = 2
+indent_style = space
+
+[package.json]
+indent_style = space
+indent_size = 2
+
+[*.html]
+max_line_length = 130
+
+
+[*.md]
+trim_trailing_whitespace = false

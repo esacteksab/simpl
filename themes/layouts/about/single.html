@@ -1,0 +1,6 @@
+{{- define "main" }}
+{{ partial "post-meta.html" . }}
+<article class="about">
+    {{ .Content | emojify }}
+</article>
+{{ end -}}

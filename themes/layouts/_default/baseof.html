@@ -1,0 +1,20 @@
+<!doctype html>
+<html class="bg-neutral-50 text-neutral-950 dark:bg-dark-primary dark:text-neutral-50 font-sm md:text-base/7"
+  lang="{{ site.Language.LanguageCode }}" dir="{{ or site.Language.LanguageDirection `ltr` }}">
+  <head>
+    {{- partial "head.html" . }}
+  </head>
+  <body class="@container">
+    <header
+      class="flex flex-row items-baseline pb-2 lg:mx-32 bg-neutral-50 dark:bg-dark-primary dark:border-amber-600 border-b-1 border-orange-500">
+      {{- partial "header.html" . }}
+    </header>
+    <main
+      class="main sm:flex sm:flex-col p-2 md:px-8 md:pt-4 lg:mx-32 bg-neutral-100 dark:bg-dark-secondary border-b-2 border-orange-500 dark:border-amber-600">
+      {{- block "main" . -}}{{- end -}}
+    </main>
+    <footer class="mb-5 md:mb-25 md:pt-8 flex flex-col items-center">
+      {{- partial "footer.html" . -}}
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,18 @@
+<div class="post-metadata">
+  {{- $dateMachine := .Date | time.Format "2006-01-02T15:04:05-07:00" }}
+  {{- $dateHuman := .Date | time.Format ":date_long" }}
+  {{- $lastmod := .Lastmod | time.Format ":date_long" }}
+  <p class="tight font-semibold md:underline a:no-underline md:decoration-amber-600 md:underline-offset-4"> Published:
+    <time datetime="{{ $dateMachine }}">{{ $dateHuman }}</time>
+    {{- if .Lastmod }}<time datetime="{{$lastmod}}"> | Updated: {{$lastmod}}{{- end}}</time>
+    {{- if .Params.tags -}}<span class="hidden md:contents no-underline">&nbsp;|&nbsp; {{- with .Params.tags -}}
+      {{- if ge (len .) 1 -}}
+      {{- range . -}}
+      <a href="{{ $.Site.BaseURL }}tags/{{ . | urlize }}/">#{{- . -}}&nbsp;</a>
+      {{- end -}}
+      {{- end -}}
+      {{- end -}}
+    </span>
+  </p>
+  {{- end -}}
+</div>

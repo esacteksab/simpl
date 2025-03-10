@@ -1,0 +1,9 @@
+{{ define "main" }}
+{{ partial "post-meta.html" . }}
+<article class="post mb-16 mt-8">
+  {{ .Content | emojify }}
+</article>
+{{- partial "pager.html" . }}
+<!-- "posts/single.html" -->
+{{ end }}
+{{- /* Trim EOF */ -}}

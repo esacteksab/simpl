@@ -1,0 +1,17 @@
+<div class="pager flex flex-1 flex-col">
+  <ul class="bottom-8 flex list-none flex-wrap">
+    <li class="mr-auto">
+      {{ with $.PrevInSection }}
+      <a href="{{ .RelPermalink }}" aria-label="Previous" class="page-link" role="button"><span aria-hidden="true">
+          &larr; Previous Post</span></a>
+      {{ end }}
+    </li>
+    <li class="ml-auto">
+      {{ with $.NextInSection }}
+      <a href="{{ .RelPermalink }}" aria-label="Next" class="page-link" role="button"><span
+          aria-hidden="true"></span>Next Post &rarr;</a>
+      {{ end }}
+    </li>
+  </ul>
+</div>
+{{- /* Trim EOF */ -}}

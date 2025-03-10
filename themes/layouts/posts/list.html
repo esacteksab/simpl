@@ -1,0 +1,26 @@
+{{ define "main" }}
+{{ $pages := where site.RegularPages "Section" "posts" }}
+{{ $paginator := .Paginate $pages }}
+{{ range $paginator.Pages }}
+<article class="mt-4 post-ls">
+  <h2>
+    <a class="no-underline" href="{{ .RelPermalink }}">{{ .LinkTitle }}</a>
+  </h2>
+  {{ if eq .Truncated false }}
+  <p>There is no summary. Someone got lazy.</p>
+  {{ else }}
+  <span class="summary">
+    {{ .Summary | emojify }}
+  </span>
+  {{ end }}
+  {{ if .Truncated }}
+  <span class="read-more mt-8 flex flew-row">
+    <a href="{{ .RelPermalink }}" aria-label="Read More" class="page-link" role="button"><span aria-hidden="true">Read
+        more &rarr;</span></a>
+  </span>
+  {{ end }}
+</article>
+<hr />
+{{ end }}
+{{ partial "pagination.html" . }} "posts/list.html" {{ end }}
+{{- /* Trim EOF */ -}}

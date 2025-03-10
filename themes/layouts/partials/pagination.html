@@ -1,0 +1,20 @@
+{{- with .Paginator -}}
+{{- $currentPageNumber := .PageNumber -}}
+<div class="pager flex flex-1 flex-col">
+  <ul class="bottom-8 flex list-none flex-wrap">
+    {{- with .Prev -}}
+    <li class="mr-auto">
+      <a href="{{ .URL }}" aria-label="Previous" class="page-link" role="button"><span aria-hidden="true">&larr;
+          Previous Page</span></a>
+    </li>
+    {{- end -}}
+    {{- with .Next -}}
+    <li class="ml-auto">
+      <a href="{{ .URL }}" aria-label="Next" class="page-link" role="button"><span aria-hidden="true">Next Page
+          &rarr;</span></a>
+    </li>
+    {{- end -}}
+  </ul>
+</div>
+{{- end -}}
+{{- /* Trim EOF */ -}}
