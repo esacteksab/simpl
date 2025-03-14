@@ -1,10 +1,12 @@
 {{ define "main" }}
 {{ .Content | emojify }}
 <ul>
-    {{ range .Data.Terms.ByCount }}
-    <li class="list-none">#<a class="no-underline hover:underline" href="{{ .Page.RelPermalink }}">{{- lower .Page.Title
-            }}</a> &middot; {{ .Count }}</li>
-    {{ end }}
-</ul>
+{{ range .Data.Terms.ByCount }}
+<li class="list-none">#<a class="no-underline hover:underline" href="{{ .Page.RelPermalink }}">{{ lower .Page.Title }}</a> &middot; {{ .Count }}</li>
 {{ end }}
+</ul>
+
+<!-- "_default/taxonomy.html" -->
+{{ end }}
+
 {{- /* Trim EOF */ -}}

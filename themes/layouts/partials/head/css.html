@@ -1,25 +1,34 @@
 {{- with (templates.Defer (dict "key" "global")) -}}
 {{ $t := debug.Timer "tailwindcss" -}}
 {{ with resources.Get "css/main.css" -}}
-{{- $opts := dict "inlineImports" true "minify" true "optimize" (not hugo.IsDevelopment) -}}
+  {{- $opts := dict "inlineImports" true "minify" true "optimize" (not hugo.IsDevelopment) -}}
 {{- with . | css.TailwindCSS $opts -}}
 {{- if hugo.IsDevelopment -}}
-<link rel="stylesheet" href="{{ .RelPermalink | absURL }}" />
+  <link rel="stylesheet" href="{{ .RelPermalink | absURL }}" />
 {{- else -}}
 {{ with . | fingerprint }}
-<link rel="stylesheet" href="{{ .RelPermalink | absURL }}" integrity="{{ .Data.Integrity }}" crossorigin="anonymous" />
+  <link rel="stylesheet" href="{{ .RelPermalink | absURL }}" integrity="{{ .Data.Integrity }}" crossorigin="anonymous" />
 {{- end -}}
 {{- end -}}
 {{- end -}}
 {{- end -}}
 {{- $t.Stop -}}
 {{- end }}
-{{ with resources.Get "fontawesome/css/all.css" -}}
+<!-- {{ with resources.Get "css/syntax.css" -}}
 {{- if hugo.IsDevelopment -}}
-<link rel="stylesheet" href="{{ .RelPermalink | absURL }}" />
+  <link rel="stylesheet" href="{{ .RelPermalink | absURL }}" />
 {{- else -}}
 {{ with . | postCSS | minify | fingerprint }}
-<link rel="stylesheet" href="{{ .RelPermalink | absURL }}" integrity="{{ .Data.Integrity }}" crossorigin="anonymous" />
+  <link rel="stylesheet" href="{{ .RelPermalink | absURL }}" integrity="{{ .Data.Integrity }}" crossorigin="anonymous" />
+{{ end -}}
+{{- end -}}
+{{ end -}} -->
+{{ with resources.Get "fontawesome/css/all.css" -}}
+{{- if hugo.IsDevelopment -}}
+  <link rel="stylesheet" href="{{ .RelPermalink | absURL }}" />
+{{- else -}}
+{{ with . | postCSS | minify | fingerprint }}
+  <link rel="stylesheet" href="{{ .RelPermalink | absURL }}" integrity="{{ .Data.Integrity }}" crossorigin="anonymous" />
 {{ end -}}
 {{- end -}}
 {{ end -}}

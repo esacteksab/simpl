@@ -1,8 +1,9 @@
 {{ define "main" }}
-{{ .Content | emojify }}
-<ul>
+  {{ .Content | emojify }}
+  <ul>
   {{ range .Pages.ByDate }}
-  <li class="list-none"><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></li>
+    <li class="list-none"><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></li>
   {{ end }}
-</ul>
+  </ul>
+  <!-- "_default/term.html" -->
 {{ end }}

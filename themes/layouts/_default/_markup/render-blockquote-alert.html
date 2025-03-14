@@ -6,20 +6,20 @@
     "warning" "fas fa-triangle-exclamation"
 }}
 {{- if eq .Type "alert" }}
-<blockquote class="alert alert-{{- .AlertType }} flex flex-col border-l-8 border-2 rounded-sm">
-  <div class="inline-flex items-center">
-    <span class="fa-stack fa-lg m-2">
-      <i class="fas fa-square fa-stack-2x"></i>
-      <i class="{{- index $svgs .AlertType }} fa-stack-1x fa-inverse"></i>
-    </span>
-    {{- with .AlertTitle }}
-    <h3>{{- . }}</h3>
-    {{- else }}
-    <h3>{{- or (i18n .AlertType) (title .AlertType) }}</h3>
-    {{- end }}
-  </div>
-  <div class="flex flex-col m-0 p-2">
-    {{- .Text | emojify }}
-  </div>
-</blockquote>
+    <blockquote class="alert alert-{{- .AlertType }} flex flex-col border-l-8 border-2 rounded-sm">
+        <div class="inline-flex items-center">
+            <span class="fa-stack fa-lg m-2">
+                <i class="fas fa-square fa-stack-2x"></i>
+                <i class="{{- index $svgs .AlertType }} fa-stack-1x fa-inverse"></i>
+            </span>
+            {{- with .AlertTitle }}
+                <h3>{{- . }}</h3>
+            {{- else }}
+                <h3>{{- or (i18n .AlertType) (title .AlertType) }}</h3>
+            {{- end }}
+        </div>
+        <div class="flex flex-col m-0 p-2">
+            {{- .Text | emojify }}
+        </div>
+    </blockquote>
 {{- end }}

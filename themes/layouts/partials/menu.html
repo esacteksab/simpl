@@ -2,16 +2,17 @@
 {{- $menuID := .menuID -}}
 {{- with index site.Menus $menuID -}}
 <nav class="flex flex-1 flex-row-reverse">
-  <label for="menu" tabindex="0">
-    <span class="fa-stack">
-      <i class="fas fa-square fa-stack-2x"></i>
-      <i class="fas fa-bars fa-stack-1x fa-inverse"></i>
-    </span>
-  </label>
-  <input id="menu" type="checkbox" />
-  <ul class="md:flex m-0 p-0 md:pr-4">
-    {{- partial "inline/menu/walk.html" (dict "page" $page "menuEntries" .) -}}
-  </ul>
+    <label for="menu" tabindex="0">
+        <span class="fa-stack">
+            <i class="fas fa-square fa-stack-2x"></i>
+            <i class="fas fa-bars fa-stack-1x fa-inverse"></i>
+        </span>
+    </label>
+    <input id ="menu" type="checkbox" />
+    <ul class="md:flex m-0 p-0 md:pr-4">
+
+        {{- partial "inline/menu/walk.html" (dict "page" $page "menuEntries" .) -}}
+    </ul>
 </nav>
 {{- end -}}
 {{- define "partials/inline/menu/walk.html" -}}
@@ -29,14 +30,15 @@
 {{- $name = . }}
 {{- end -}}
 {{- end -}}
+
 <li class="inline-flex nav-links pr-4 menu-{{- lower .Identifier }}">
-  <a {{- range $k, $v :=$attrs }} {{- with $v }}{{ printf " %s=%q" $k $v | safeHTMLAttr }}{{ end -}}
-    {{- end -}}>{{ $name }}</a>
-  {{- with .Children }}
-  <ul>
-    {{- partial "inline/menu/walk.html" (dict "page" $page "menuEntries" .) }}
-  </ul>
-  {{- end -}}
+    <a {{- range $k, $v :=$attrs }} {{- with $v }}{{ printf " %s=%q" $k $v | safeHTMLAttr }}{{ end -}} {{- end -}}>{{
+        $name }}</a>
+    {{- with .Children }}
+    <ul>
+        {{- partial "inline/menu/walk.html" (dict "page" $page "menuEntries" .) }}
+    </ul>
+    {{- end -}}
 </li>
 {{- end -}}
 {{- end -}}
