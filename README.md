@@ -3,8 +3,7 @@
 Not a unique name I know.
 
 > [!WARNING]
->
-> - **_NOT READY FOR PUBLIC CONSUMPTION_**
+> - **_NOT READY FOR PUBLIC CONSUMPTION_** <!-- markdownlint-disable MD032 -->
 > - This is an experiment creating a Hugo theme.
 > - This is my first time creating a theme.
 > - This is my first time navigating Hugo modules.
@@ -38,7 +37,7 @@ title = 'My New Hugo Site'
 theme = 'simpl'
 ```
 
-This theme requires TailwindCSS, copy the `package.json`, `tailwind.config.js` to `my-new-blog`. Install packages. **There may be things you _don't_ want. Edit `package.json` accordingly.
+This theme requires TailwindCSS, copy the `package.json`, `tailwind.config.js` to `my-new-blog`. Install packages. _There may be things you don't_ want. Edit `package.json` accordingly.
 
 ```bash
 npm i
