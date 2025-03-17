@@ -1,0 +1,70 @@
+repos:
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v5.0.0
+    hooks:
+      - id: trailing-whitespace
+        name: "Trailing Whitespace"
+        args:
+          - --markdown-linebreak-ext=md
+      - id: end-of-file-fixer
+        name: "EOF Fixer"
+        exclude: ^testdata/
+      - id: check-json
+        name: "Check JSON"
+      - id: check-yaml
+        name: "Check YAML"
+      - id: check-merge-conflict
+        name: "Check Merge Conflicts"
+
+  - repo: https://github.com/python-jsonschema/check-jsonschema
+    rev: 0.31.3
+    hooks:
+      - id: check-github-workflows
+      - id: check-renovate
+      - id: check-dependabot
+      - id: check-jsonschema
+        name: "Validate Pre-Commit"
+        files: ^\.pre-commit-config.yaml+$
+        types:
+          - yaml
+        args:
+          [
+            "--schemafile",
+            "https://json.schemastore.org/pre-commit-config.json",
+          ]
+      - id: check-jsonschema
+        name: "Validate MarkdownLint"
+        files: ^\.markdownlint.yml+$
+        types:
+          - yaml
+        args:
+          [
+            "--schemafile",
+            "https://raw.githubusercontent.com/DavidAnson/markdownlint/main/schema/markdownlint-config-schema.json",
+          ]
+
+  - repo: https://github.com/hukkin/mdformat
+    rev: 0.7.22
+    hooks:
+      - id: mdformat
+        exclude: ^testdata/
+        name: "Markdown Formatter"
+        additional_dependencies:
+          - mdformat-gfm
+          - mdformat-toc
+          - mdformat-gfm-alerts
+          - mdformat-tables
+          - mdformat-footnote
+
+  - repo: https://github.com/crate-ci/typos
+    rev: v1.30.2
+    hooks:
+      - id: typos
+        args: [--force-exclude]
+        name: "Typos"
+
+  - repo: https://github.com/DavidAnson/markdownlint-cli2
+    rev: v0.17.2
+    hooks:
+      - id: markdownlint-cli2
+        name: "Markdown Lint"
