@@ -25,7 +25,6 @@ hugo.linux
 public/
 *node_modules/
 package-lock.json
-.hugo_build.lock
 resources/
 
 # Logs
@@ -130,7 +129,6 @@ dist
 
 # vuepress v2.x temp and cache directory
 .temp
-.cache
 
 # vitepress build output
 **/.vitepress/dist
@@ -152,9 +150,6 @@ dist
 
 # TernJS port file
 .tern-port
-
-# Stores VSCode versions used for testing VSCode extensions
-.vscode-test
 
 # yarn v2
 .yarn/cache
@@ -188,7 +183,6 @@ go.work
 go.work.sum
 
 # env file
-.env
 
 #######################
 # GitHub Pages Things #
@@ -202,6 +196,12 @@ _site/
 .tool-versions
 
 #################
+# Goland Things #
+#################
+
+.idea
+
+#################
 # VSCode Things #
 #################
 # sometimes there is other stuff in here
@@ -211,6 +211,8 @@ _site/
 
 # Stores VSCode versions used for testing VSCode extensions
 .vscode-test
+
+# Stores VSCode versions used for testing VSCode extensions
 
 #################
 # Python Things #

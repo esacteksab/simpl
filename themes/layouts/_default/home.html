@@ -1,25 +1,27 @@
 {{- define "main" }}
-{{ .Content | emojify }}
-{{- $pages := where .Site.RegularPages "Section" "in" .Site.MainSections }}
-{{- $paginator := .Paginate $pages }}
-{{- range $paginator.Pages }}
-<div class="post-preview flex-col home-ls">
-<h3><a class="no-underline" href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></h2>
-{{- if eq .Truncated false -}}
-<p>There is no summary. Someone got lazy.</p>
-<span class="read-more p-0 m-0 px-1 md:mt-8 flex flex-row"><a href="{{ .RelPermalink }}">Read Anyway &rarr;</a></span>
-{{- else -}}
-<span class="summary">
+    {{ .Content | emojify }}
+    {{- $pages := where .Site.RegularPages "Section" "in" .Site.MainSections }}
+    {{- $paginator := .Paginate $pages }}
+    {{- range $paginator.Pages }}
+        <div class="post-preview flex-col home-ls">
+        <h3><a class="no-underline" href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></h2>
+        {{- if eq .Truncated false -}}
+            <p>There is no summary. Someone got lazy.</p>
+            <span class="read-more p-0 m-0 px-1 md:mt-8 flex flex-row"><a
+                        href="{{ .RelPermalink }}">Read Anyway &rarr;</a></span>
+        {{- else -}}
+            <span class="summary">
 {{ .Summary | emojify }}
 </span>
-{{- end -}}
-{{- if .Truncated -}}
-<span class="read-more p-0 m-0 px-1 md:mt-8 flex flex-row"><a href="{{ .RelPermalink }}">Read More &rarr;</a></span>
-{{- end -}}
-<hr />
-{{- end -}}
-</div>
-{{- partial "pagination.html" . }}
-<!-- _default/home.html -->
+        {{- end -}}
+        {{- if .Truncated -}}
+            <span class="read-more p-0 m-0 px-1 md:mt-8 flex flex-row"><a
+                        href="{{ .RelPermalink }}">Read More &rarr;</a></span>
+        {{- end -}}
+        <hr/>
+    {{- end -}}
+    </div>
+    {{- partial "pagination.html" . }}
+    <!-- _default/home.html -->
 {{- end -}}
 {{- /* Trim EOF */ -}}
