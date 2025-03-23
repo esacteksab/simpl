@@ -11,7 +11,7 @@ demosite = 'https://barrymorrison.com'
 
 # Taxonomy terms
 tags = ['blog']
-features = ['dark', 'i18n', 'a11y', 'tailwindcss']
+features = ['dark', 'tailwindcss', 'dark-a11y']
 
 # If the theme has a single author
 [author]
