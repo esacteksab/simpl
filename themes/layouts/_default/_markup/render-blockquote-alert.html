@@ -1,9 +1,9 @@
 {{- $svgs := dict
-    "caution" "fas fa-circle-exclamation"
-    "important" "fas fa-star"
-    "note" "fas fa-note-sticky"
-    "tip" "fas fa-lightbulb"
-    "warning" "fas fa-triangle-exclamation"
+"caution" "fas fa-circle-exclamation"
+"important" "fas fa-star"
+"note" "fas fa-note-sticky"
+"tip" "fas fa-lightbulb"
+"warning" "fas fa-triangle-exclamation"
 }}
 {{- if eq .Type "alert" }}
     <blockquote class="alert alert-{{- .AlertType }} flex flex-col border-l-8 border-2 rounded-sm">

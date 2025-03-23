@@ -4,18 +4,18 @@
 {{- $inner := trim .Inner "\n\r" -}}
 {{- $highlight := "" -}}
 {{- if hasPrefix $inner "```" -}}
-  {{- /* Inner is a code fence, so render with markdownify */ -}}
-  {{- $highlight = $inner | markdownify -}}
+    {{- /* Inner is a code fence, so render with markdownify */ -}}
+    {{- $highlight = $inner | markdownify -}}
 {{- else -}}
-  {{- /* Inner is not a code fence, so render with highlight */ -}}
-  {{- $highlight = highlight $inner $lang $options -}}
+    {{- /* Inner is not a code fence, so render with highlight */ -}}
+    {{- $highlight = highlight $inner $lang $options -}}
 {{- end -}}
 {{- /* Output */ -}}
 <div class="labeled-highlight">
-  {{- with $label }}
-    <div class="labeled-highlight__label">
-      <code>{{ . | emojify }}</code>
-    </div>
-  {{- end }}
-  {{ $highlight }}
+    {{- with $label }}
+        <div class="labeled-highlight__label">
+            <code>{{ . | emojify }}</code>
+        </div>
+    {{- end }}
+    {{ $highlight }}
 </div>

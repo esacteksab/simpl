@@ -1,46 +1,67 @@
 @import "tailwindcss";
 @source "hugo_stats.json";
 
-@theme {
-  --color-dark-primary: #171717;
-  --color-dark-secondary: #282828;
-  --color-light-secondary: #f6f8fa;
-}
-
 @layer components {
+  html {
+    width: 100%;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply mb-0;
+  }
+
+  h2,
+  h3,
+  h4 {
+    @apply font-bold;
+  }
+
+  h5,
+  h6 {
+    @apply font-semibold;
+  }
+
   h1 {
-    @apply mb-0 text-4xl font-extrabold max-sm:text-2xl;
+    @apply text-3xl font-extrabold max-sm:text-2xl;
   }
-
   h2 {
-    @apply mb-0 text-2xl font-bold max-sm:text-xl;
+    @apply text-2xl max-sm:text-xl;
   }
-
   h3 {
-    @apply mb-0 text-2xl font-semibold max-sm:text-lg;
+    @apply text-xl max-sm:text-lg;
   }
   h4 {
-    @apply mb-0 text-xl font-bold max-sm:text-base;
+    @apply text-lg max-sm:text-base;
   }
   h5 {
-    @apply mb-0 font-medium md:text-xl;
+    @apply font-medium md:text-lg;
   }
   h6 {
-    @apply mb-0 font-medium md:text-lg;
+    @apply font-medium md:text-base;
   }
 
   a {
     @apply underline underline-offset-4;
   }
-  a:hover {
-    @apply underline underline-offset-4;
-  }
 
   p {
-    @apply block font-medium md:text-base/7;
-    margin-block-start: 1em;
-    margin-block-end: 1em;
+    @apply block font-medium;
   }
+}
+
+:is(h1, h2, h3, h4, h5, h6) code {
+  @apply border-1;
+}
+
+code {
+  display: inline-block;
+  padding: 0.0625rem 0.25rem;
+  font-size: 85%;
+  @apply rounded-sm no-underline;
 }
 
 nav input[type="checkbox"],
@@ -141,6 +162,51 @@ nav label {
   @apply m-0 p-0 underline underline-offset-4;
 }
 
+main table {
+  width: 100%;
+  max-width: 100%;
+  word-wrap: break-word;
+  margin-top: 0;
+  margin-bottom: 16px;
+  overflow: auto;
+  font-variant: tabular-nums;
+  text-indent: 0;
+}
+
+thead {
+  display: table-header-group;
+  vertical-align: middle;
+}
+
+tr {
+  display: table-row;
+  vertical-align: inherit;
+}
+
+th {
+  display: table-cell;
+  font-variant: tabular-nums;
+  text-align: center;
+  vertical-align: inherit;
+  unicode-bidi: isolate;
+}
+
+td {
+  display: table-cell;
+  text-align: unset;
+  vertical-align: inherit;
+}
+
+main table th {
+  box-sizing: border-box;
+  padding: 6px 13px;
+}
+
+main table td {
+  box-sizing: border-box;
+  padding: 3px 6px;
+}
+
 article .about {
   @apply mt-8;
 }
@@ -204,10 +270,6 @@ ol + h4 {
   @apply md:mt-2 md:pt-2;
 }
 
-code + p {
-  @apply mr-8;
-}
-
 h2 + h3 {
   @apply mt-2;
 }
@@ -221,62 +283,68 @@ h2 + h3 {
 }
 
 .alert-note {
-  @apply border-orange-600 bg-orange-100 text-orange-700;
-  h3 {
-    @apply text-orange-700;
-  }
-  p {
-    @apply text-orange-700;
+  @apply bg-blue-100 text-blue-700;
+  code {
+    @apply border-blue-700;
   }
 }
+
 .alert-tip {
-  @apply border-sky-700 bg-sky-100 text-sky-700;
-  h3 {
-    @apply text-sky-700;
-  }
-  p {
-    @apply text-sky-700;
+  @apply bg-orange-100 text-orange-700;
+  code {
+    @apply border-orange-700;
   }
 }
+
 .alert-important {
-  @apply border-lime-700 bg-lime-100 text-lime-700;
-  h3 {
-    @apply text-lime-700;
-  }
-  p {
-    @apply text-lime-700;
+  @apply bg-lime-100 text-lime-700;
+  code {
+    @apply border-lime-700;
   }
 }
 
 .alert-caution {
-  @apply border-yellow-700 bg-yellow-100 text-yellow-700;
-  h3 {
-    @apply text-yellow-700;
-  }
-  p {
-    @apply text-yellow-700;
+  @apply bg-yellow-100 text-yellow-700;
+  code {
+    @apply border-yellow-700;
   }
 }
+
 .alert-warning {
-  @apply border-red-700 bg-red-100 text-red-700;
-  h3 {
-    @apply text-red-700;
-  }
-  p {
-    @apply text-red-700;
+  @apply bg-red-100 text-red-700;
+  code {
+    @apply border-red-700;
   }
 }
 
 hr {
-  @apply m-4 border-t-1 border-amber-500;
+  @apply m-4 border-t-1;
 }
 
 #TableOfContents {
   @apply my-4;
 }
 
+.highlight {
+  @apply my-4 py-3;
+  .chroma {
+    @apply px-4 whitespace-pre-wrap;
+  }
+}
+
 .labeled-highlight {
   @apply mt-8;
+}
+
+.labeled-highlight__label {
+  @apply italic;
+  position: absolute;
+  pre {
+    @apply mt-1.5;
+  }
+  code {
+    @apply border-1;
+  }
 }
 
 footer .list-inline {
@@ -284,70 +352,65 @@ footer .list-inline {
   padding-top: 10px;
 }
 
+blockquote {
+  @apply mt-3 mb-4 border-l-3 pl-3;
+  pre {
+    @apply mt-1.5;
+  }
+}
+
 /*
 Dark Mode
 */
 
 @media (prefers-color-scheme: dark) {
-  main {
-    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.5);
-  }
-  blockquote {
-    @apply mt-3 mb-4 border-l-3 pl-3;
+  code {
+    @apply border-neutral-600 font-mono text-amber-500;
   }
 
   img {
     @apply brightness-[.9] contrast-[1.1];
   }
 
-  .main h2 a {
-    @apply text-neutral-50;
+  tr {
+    @apply border-t-1 border-neutral-600;
   }
+
+  th {
+    @apply border-1 border-neutral-600;
+  }
+
+  td {
+    @apply border-1 border-neutral-600;
+    code {
+      @apply border-1 border-neutral-600;
+    }
+  }
+
   li,
   p,
   blockquote {
-    pre {
-      @apply mt-1.5;
-      code {
-        @apply p-1.5;
-      }
-    }
     code {
-      margin: 0.125rem 0.125rem;
-      padding: 0.125rem 0.25rem;
-      @apply rounded-sm border-1 border-neutral-600 font-mono text-sm text-amber-500;
+      @apply border-1 border-neutral-600;
     }
   }
 
   .labeled-highlight__label {
-    @apply italic;
-    position: absolute;
     translate: 0% -50%;
-    pre {
-      @apply mt-1.5;
-    }
     code {
-      padding: 0.125rem 0.25rem;
-      @apply rounded-sm border-1 border-neutral-600 bg-dark-secondary font-mono text-sm text-amber-500;
+      @apply border-neutral-600 bg-zinc-800;
     }
   }
 
   .highlight {
-    @apply my-4 rounded-sm border-1 border-neutral-600 py-3 text-sm;
-    .chroma {
-      @apply px-4 whitespace-pre-wrap;
-    }
+    @apply rounded-sm border-1 border-neutral-600;
   }
 
   .tags {
-    @apply bg-dark-secondary;
+    @apply bg-zinc-800;
   }
 
-  .read-more a {
-    @apply text-amber-500;
-  }
-
-  .pager a {
+  :is(.read-more, .pager) a {
     @apply text-amber-500;
   }
 
@@ -356,7 +419,7 @@ Dark Mode
   }
   nav,
   footer .fa-inverse {
-    @apply text-dark-primary;
+    @apply text-neutral-900;
   }
 }
 
@@ -365,13 +428,25 @@ Light Mode
 */
 
 @media (prefers-color-scheme: light) {
-  blockquote {
-    @apply mt-3 mb-4 border-l-3 pl-3;
+  code {
+    @apply font-mono text-orange-700;
   }
 
-  .main h2 a {
-    @apply text-neutral-900;
+  tr {
+    @apply border-t-1 border-neutral-600;
   }
+
+  th {
+    @apply border-1 border-neutral-600;
+  }
+
+  td {
+    @apply border-1 border-neutral-600;
+    code {
+      @apply border-1 border-orange-700;
+    }
+  }
+
   .labeled-highlight {
     @apply mt-8;
   }
@@ -379,500 +454,25 @@ Light Mode
   li,
   p,
   blockquote {
-    pre {
-      @apply mt-1.5;
-      code {
-        @apply p-1;
-      }
-    }
     code {
-      margin: 0.125rem 0.125rem;
-      padding: 0.125rem 0.25rem;
-      @apply rounded-sm border-1 border-orange-700 font-mono text-sm text-orange-700 no-underline;
+      @apply border-1 border-orange-700;
     }
   }
 
   .labeled-highlight__label {
-    @apply italic;
-    position: absolute;
-    translate: 0%;
-    pre {
-      @apply mt-1.5;
-    }
+    translate: 0;
     code {
-      padding: 0.125rem 0.25rem;
-      @apply rounded-sm border-1 border-orange-500 bg-neutral-100 font-mono text-sm text-orange-700;
+      @apply border-orange-500 bg-neutral-100;
     }
   }
 
   .highlight {
-    @apply my-4 py-3 text-sm;
     .chroma {
-      @apply rounded-sm px-4 py-5 whitespace-pre-wrap;
+      @apply rounded-sm py-5;
     }
   }
 
-  .read-more a {
+  :is(.read-more, .pager) a {
     @apply text-orange-700;
   }
-
-  .pager a {
-    @apply text-orange-700;
-  }
-}
-
-/*
-Generated using: hugo gen chromastyles --style=github-dark -- then heavily modified toward's highlightJS a11y-dark
-*/
-
-/* Background */
-.bg {
-  /* @apply bg-dark-secondary; */
-  @apply bg-dark-secondary;
-  color: var(--text-neutral-50);
-}
-/* PreWrapper */
-.chroma {
-  color: var(--text-neutral-50);
-  @apply bg-dark-secondary;
-}
-/* Other
-/* .chroma .x {
-} */
-/* Error */
-.chroma .err {
-  color: #f85149;
-}
-/* CodeLine */
-.chroma .cl {
-  @apply text-neutral-50;
-}
-/* LineLink */
-.chroma .lnlinks {
-  outline: none;
-  text-decoration: none;
-  @apply text-neutral-50;
-}
-/* LineTableTD */
-.chroma .lntd {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  vertical-align: top;
-}
-/* LineTable */
-.chroma .lntable {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  @apply sm:block sm:overflow-x-clip md:overflow-x-auto;
-}
-/* LineHighlight */
-.chroma .hl {
-  background-color: #6e7681;
-}
-/* LineNumbersTable */
-.chroma .lnt {
-  margin-right: 0.4em;
-  padding: 0 0.4em 0 0.4em;
-  white-space: pre;
-  -webkit-user-select: none;
-  user-select: none;
-  @apply text-neutral-50;
-}
-/* LineNumbers */
-.chroma .ln {
-  margin-right: 0.4em;
-  padding: 0 0.4em 0 0.4em;
-  white-space: pre;
-  -webkit-user-select: none;
-  user-select: none;
-  @apply text-neutral-50;
-}
-/* Line */
-.chroma .line {
-  @apply text-neutral-50;
-  display: flex;
-}
-/* Keyword */
-.chroma .k {
-  color: #abe338;
-}
-/* KeywordConstant
-.chroma .kc {
-} */
-/* KeywordDeclaration */
-.chroma .kd {
-  color: #abe338;
-}
-/* KeywordNamespace */
-.chroma .kn {
-  color: #abe338;
-}
-/* KeywordPseudo */
-.chroma .kp {
-  color: #abe338;
-}
-/* KeywordReserved */
-.chroma .kr {
-  color: #abe338;
-}
-/* KeywordType */
-.chroma .kt {
-  color: #abe338;
-}
-/* Name */
-.chroma .n {
-  color: #ffa07a;
-}
-/* NameAttribute */
-.chroma .na {
-  @apply text-neutral-50;
-}
-
-/* NameBuiltin */
-.cl + .na + .nb {
-  @apply text-neutral-50;
-}
-.chroma .nb {
-  color: #f5ab35;
-}
-
-.na + .nb + .p + .nx {
-  @apply text-neutral-50;
-}
-
-.si + .nb {
-  color: #abe338;
-}
-.p + .nx {
-  color: #abe338;
-}
-
-.s2 + .nx {
-  color: #abe338;
-}
-.chroma .s2 + .nx {
-  color: #abe338;
-}
-
-.si + .nb + .p + .nx + .p + .nx {
-  color: #abe338;
-}
-
-.nb .nv {
-  @apply text-neutral-50;
-}
-
-/* NameBuiltinPseudo
-.chroma .bp {
-} */
-/* NameClass */
-.chroma .nc {
-  color: #ffa07a;
-  font-weight: bold;
-}
-/* NameConstant */
-.chroma .no {
-  color: #ffa07a;
-  /* color: #79c0ff; */
-  font-weight: bold;
-}
-/* NameDecorator */
-.chroma .nd {
-  color: #ffa07a;
-  /* color: #d2a8ff; */
-  font-weight: bold;
-}
-/* NameEntity */
-.chroma .ni {
-  color: #ffa07a;
-}
-/* NameException */
-.chroma .ne {
-  color: #ffa07a;
-  font-weight: bold;
-}
-/* NameFunction */
-.chroma .nf {
-  color: #ffa07a;
-  font-weight: bold;
-}
-/* NameFunctionMagic */
-.chroma .fm {
-  color: #ffa07a;
-}
-/* NameLabel */
-.chroma .nl {
-  color: #ffa07a;
-  font-weight: bold;
-}
-/* NameNamespace */
-.chroma .nn {
-  color: #ffa07a;
-}
-/* NameOther */
-.ci + .nx {
-  @apply text-neutral-100;
-}
-
-.na + .nx {
-  @apply text-neutral-100;
-}
-
-.nx + .p + .nx {
-  @apply text-neutral-100;
-}
-/* .chroma .nx {
-} */
-/* NameProperty */
-.chroma .py {
-  color: #ffa07a;
-}
-/* NameTag
-.chroma .nt {
-} */
-
-/* NameVariable */
-.chroma .nv {
-  color: #ffa07a;
-}
-
-.nb + .nv {
-  @apply text-neutral-50;
-}
-
-.nb + .nv + .o + .m {
-  @apply text-neutral-50;
-}
-/* NameVariableClass */
-.chroma .vc {
-  color: #ffa07a;
-}
-/* NameVariableGlobal */
-.chroma .vg {
-  color: #ffa07a;
-}
-/* NameVariableInstance */
-.chroma .vi {
-  color: #ffa07a;
-}
-/* NameVariableMagic */
-.chroma .vm {
-  color: #ffa07a;
-}
-/* Literal */
-.chroma .l {
-  color: #abe338;
-}
-/* LiteralDate */
-.chroma .ld {
-  color: #abe338;
-}
-/* LiteralString */
-.chroma .s {
-  color: #abe338;
-}
-/* LiteralStringAffix */
-.chroma .sa {
-  color: #abe338;
-}
-/* LiteralStringBacktick */
-.chroma .sb {
-  color: #abe338;
-}
-/* LiteralStringChar */
-.chroma .sc {
-  color: #abe338;
-}
-/* LiteralStringDelimiter */
-.chroma .dl {
-  color: #abe338;
-}
-/* LiteralStringDoc */
-.chroma .sd {
-  color: #abe338;
-}
-/* LiteralStringDouble */
-.chroma .s2 {
-  color: #abe338;
-}
-
-/* LiteralStringEscape */
-.chroma .se {
-  color: #abe338;
-}
-/* LiteralStringHeredoc */
-.chroma .sh {
-  color: #abe338;
-}
-/* LiteralStringInterpol */
-.chroma .si {
-  color: #abe338;
-}
-/* LiteralStringOther */
-.chroma .sx {
-  color: #abe338;
-}
-/* LiteralStringRegex */
-.chroma .sr {
-  color: #f5ab35;
-}
-/* LiteralStringSingle */
-.chroma .s1 {
-  color: #abe338;
-}
-/* LiteralStringSymbol */
-.chroma .ss {
-  color: #f5ab35;
-}
-/* LiteralNumber */
-.chroma .m {
-  color: #f5ab35;
-}
-/* LiteralNumberBin */
-.chroma .mb {
-  color: #f5ab35;
-}
-/* LiteralNumberFloat */
-.chroma .mf {
-  color: #f5ab35;
-}
-/* LiteralNumberHex */
-.chroma .mh {
-  color: #f5ab35;
-}
-/* LiteralNumberInteger */
-.chroma .mi {
-  color: #f5ab35;
-}
-.mi + .kt {
-  color: #f5ab35;
-}
-/* LiteralNumberIntegerLong */
-.chroma .il {
-  color: #f5ab35;
-}
-
-/* LiteralNumberOct */
-.chroma .mo {
-  color: #f5ab35;
-}
-/* Operator */
-.chroma .o {
-  font-weight: bold;
-}
-
-.o + .nt {
-  color: gold;
-}
-
-.nt + .o + .nt {
-  color: #ffa07a;
-}
-
-/* OperatorWord */
-.chroma .ow {
-  color: #ff7b72;
-  font-weight: bold;
-}
-/* Punctuation
-.chroma .p {
-} */
-
-.cl + .nt {
-  @apply text-neutral-50;
-}
-/* Comment */
-.chroma .c {
-  @apply text-neutral-200;
-  font-style: italic;
-}
-/* CommentHashbang */
-.chroma .ch {
-  @apply text-neutral-200;
-  font-style: italic;
-}
-/* CommentMultiline */
-.chroma .cm {
-  @apply text-neutral-200;
-  font-style: italic;
-}
-/* CommentSingle */
-.chroma .c1 {
-  @apply text-neutral-200;
-  font-style: italic;
-}
-/* CommentSpecial */
-.chroma .cs {
-  @apply text-neutral-200;
-  font-style: italic;
-  font-weight: bold;
-}
-/* CommentPreproc */
-.chroma .cp {
-  @apply text-neutral-200;
-  font-style: italic;
-  font-weight: bold;
-}
-/* CommentPreprocFile */
-.chroma .cpf {
-  @apply text-neutral-200;
-  font-style: italic;
-  font-weight: bold;
-}
-/* Generic
-.chroma .g {
-}
-*/
-/* GenericDeleted */
-.chroma .gd {
-  background-color: #490202;
-  color: #ffa198;
-}
-/* GenericEmph */
-.chroma .ge {
-  font-style: italic;
-}
-/* GenericError */
-.chroma .gr {
-  color: #ffa198;
-}
-/* GenericHeading */
-.chroma .gh {
-  color: #79c0ff;
-  font-weight: bold;
-}
-/* GenericInserted */
-.chroma .gi {
-  background-color: #0f5323;
-  color: #56d364;
-}
-/* GenericOutput */
-.chroma .go {
-  @apply text-neutral-50;
-}
-/* GenericPrompt */
-.chroma .gp {
-  @apply text-neutral-50;
-}
-/* GenericStrong */
-.chroma .gs {
-  font-weight: bold;
-}
-/* GenericSubheading */
-.chroma .gu {
-  color: #79c0ff;
-}
-/* GenericTraceback */
-.chroma .gt {
-  color: #ff7b72;
-}
-/* GenericUnderline */
-.chroma .gl {
-  text-decoration: underline;
-}
-/* TextWhitespace */
-.chroma .w {
-  @apply bg-dark-secondary;
 }
