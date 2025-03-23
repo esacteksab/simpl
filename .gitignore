@@ -56,7 +56,6 @@ hugo.darwin
 # Executable may be added to repository
 hugo.exe
 hugo.linux
-hugo_stats.json
 
 # keep-sorted end
 ###############
