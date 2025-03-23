@@ -90,7 +90,7 @@ theme = 'simpl'
 
 ### Favicon
 
-The site by default tries to load some missing files related to [favicon](https://developer.mozilla.org/en-US/docs/Glossary/Favicon). I use [favicon.io](https://favicon.io/) to convert an existing PNG to ico. They provide you with a `.zip` that contains the files you need.
+The site by default tries to load some files related to [(MDN): favicon](https://developer.mozilla.org/en-US/docs/Glossary/Favicon) that don't exist in the `static` directory of the theme. I use [favicon.io](https://favicon.io/) to convert an existing PNG to ico. They provide you with a `.zip` that contains the files you need.
 
 ```bash
 ls favicon_io
@@ -103,4 +103,4 @@ favicon-32x32.png
 site.webmanifest
 ```
 
-You can put these in your `static` dir and they will exist where they should.
+You can put these in your `static` dir and they will exist where they should when the site is built and published.
