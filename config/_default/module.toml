@@ -23,5 +23,6 @@ target = 'i18n'
 source = 'archetypes'
 target = 'archetypes'
 [[mounts]]
+disableWatch = true
 source = "hugo_stats.json"
 target = "assets/watching/hugo_stats.json"
