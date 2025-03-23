@@ -1,0 +1,15 @@
+
+[markup.goldmark]
+[markup.goldmark.parser]
+[markup.goldmark.parser.attribute]
+block = true
+title = true
+
+[markup.highlight]
+noClasses = false
+wrapperClass = 'highlight not-prose'
+
+[markup.tableOfContents]
+endLevel = 6
+ordered = false
+startLevel = 1
