@@ -3,7 +3,7 @@
     <ul>
         {{ range .Data.Terms.ByCount }}
             <li class="list-none">#<a class="no-underline hover:underline"
-                                      href="{{ .Page.RelPermalink }}">{{ lower .Page.Title }}</a> &middot; {{ .Count }}
+                                      href="{{ .Page.RelPermalink | absURL }}">{{ lower .Page.Title }}</a> &middot; {{ .Count }}
             </li>
         {{ end }}
     </ul>

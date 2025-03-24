@@ -4,11 +4,11 @@
     {{ range $paginator.Pages }}
         <article class="md:mt-4 post-ls">
             <h2>
-                <a class="no-underline" href="{{ .RelPermalink }}">{{ .LinkTitle }}</a>
+                <a class="no-underline" href="{{ .RelPermalink |absURL }}">{{ .LinkTitle }}</a>
             </h2>
             {{ if eq .Truncated false }}
                 <p>There is no summary. Someone got lazy.</p>
-                <span class="read-more p-0 m-0 px-1 md:mt-8 flex flex-row"><a href="{{ .RelPermalink }}">Read Anyway &rarr;</a></span>
+                <span class="read-more p-0 m-0 px-1 md:mt-8 flex flex-row"><a href="{{ .RelPermalink | absURL }}">Read Anyway &rarr;</a></span>
             {{ else }}
                 <span class="summary">
             {{ .Summary | emojify }}
@@ -16,7 +16,7 @@
             {{ end }}
             {{ if .Truncated }}
                 <span class="read-more p-0 m-0 px-1 md:mt-8 flex flew-row">
-                <a href="{{ .RelPermalink }}" aria-label="Read More" class="page-link" role="button"><span
+                <a href="{{ .RelPermalink | absURL }}" aria-label="Read More" class="page-link" role="button"><span
                             aria-hidden="true">Read more &rarr;</span></a>
             </span>
             {{ end }}
