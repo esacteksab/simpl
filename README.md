@@ -2,22 +2,21 @@
 
 Not a unique name I know.
 
-> \[!WARNING]
->
-> * ***NOT READY FOR PUBLIC CONSUMPTION*** <!-- markdownlint-disable MD032 -->
-> * This is an experiment creating a Hugo theme.
-> * This is my first time creating a theme.
-> * This is my first time navigating Hugo modules.
+> [!WARNING]
+> - **_NOT READY FOR PUBLIC CONSUMPTION_** <!-- markdownlint-disable MD032 -->
+> - This is an experiment creating a Hugo theme.
+> - This is my first time creating a theme.
+> - This is my first time navigating Hugo modules.
 
 ## Features
 
-* Work in progress.
-* It's pretty barebones.
-* TailwindCSS v4.
-* Has Dark and Light Mode based on system settings.
-* Mobile'ish.
-* There has been some attention paid to a11y, but it may still fall short while I work through things.
-* Early attempts at i18n.
+- Work in progress.
+- It's pretty barebones.
+- TailwindCSS v4.
+- Has Dark and Light Mode based on system settings.
+- Mobile'ish.
+- There has been some attention paid to a11y, but it may still fall short while I work through things.
+- Early attempts at i18n.
 
 ## Installation
 
@@ -53,7 +52,7 @@ _merge = 'deep'
 path = "github.com/esacteksab/simpl"
 ```
 
-This theme requires [TailwindCSS](https://gohugo.io/functions/css/tailwindcss/), and [PostCSS](https://gohugo.io/functions/css/postcss/) copy the `package.json`, `tailwind.config.js` and `postcss.config.js` from GitHub [esacteksab/simpl](https://github.com/esacteksab/simpl) to `my-new-blog`. Before we install packages, ***there may be things you don't*** want. Edit `package.json` accordingly. When ready, install the packages:
+This theme requires [TailwindCSS](https://gohugo.io/functions/css/tailwindcss/), and [PostCSS](https://gohugo.io/functions/css/postcss/) copy the `package.json`, `tailwind.config.js` and `postcss.config.js` from GitHub [esacteksab/simpl](https://github.com/esacteksab/simpl) to `my-new-blog`. Before we install packages, **_there may be things you don't_** want. Edit `package.json` accordingly. When ready, install the packages:
 
 ```bash
 npm i
@@ -162,8 +161,7 @@ I develop almost excusively on GitHub, so I use Cloudflare's [Git integration](h
 
 A few things to note that I learned by trial and error:
 
-* The default build command that Cloudflare uses is `hugo`, but you will want to adjust it so your final build command look slike `hugo -b $CF_PAGES_URL`.
-* If you're using a custom domain, you will need to deploy *after* you've configured custom domain. This ensures your stylesheets use the appropriate hostname.
-* This theme was built with Hugo Extended Edition, so in Cloudflare, you can pass an enviornment variable `HUGO_VERSION` with a value of `0.145.0+extended` to ensure it uses the extended edition.
+- If you're using a custom domain, you will need to deploy _after_ you've configured custom domain. This ensures your stylesheets use the appropriate hostname.
+- This theme was built with Hugo Extended Edition, so in Cloudflare, you can pass an environment variable `HUGO_VERSION` with a value of `0.145.0+extended` to ensure it uses the extended edition.
 
 Any questions, please don't hesitate to open an Issue. I'm new to Hugo so we'll figure it out together!
