@@ -1,6 +1,7 @@
+# https://json.schemastore.org/hugo.json
 [hugoVersion]
   extended = false
-  min = "0.134.2"
+  min      = "0.134.2"
 [[mounts]]
   source = 'content'
   target = 'content'
@@ -24,5 +25,5 @@
   target = 'archetypes'
 [[mounts]]
   disableWatch = false
-  source = "hugo_stats.json"
-  target = "assets/watching/hugo_stats.json"
+  source       = "hugo_stats.json"
+  target       = "assets/watching/hugo_stats.json"

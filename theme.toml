@@ -1,5 +1,6 @@
-name = 'simpl'
-license = 'MIT'
+# https://json.schemastore.org/hugo-theme.json
+name        = 'simpl'
+license     = 'MIT'
 licenselink = 'https://github.com/esacteksab/simpl/LICENSE'
 description = 'An attempt at a barebones theme.'
 
@@ -7,13 +8,13 @@ description = 'An attempt at a barebones theme.'
 homepage = 'https://github.com/esacteksab/simpl'
 
 # If you have a running demo of the theme
-demosite = 'https://barrymorrison.com'
+demosite = 'https://esacteksab.com'
 
 # Taxonomy terms
-tags = ['blog']
+tags     = ['blog']
 features = ['dark', 'tailwindcss', 'dark-a11y']
 
 # If the theme has a single author
 [author]
-name = 'Barry Morrison'
-homepage = 'https://barrymorrison.com'
+  name     = 'Barry Morrison'
+  homepage = 'https://esacteksab.com'
