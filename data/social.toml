@@ -1,245 +1,245 @@
 [[social_icons]]
-    id = "500px"
-    url = "https://500px.com/%s"
-    title = "500px"
-    icon = "fab fa-500px"
+icon  = "fab fa-500px"
+id    = "500px"
+title = "500px"
+url   = "https://500px.com/%s"
 
 [[social_icons]]
-    id = "about"
-    url = "%s"
-    title = "About"
-    icon = "fas fa-at"
+icon  = "fas fa-at"
+id    = "about"
+title = "About"
+url   = "%s"
 
 [[social_icons]]
-    id = "amazonwishlist"
-    url = "https://amzn.com/w/%s"
-    title = "Amazon Wishlist"
-    icon = "fab fa-amazon"
+icon  = "fab fa-amazon"
+id    = "amazonwishlist"
+title = "Amazon Wishlist"
+url   = "https://amzn.com/w/%s"
 
 [[social_icons]]
-    id = "angellist"
-    url = "https://www.angel.co/p/%s"
-    title = "AngelList"
-    icon = "fab fa-angellist"
+icon  = "fab fa-angellist"
+id    = "angellist"
+title = "AngelList"
+url   = "https://www.angel.co/p/%s"
 
 [[social_icons]]
-    id = "bandcamp"
-    url = "https://%s.bandcamp.com/"
-    title = "Bandcamp"
-    icon = "fab fa-bandcamp"
+icon  = "fab fa-bandcamp"
+id    = "bandcamp"
+title = "Bandcamp"
+url   = "https://%s.bandcamp.com/"
 
 [[social_icons]]
-    id = "bitbucket"
-    url = "https://bitbucket.org/%s"
-    title = "Bitbucket"
-    icon = "fab fa-bitbucket"
+icon  = "fab fa-bitbucket"
+id    = "bitbucket"
+title = "Bitbucket"
+url   = "https://bitbucket.org/%s"
 
 [[social_icons]]
-    id = "bluesky"
-    url = "https://bsky.app/profile/%s"
-    title = "Bluesky"
-    icon = "fab fa-bluesky"
+icon  = "fab fa-bluesky"
+id    = "bluesky"
+title = "Bluesky"
+url   = "https://bsky.app/profile/%s.bsky.social"
 
 [[social_icons]]
-    id = "codepen"
-    url = "https://codepen.io/%s"
-    title = "CodePen"
-    icon = "fab fa-codepen"
+icon  = "fab fa-codepen"
+id    = "codepen"
+title = "CodePen"
+url   = "https://codepen.io/%s"
 
 [[social_icons]]
-    id = "discord"
-    url = "https://discord.gg/%s"
-    title = "Discord"
-    icon = "fab fa-discord"
+icon  = "fab fa-discord"
+id    = "discord"
+title = "Discord"
+url   = "https://discord.gg/%s"
 
 [[social_icons]]
-    id = "docker"
-    url = "https://hub.docker.come/r/%s"
-    title = "Docker"
-    icon = "fab fa-docker"
+icon  = "fab fa-docker"
+id    = "docker"
+title = "Docker"
+url   = "https://hub.docker.come/r/%s"
 
 [[social_icons]]
-    id = "email"
-    url = "mailto:%s"
-    title = "Email me"
-    icon = "fas fa-envelope"
+icon  = "fas fa-envelope"
+id    = "email"
+title = "Email me"
+url   = "mailto:%s"
 
 [[social_icons]]
-    id = "facebook"
-    url = "https://www.facebook.com/%s"
-    title = "Facebook"
-    icon = "fab fa-facebook"
+icon  = "fab fa-facebook"
+id    = "facebook"
+title = "Facebook"
+url   = "https://www.facebook.com/%s"
 
 [[social_icons]]
-    id = "github"
-    url = "https://github.com/%s"
-    title = "GitHub"
-    icon = "fab fa-github"
+icon  = "fab fa-github"
+id    = "github"
+title = "GitHub"
+url   = "https://github.com/%s"
 
 [[social_icons]]
-    id = "gitlab"
-    url = "https://gitlab.com/%s"
-    title = "GitLab"
-    icon = "fab fa-gitlab"
+icon  = "fab fa-gitlab"
+id    = "gitlab"
+title = "GitLab"
+url   = "https://gitlab.com/%s"
 
 [[social_icons]]
-    id = "instagram"
-    url = "https://www.instagram.com/%s"
-    title = "Instagram"
-    icon = "fab fa-instagram"
+icon  = "fab fa-instagram"
+id    = "instagram"
+title = "Instagram"
+url   = "https://www.instagram.com/%s"
 
 [[social_icons]]
-    id = "itchio"
-    url = "https://itch.io/profile/%s"
-    title = "Itch.io"
-    icon = "fas fa-gamepad"
+icon  = "fas fa-gamepad"
+id    = "itchio"
+title = "Itch.io"
+url   = "https://itch.io/profile/%s"
 
 [[social_icons]]
-    id = "kaggle"
-    url = "https://www.kaggle.com/%s"
-    title = "kaggle"
-    icon = "fab fa-kaggle"
+icon  = "fab fa-kaggle"
+id    = "kaggle"
+title = "kaggle"
+url   = "https://www.kaggle.com/%s"
 
 [[social_icons]]
-    id = "keybase"
-    url = "https://keybase.io/%s"
-    title = "Keybase"
-    icon = "fab fa-keybase"
+icon  = "fab fa-keybase"
+id    = "keybase"
+title = "Keybase"
+url   = "https://keybase.io/%s"
 
 [[social_icons]]
-    id = "lastfm"
-    url = "https://www.last.fm/user/%s"
-    title = "Last.fm"
-    icon = "fab fa-lastfm"
+icon  = "fab fa-lastfm"
+id    = "lastfm"
+title = "Last.fm"
+url   = "https://www.last.fm/user/%s"
 
 [[social_icons]]
-    id = "linkedin"
-    url = "https://linkedin.com/in/%s"
-    title = "LinkedIn"
-    icon = "fab fa-linkedin"
+icon  = "fab fa-linkedin"
+id    = "linkedin"
+title = "LinkedIn"
+url   = "https://linkedin.com/in/%s"
 
 [[social_icons]]
-    id = "mastodon"
-    url = "https://%s"
-    title = "Mastodon"
-    icon = "fab fa-mastodon"
+icon  = "fab fa-mastodon"
+id    = "mastodon"
+title = "Mastodon"
+url   = "https://%s"
 
 [[social_icons]]
-    id = "medium"
-    url = "https://medium.com/@%s"
-    title = "Medium"
-    icon = "fab fa-medium"
+icon  = "fab fa-medium"
+id    = "medium"
+title = "Medium"
+url   = "https://medium.com/@%s"
 
 [[social_icons]]
-    id = "paypal"
-    url = "https://paypal.me/%s"
-    title = "PayPal"
-    icon = "fab fa-paypal"
+icon  = "fab fa-paypal"
+id    = "paypal"
+title = "PayPal"
+url   = "https://paypal.me/%s"
 
 [[social_icons]]
-    id = "pinterest"
-    url = "https://paypal.me/%s"
-    title = "Pinterest"
-    icon = "fab fa-pinterest"
+icon  = "fab fa-pinterest"
+id    = "pinterest"
+title = "Pinterest"
+url   = "https://paypal.me/%s"
 
 [[social_icons]]
-    id = "quora"
-    url = "https://www.quora.com/profile/%s"
-    title = "Quora"
-    icon = "fab fa-quora"
+icon  = "fab fa-quora"
+id    = "quora"
+title = "Quora"
+url   = "https://www.quora.com/profile/%s"
 
 [[social_icons]]
-    id = "reddit"
-    url = "https://reddit.com/u/%s"
-    title = "Reddit"
-    icon = "fab fa-reddit-alien"
+icon  = "fab fa-reddit-alien"
+id    = "reddit"
+title = "Reddit"
+url   = "https://reddit.com/u/%s"
 
 [[social_icons]]
-    id = "slack"
-    url = "https://%s.slack.com/"
-    title = "Slack"
-    icon = "fab fa-slack"
+icon  = "fab fa-slack"
+id    = "slack"
+title = "Slack"
+url   = "https://%s.slack.com/"
 
 [[social_icons]]
-    id = "slideshare"
-    url = "https://www.slideshare.net/%s"
-    title = "Slideshare"
-    icon = "fab fa-slideshare"
+icon  = "fab fa-slideshare"
+id    = "slideshare"
+title = "Slideshare"
+url   = "https://www.slideshare.net/%s"
 
 [[social_icons]]
-    id = "snapchat"
-    url = "https://www.snapchat.com/add/%s"
-    title = "Snapchat"
-    icon = "fab fa-snapchat-ghost"
+icon  = "fab fa-snapchat-ghost"
+id    = "snapchat"
+title = "Snapchat"
+url   = "https://www.snapchat.com/add/%s"
 
 [[social_icons]]
-    id = "soundcloud"
-    url = "https://soundcloud.com/%s"
-    title = "SoundCloud"
-    icon = "fab fa-soundcloud"
+icon  = "fab fa-soundcloud"
+id    = "soundcloud"
+title = "SoundCloud"
+url   = "https://soundcloud.com/%s"
 
 [[social_icons]]
-    id = "spotify"
-    url = "https://open.spotify.com/user/%s"
-    title = "Spotify"
-    icon = "fab fa-spotify"
+icon  = "fab fa-spotify"
+id    = "spotify"
+title = "Spotify"
+url   = "https://open.spotify.com/user/%s"
 
 [[social_icons]]
-    id = "stackoverflow"
-    url = "https://stackoverflow.com/%s"
-    title = "StackOverflow"
-    icon = "fab fa-stack-overflow"
+icon  = "fab fa-stack-overflow"
+id    = "stackoverflow"
+title = "StackOverflow"
+url   = "https://stackoverflow.com/%s"
 
 [[social_icons]]
-    id = "steam"
-    url = "https://steamcommunity.com/id/%s"
-    title = "Steam"
-    icon = "fab fa-steam"
+icon  = "fab fa-steam"
+id    = "steam"
+title = "Steam"
+url   = "https://steamcommunity.com/id/%s"
 
 [[social_icons]]
-    id = "strava"
-    url = "https://www.strava.com/athletes/%s"
-    title = "Strava"
-    icon = "fab fa-strava"
+icon  = "fab fa-strava"
+id    = "strava"
+title = "Strava"
+url   = "https://www.strava.com/athletes/%s"
 
 [[social_icons]]
-    id = "tiktok"
-    url = "https://www.tiktok.com/%s"
-    title = "TikTok"
-    icon = "fab fa-tiktok"
+icon  = "fab fa-tiktok"
+id    = "tiktok"
+title = "TikTok"
+url   = "https://www.tiktok.com/%s"
 
 [[social_icons]]
-    id = "telegram"
-    url = "https://telegram.me/%s"
-    title = "Telegram"
-    icon = "fab fa-telegram"
+icon  = "fab fa-telegram"
+id    = "telegram"
+title = "Telegram"
+url   = "https://telegram.me/%s"
 
 [[social_icons]]
-    id = "twitter"
-    url = "https://twitter.com/%s"
-    title = "Twitter"
-    icon = "fab fa-x-twitter"
+icon  = "fab fa-x-twitter"
+id    = "twitter"
+title = "Twitter"
+url   = "https://twitter.com/%s"
 
 [[social_icons]]
-    id = "vk"
-    url = "https://vk.com/%s"
-    title = "VK"
-    icon = "fab fa-vk"
+icon  = "fab fa-vk"
+id    = "vk"
+title = "VK"
+url   = "https://vk.com/%s"
 
 [[social_icons]]
-    id = "weibo"
-    url = "https://weibo.com/%s"
-    title = "Weibo"
-    icon = "fab fa-weibo"
+icon  = "fab fa-weibo"
+id    = "weibo"
+title = "Weibo"
+url   = "https://weibo.com/%s"
 
 [[social_icons]]
-    id = "xing"
-    url = "https://www.xing.com/profile/%s"
-    title = "Xing"
-    icon = "fab fa-xing"
+icon  = "fab fa-xing"
+id    = "xing"
+title = "Xing"
+url   = "https://www.xing.com/profile/%s"
 
 [[social_icons]]
-    id = "youtube"
-    url = "https://www.youtube.com/%s"
-    title = "Youtube"
-    icon = "fab fa-youtube"
+icon  = "fab fa-youtube"
+id    = "youtube"
+title = "Youtube"
+url   = "https://www.youtube.com/%s"
