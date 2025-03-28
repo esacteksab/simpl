@@ -4,6 +4,7 @@
     "prettier-plugin-pkg",
     "prettier-plugin-go-template",
     "prettier-plugin-css-order",
+    "prettier-plugin-toml",
     "prettier-plugin-tailwindcss"
   ],
   "overrides": [
@@ -23,6 +24,13 @@
       "options": {
         "tabWidth": 2,
         "embeddedLanguageFormatting": "off"
+      }
+    },
+    {
+      "files": ["*.toml"],
+      "options": {
+        "indentTables": true,
+        "indentEntries": true
       }
     }
   ],

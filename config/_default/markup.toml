@@ -1,15 +1,14 @@
-
 [goldmark]
-[goldmark.parser]
-[goldmark.parser.attribute]
-block = true
-title = true
+  [goldmark.parser]
+    [goldmark.parser.attribute]
+      block = true
+      title = true
 
 [highlight]
-noClasses = false
-wrapperClass = 'highlight not-prose'
+  noClasses = false
+  wrapperClass = 'highlight not-prose'
 
 [tableOfContents]
-endLevel = 6
-ordered = false
-startLevel = 1
+  endLevel = 6
+  ordered = false
+  startLevel = 1
