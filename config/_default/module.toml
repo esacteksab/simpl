@@ -1,28 +1,29 @@
+# https://json.schemastore.org/hugo.json
 [hugoVersion]
-extended = false
-min = "0.134.2"
+  extended = false
+  min      = "0.134.2"
 [[mounts]]
-source = 'content'
-target = 'content'
+  source = 'content'
+  target = 'content'
 [[mounts]]
-source = 'static'
-target = 'static'
+  source = 'static'
+  target = 'static'
 [[mounts]]
-source = 'layouts'
-target = 'layouts'
+  source = 'layouts'
+  target = 'layouts'
 [[mounts]]
-source = 'data'
-target = 'data'
+  source = 'data'
+  target = 'data'
 [[mounts]]
-source = 'assets'
-target = 'assets'
+  source = 'assets'
+  target = 'assets'
 [[mounts]]
-source = 'i18n'
-target = 'i18n'
+  source = 'i18n'
+  target = 'i18n'
 [[mounts]]
-source = 'archetypes'
-target = 'archetypes'
+  source = 'archetypes'
+  target = 'archetypes'
 [[mounts]]
-disableWatch = true
-source = "hugo_stats.json"
-target = "assets/watching/hugo_stats.json"
+  disableWatch = false
+  source       = "hugo_stats.json"
+  target       = "assets/watching/hugo_stats.json"
