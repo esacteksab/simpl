@@ -3,7 +3,7 @@
         {{- if isset $.Site.Params.Author .id }}
             <li>
                 <a {{ if .rel }}rel="{{ .rel }}" {{- end -}} href="{{ printf .url (index $.Site.Params.Author .id ) }}"
-                   title="{{ .title }}" target="_blank" rel="noopener noreferrer">
+                  title="{{ .title }}" target="_blank">
 <span class="fa-stack md:fa-lg">
 <i class="fas fa-square fa-stack-2x"></i>
 <i class="{{ .icon }} fa-stack-1x fa-inverse"></i>
@@ -25,12 +25,11 @@
         {{- end -}}
     {{- end -}}
 </ul>
-<div class="flex flex-col text-sm items-center">
-    {{/* Copyright */}}
+<div class="flex flex-col items-center">
+    {{- /* Copyright */ -}}
     {{- with .Site.Copyright -}}
-    <p>{{ . | markdownify }}
-        {{- else }}&copy;&nbsp;{{ now.Format "2006" }}&nbsp;{{ $.Site.Params.Author.name }}{{ end -}}
-    </p> <!-- <span>Copyright {{ now.Year }}. All rights reserved.</span> -->
-    <span>Powered by <a class="powered-by" href="https://gohugo.io/" target="_blank" rel="noopener noreferrer">Hugo</a></span>
+    <p>{{ . | markdownify }}</p>
+    {{- else }}<p>&copy;&nbsp;{{ now.Format "2006" }}&nbsp;{{ $.Site.Params.Author.name }}</p>{{ end -}}
+    <p>Built with <i class="fas fa-heart"></i> and <a class="powered-by" href="https://github.com/esacteksab/simpl" target="_blank">Simpl</a>. Powered by <a class="powered-by" href="https://gohugo.io/" target="_blank">Hugo</a>.  {{ with .GitInfo -}}{{- .AbbreviatedHash -}}{{- end -}}</p>
 </div>
 {{- /* Trim EOF */ -}}

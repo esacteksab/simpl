@@ -6,7 +6,7 @@
 
     @example: {{ partial "terms.html" (dict "taxonomy" "tags" "page" .)
 }}
-*/}}
+*/ -}}
 {{- $page := .page }}
 {{- $taxonomy := .taxonomy }}
 
@@ -15,13 +15,13 @@
     <div class="flex-column mt-8 flex flex-wrap">
         <strong>{{ $label }}:</strong>
         <ul class="list-none">
-            {{- range . }}
-                <li class="tags inline-flex pt-1 pr-2 text-sm">
+            {{ range . }}
+                <li class="tags inline-flex pt-1 pr-2">
                     <a href="{{ .RelPermalink | absURL }}">[{{ .LinkTitle }}]</a>
                 </li>
-            {{- end }}
+            {{ end -}}
         </ul>
     </div>
     "partials/terms.html"
-{{- end }}
+{{ end -}}
 {{- /* Trim EOF */ -}}
