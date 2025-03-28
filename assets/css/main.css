@@ -45,11 +45,12 @@
   }
 
   a {
-    @apply underline underline-offset-4;
+    @apply underline underline-offset-2;
   }
 
   p {
-    @apply block font-medium;
+    @apply block text-sm/tight font-medium;
+    margin-block: unset;
   }
 }
 
@@ -139,7 +140,7 @@ nav label {
 }
 
 .read-more a:hover {
-  @apply underline underline-offset-4;
+  @apply underline underline-offset-2;
 }
 
 .pager {
@@ -147,11 +148,11 @@ nav label {
 }
 
 .pager a {
-  @apply md:font-semibold md:no-underline;
+  @apply md:font-semibold lg:no-underline;
 }
 
 .pager a:hover {
-  @apply underline underline-offset-4;
+  @apply underline underline-offset-2;
 }
 
 .pager li {
@@ -159,7 +160,7 @@ nav label {
 }
 
 .tight {
-  @apply m-0 p-0 underline underline-offset-4;
+  @apply m-0 p-0;
 }
 
 main table {
@@ -220,11 +221,11 @@ article .post {
 }
 
 article a {
-  @apply underline underline-offset-4;
+  @apply underline underline-offset-2;
 }
 
 .summary p a {
-  @apply underline underline-offset-4;
+  @apply underline underline-offset-2;
 }
 
 .til-ls a {
@@ -347,8 +348,11 @@ hr {
   }
 }
 
+footer p {
+  margin-block: 0;
+}
 footer .list-inline {
-  margin-bottom: 1rem;
+  margin-bottom: 1em;
   padding-top: 10px;
 }
 
