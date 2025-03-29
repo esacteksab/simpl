@@ -20,7 +20,6 @@ repos:
     rev: 0.31.3
     hooks:
       - id: check-github-workflows
-      - id: check-renovate
       - id: check-dependabot
       - id: check-jsonschema
         name: "Validate Pre-Commit"
