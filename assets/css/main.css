@@ -51,7 +51,19 @@
   p {
     @apply block text-sm/tight font-medium;
     margin-block: unset;
+    @apply py-2;
   }
+}
+
+a :is(h1, h2, h3, h4, h5, h6) {
+  @apply no-underline;
+}
+a .anchor-icon {
+  visibility: hidden;
+}
+
+a:hover .anchor-icon {
+  visibility: visible;
 }
 
 :is(h1, h2, h3, h4, h5, h6) code {
@@ -252,19 +264,19 @@ article h2 {
 }
 
 p + p,
-p + h1,
-p + h2,
-p + h3,
-p + h4,
-p + h5,
-p + h6,
-ul + h2,
-ul + h3,
-ul + h4,
-ol + h2,
-ol + h3,
-ol + h4 {
-  @apply md:mt-3 md:mb-2;
+p + a + h1,
+p + a + h2,
+p + a + h3,
+p + a + h4,
+p + a + h5,
+p + a + h6,
+ul + a + h2,
+ul + a + h3,
+ul + a + h4,
+ol + a + h2,
+ol + a + h3,
+ol + a + h4 {
+  @apply md:mb-2 md:mt-3;
 }
 
 :is(h1, h2, h3, h4, h5, h6) + p {
@@ -319,7 +331,7 @@ h2 + h3 {
 }
 
 hr {
-  @apply m-4 border-t-1;
+  @apply border-t-1 m-4;
 }
 
 #TableOfContents {
@@ -329,7 +341,7 @@ hr {
 .highlight {
   @apply my-4 py-3;
   .chroma {
-    @apply px-4 whitespace-pre-wrap;
+    @apply whitespace-pre-wrap px-4;
   }
 }
 
@@ -357,7 +369,7 @@ footer .list-inline {
 }
 
 blockquote {
-  @apply mt-3 mb-4 border-l-3 pl-3;
+  @apply border-l-3 mb-4 mt-3 pl-3;
   pre {
     @apply mt-1.5;
   }
@@ -407,7 +419,7 @@ Dark Mode
   }
 
   .highlight {
-    @apply rounded-sm border-1 border-neutral-600;
+    @apply border-1 rounded-sm border-neutral-600;
   }
 
   .tags {
@@ -471,6 +483,8 @@ Light Mode
   }
 
   .highlight {
+    /* This overwrites the global .highlight because we don't need this padding */
+    @apply my-0;
     .chroma {
       @apply rounded-sm py-5;
     }
