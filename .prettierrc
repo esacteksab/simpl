@@ -1,44 +1,40 @@
 {
-  "plugins": [
-    "prettier-plugin-sh",
-    "prettier-plugin-pkg",
-    "prettier-plugin-go-template",
-    "prettier-plugin-css-order",
-    "prettier-plugin-toml",
-    "prettier-plugin-tailwindcss"
-  ],
-  "overrides": [
-    {
-      "files": ["*.html"],
-      "options": {
-        "parser": "go-template",
-        "goTemplateBracketSpacing": true,
-        "bracketSameLine": true,
-        "embeddedLanguageFormatting": "off",
-        "htmlWhitespaceSensitivity": "strict"
-      }
-    },
-    {
-      "files": ["*.md"],
-      "options": {
-        "embeddedLanguageFormatting": "off"
-      }
-    },
-    {
-      "files": ["*.toml"],
-      "options": {
-        "indentTables": true,
-        "indentEntries": true,
-        "alignEntries": true
-      }
-    }
-  ],
-  "tailwindStylesheet": "./assets/css/main.css",
-  "tailwindConfig": "./tailwind.config.js",
-  "tailwindFunctions": ["tw"],
-  "cssDeclarationSorterOrder": "smacss",
-  "trailingComma": "es5",
-  "tabWidth": 4,
-  "semi": false,
-  "singleQuote": true
+    "plugins": [
+        "prettier-plugin-sh",
+        "prettier-plugin-pkg",
+        "prettier-plugin-go-template",
+        "prettier-plugin-css-order",
+        "prettier-plugin-toml",
+        "prettier-plugin-tailwindcss"
+    ],
+    "overrides": [
+        {
+            "files": ["*.html"],
+            "options": {
+                "parser": "go-template",
+                "goTemplateBracketSpacing": true,
+                "bracketSameLine": true,
+                "embeddedLanguageFormatting": "off",
+                "htmlWhitespaceSensitivity": "strict"
+            }
+        },
+        {
+            "files": ["*.md"],
+            "options": {
+                "embeddedLanguageFormatting": "off"
+            }
+        },
+        {
+            "files": ["*.toml"],
+            "options": {
+                "indentTables": true,
+                "indentEntries": true,
+                "alignEntries": true
+            }
+        }
+    ],
+    "tailwindStylesheet": "./assets/css/main.css",
+    "tailwindConfig": "./tailwind.config.js",
+    "tailwindFunctions": ["tw"],
+    "cssDeclarationSorterOrder": "smacss"
 }
