@@ -11,6 +11,6 @@ changelog:
         labels:
           - dependencies
 
-    - title: ":hammer: Dependencies"
+    - title: ":tractor: Dependencies"
       labels:
         - dependencies
