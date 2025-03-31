@@ -2,7 +2,7 @@
     {{- $dateMachine := .Date | time.Format "2006-01-02T15:04:05-07:00" }}
     {{- $dateHuman := .Date | time.Format ":date_long" }}
     {{- $lastmod := .Lastmod | time.Format ":date_long" }}
-    <p class="tight font-semibold md:underline a:no-underline md:decoration-amber-500 md:underline-offset-4">
+    <p class="tight font-semibold md:underline a:no-underline md:underline-offset-4">
         Published:
         <time datetime="{{ $dateMachine }}">{{ $dateHuman }}</time>
         {{- if .Lastmod }}

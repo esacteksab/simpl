@@ -1,6 +1,14 @@
 @import "tailwindcss";
 @source "hugo_stats.json";
 
+/* @theme inline {
+  --accent-color: var(--color-amber-500);
+} */
+
+:root {
+  --accent-color: var(--color-amber-500);
+}
+
 @layer components {
   html {
     width: 100%;
@@ -55,9 +63,20 @@
   }
 }
 
+header,
+main {
+  /* @apply border-amber-500; */
+  border-color: var(--accent-color);
+}
+
 a :is(h1, h2, h3, h4, h5, h6) {
   @apply no-underline;
 }
+
+.anchor {
+  @apply no-underline;
+}
+
 a .anchor-icon {
   visibility: hidden;
 }
@@ -124,6 +143,11 @@ nav label {
 
 .post-preview > span > p {
   @apply mt-5;
+}
+
+.post-metadata p {
+  /* @apply md:decoration-amber-500; */
+  text-decoration-color: var(--accent-color);
 }
 
 .main :is(ul, ol) {
@@ -263,7 +287,10 @@ article h2 {
   @apply ml-2 p-1 font-mono;
 }
 
-p + p,
+/* p + p {
+  @apply my-1.5;
+} */
+
 p + a + h1,
 p + a + h2,
 p + a + h3,
@@ -380,8 +407,13 @@ Dark Mode
 */
 
 @media (prefers-color-scheme: dark) {
+  /* header,
+  main {
+    @apply border-amber-500;
+  } */
   code {
-    @apply border-neutral-600 font-mono text-amber-500;
+    @apply border-neutral-600 font-mono;
+    color: var(--accent-color);
   }
 
   img {
@@ -427,7 +459,8 @@ Dark Mode
   }
 
   :is(.read-more, .pager) a {
-    @apply text-amber-500;
+    /* @apply text-amber-500; */
+    color: var(--accent-color);
   }
 
   nav a {
@@ -491,6 +524,7 @@ Light Mode
   }
 
   :is(.read-more, .pager) a {
-    @apply text-orange-700;
+    /* @apply text-orange-700; */
+    color: var(--accent-color);
   }
 }
