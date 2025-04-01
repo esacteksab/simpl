@@ -57,7 +57,7 @@
   }
 
   p {
-    @apply block text-sm/tight font-medium;
+    @apply block text-base/normal font-medium;
     margin-block: unset;
     @apply py-2;
   }
@@ -91,6 +91,7 @@ a:hover .anchor-icon {
 
 code {
   display: inline-block;
+  margin: 0.125em;
   padding: 0.0625rem 0.25rem;
   font-size: 85%;
   @apply rounded-sm no-underline;
@@ -142,7 +143,7 @@ nav label {
 }
 
 .post-preview > span > p {
-  @apply mt-5;
+  @apply mt-2;
 }
 
 .post-metadata p {
@@ -284,7 +285,7 @@ article h2 {
 }
 
 .tags {
-  @apply ml-2 p-1 font-mono;
+  @apply ml-2 p-1;
 }
 
 /* p + p {
@@ -323,35 +324,35 @@ h2 + h3 {
 }
 
 .alert-note {
-  @apply bg-blue-100 text-blue-700;
+  @apply bg-blue-50 text-blue-700;
   code {
     @apply border-blue-700;
   }
 }
 
 .alert-tip {
-  @apply bg-orange-100 text-orange-700;
+  @apply bg-amber-50 text-amber-700;
   code {
-    @apply border-orange-700;
+    @apply border-amber-700;
   }
 }
 
 .alert-important {
-  @apply bg-lime-100 text-lime-700;
+  @apply bg-lime-50 text-lime-700;
   code {
     @apply border-lime-700;
   }
 }
 
 .alert-caution {
-  @apply bg-yellow-100 text-yellow-700;
+  @apply bg-yellow-50 text-yellow-700;
   code {
     @apply border-yellow-700;
   }
 }
 
 .alert-warning {
-  @apply bg-red-100 text-red-700;
+  @apply bg-red-50 text-red-700;
   code {
     @apply border-red-700;
   }
@@ -384,6 +385,7 @@ hr {
   }
   code {
     @apply border-1;
+    margin: 0;
   }
 }
 
@@ -412,7 +414,7 @@ Dark Mode
     @apply border-amber-500;
   } */
   code {
-    @apply border-neutral-600 font-mono;
+    border-color: var(--accent-color);
     color: var(--accent-color);
   }
 
@@ -421,17 +423,20 @@ Dark Mode
   }
 
   tr {
-    @apply border-t-1 border-neutral-600;
+    @apply border-t-1; /* border-neutral-600; */
+    border-color: var(--accent-color);
   }
 
   th {
-    @apply border-1 border-neutral-600;
+    @apply border-1; /* border-neutral-600; */
+    border-color: var(--accent-color);
   }
 
   td {
-    @apply border-1 border-neutral-600;
+    @apply border-1; /* border-neutral-600; */
+    border-color: var(--accent-color);
     code {
-      @apply border-1 border-neutral-600;
+      @apply border-1; /* border-neutral-600; */
     }
   }
 
@@ -439,19 +444,23 @@ Dark Mode
   p,
   blockquote {
     code {
-      @apply border-1 border-neutral-600;
+      @apply border-1; /* border-neutral-600; */
+      border-color: var(--accent-color);
     }
   }
 
   .labeled-highlight__label {
     translate: 0% -50%;
     code {
-      @apply border-neutral-600 bg-zinc-800;
+      /* @apply border-neutral-600 bg-zinc-800; */
+      @apply bg-zinc-800;
+      border-color: var(--accent-color);
     }
   }
 
   .highlight {
-    @apply border-1 rounded-sm border-neutral-600;
+    @apply border-1 rounded-sm; /* border-neutral-600; */
+    border-color: var(--accent-color);
   }
 
   .tags {
@@ -478,21 +487,30 @@ Light Mode
 
 @media (prefers-color-scheme: light) {
   code {
-    @apply font-mono text-orange-700;
+    /* @apply text-orange-700; */
+    color: var(--accent-color);
   }
 
   tr {
-    @apply border-t-1 border-neutral-600;
+    /*@apply border-t-1 border-neutral-600; */
+    @apply border-t-1;
+    border-color: var(--accent-color);
   }
 
   th {
-    @apply border-1 border-neutral-600;
+    /* @apply border-1 border-neutral-600; */
+    @apply border-1;
+    border-color: var(--accent-color);
   }
 
   td {
-    @apply border-1 border-neutral-600;
+    /* @apply border-1 border-neutral-600; */
+    @apply border-1;
+    border-color: var(--accent-color);
     code {
-      @apply border-1 border-orange-700;
+      /* @apply border-1 border-orange-700; */
+      @apply border-1;
+      border-color: var(--accent-color);
     }
   }
 
@@ -504,14 +522,18 @@ Light Mode
   p,
   blockquote {
     code {
-      @apply border-1 border-orange-700;
+      /* @apply border-1 border-orange-700; */
+      @apply border-1;
+      border-color: var(--accent-color);
     }
   }
 
   .labeled-highlight__label {
     translate: 0;
     code {
-      @apply border-orange-500 bg-neutral-100;
+      /* @apply border-orange-500 bg-neutral-100; */
+      @apply bg-neutral-100;
+      border-color: var(--accent-color);
     }
   }
 
