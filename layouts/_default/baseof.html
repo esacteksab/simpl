@@ -1,18 +1,20 @@
 <!doctype html>
-<html class="bg-neutral-50 text-neutral-900 dark:bg-neutral-900 dark:text-neutral-50 text-base/normal"
-      lang="{{ site.Language.LanguageCode }}" dir="{{ or site.Language.LanguageDirection `ltr` }}">
+<html
+    class="bg-neutral-100 text-neutral-900 dark:bg-neutral-900 dark:text-neutral-50"
+    lang="{{ site.Language.LanguageCode }}"
+    dir="{{ or site.Language.LanguageDirection `ltr` }}">
 <head>
-    {{- partial "head.html" . }}
+  {{- partial "head.html" . }}
 </head>
 <body class="@container flex flex-col">
-<header class="flex flex-row items-baseline m-0 p-0 px-2 md:pb-2 lg:mx-32 bg-neutral-50 dark:bg-neutral-900">
-    {{- partial "header.html" . }}
+<header class="flex flex-row items-baseline m-0 p-0 px-2 md:pb-2 lg:mx-32 bg-neutral-100 dark:bg-neutral-900">
+  {{- partial "header.html" . }}
 </header>
-<main class="main flex flex-col m-0 p-2 md:px-8 md:pt-4 lg:mx-32 bg-neutral-100 dark:bg-zinc-800 border-1">
-    {{- block "main" . -}}{{- end -}}
+<main class="main flex flex-col m-0 p-2 md:px-8 md:pt-4 lg:mx-32 bg-white dark:bg-zinc-800 border-1">
+  {{- block "main" . }}{{ end -}}
 </main>
 <footer class="m-0 p-0 mb-2 md:pt-4 flex flex-col items-center">
-    {{- partial "footer.html" . -}}
+  {{ partial "footer.html" . -}}
 </footer>
 </body>
 </html>
