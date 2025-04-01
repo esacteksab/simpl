@@ -1,10 +1,6 @@
 @import "tailwindcss";
 @source "hugo_stats.json";
 
-/* @theme inline {
-  --accent-color: var(--color-amber-500);
-} */
-
 :root {
   --accent-color: var(--color-amber-500);
 }
@@ -65,7 +61,6 @@
 
 header,
 main {
-  /* @apply border-amber-500; */
   border-color: var(--accent-color);
 }
 
@@ -147,7 +142,6 @@ nav label {
 }
 
 .post-metadata p {
-  /* @apply md:decoration-amber-500; */
   text-decoration-color: var(--accent-color);
 }
 
@@ -288,10 +282,6 @@ article h2 {
   @apply ml-2 p-1;
 }
 
-/* p + p {
-  @apply my-1.5;
-} */
-
 p + a + h1,
 p + a + h2,
 p + a + h3,
@@ -409,10 +399,6 @@ Dark Mode
 */
 
 @media (prefers-color-scheme: dark) {
-  /* header,
-  main {
-    @apply border-amber-500;
-  } */
   code {
     border-color: var(--accent-color);
     color: var(--accent-color);
@@ -423,20 +409,20 @@ Dark Mode
   }
 
   tr {
-    @apply border-t-1; /* border-neutral-600; */
+    @apply border-t-1;
     border-color: var(--accent-color);
   }
 
   th {
-    @apply border-1; /* border-neutral-600; */
+    @apply border-1;
     border-color: var(--accent-color);
   }
 
   td {
-    @apply border-1; /* border-neutral-600; */
+    @apply border-1;
     border-color: var(--accent-color);
     code {
-      @apply border-1; /* border-neutral-600; */
+      @apply border-1;
     }
   }
 
@@ -444,7 +430,7 @@ Dark Mode
   p,
   blockquote {
     code {
-      @apply border-1; /* border-neutral-600; */
+      @apply border-1;
       border-color: var(--accent-color);
     }
   }
@@ -459,7 +445,7 @@ Dark Mode
   }
 
   .highlight {
-    @apply border-1 rounded-sm; /* border-neutral-600; */
+    @apply border-1 rounded-sm;
     border-color: var(--accent-color);
   }
 
@@ -468,7 +454,6 @@ Dark Mode
   }
 
   :is(.read-more, .pager) a {
-    /* @apply text-amber-500; */
     color: var(--accent-color);
   }
 
@@ -486,29 +471,27 @@ Light Mode
 */
 
 @media (prefers-color-scheme: light) {
+  :root {
+    --accent-color: var(--color-orange-700);
+  }
   code {
-    /* @apply text-orange-700; */
     color: var(--accent-color);
   }
 
   tr {
-    /*@apply border-t-1 border-neutral-600; */
     @apply border-t-1;
     border-color: var(--accent-color);
   }
 
   th {
-    /* @apply border-1 border-neutral-600; */
     @apply border-1;
     border-color: var(--accent-color);
   }
 
   td {
-    /* @apply border-1 border-neutral-600; */
     @apply border-1;
     border-color: var(--accent-color);
     code {
-      /* @apply border-1 border-orange-700; */
       @apply border-1;
       border-color: var(--accent-color);
     }
@@ -522,7 +505,6 @@ Light Mode
   p,
   blockquote {
     code {
-      /* @apply border-1 border-orange-700; */
       @apply border-1;
       border-color: var(--accent-color);
     }
@@ -531,7 +513,6 @@ Light Mode
   .labeled-highlight__label {
     translate: 0;
     code {
-      /* @apply border-orange-500 bg-neutral-100; */
       @apply bg-neutral-100;
       border-color: var(--accent-color);
     }
@@ -546,7 +527,6 @@ Light Mode
   }
 
   :is(.read-more, .pager) a {
-    /* @apply text-orange-700; */
     color: var(--accent-color);
   }
 }
