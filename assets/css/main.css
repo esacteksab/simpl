@@ -1,6 +1,10 @@
 @import "tailwindcss";
 @source "hugo_stats.json";
 
+:root {
+  --accent-color: var(--color-amber-500);
+}
+
 @layer components {
   html {
     width: 100%;
@@ -49,15 +53,25 @@
   }
 
   p {
-    @apply block text-sm/tight font-medium;
+    @apply block text-base/normal font-medium;
     margin-block: unset;
     @apply py-2;
   }
 }
 
+header,
+main {
+  border-color: var(--accent-color);
+}
+
 a :is(h1, h2, h3, h4, h5, h6) {
   @apply no-underline;
 }
+
+.anchor {
+  @apply no-underline;
+}
+
 a .anchor-icon {
   visibility: hidden;
 }
@@ -72,6 +86,7 @@ a:hover .anchor-icon {
 
 code {
   display: inline-block;
+  margin: 0.125em;
   padding: 0.0625rem 0.25rem;
   font-size: 85%;
   @apply rounded-sm no-underline;
@@ -123,7 +138,11 @@ nav label {
 }
 
 .post-preview > span > p {
-  @apply mt-5;
+  @apply mt-2;
+}
+
+.post-metadata p {
+  text-decoration-color: var(--accent-color);
 }
 
 .main :is(ul, ol) {
@@ -260,10 +279,9 @@ article h2 {
 }
 
 .tags {
-  @apply ml-2 p-1 font-mono;
+  @apply ml-2 p-1;
 }
 
-p + p,
 p + a + h1,
 p + a + h2,
 p + a + h3,
@@ -296,35 +314,35 @@ h2 + h3 {
 }
 
 .alert-note {
-  @apply bg-blue-100 text-blue-700;
+  @apply bg-blue-50 text-blue-700;
   code {
     @apply border-blue-700;
   }
 }
 
 .alert-tip {
-  @apply bg-orange-100 text-orange-700;
+  @apply bg-amber-50 text-amber-700;
   code {
-    @apply border-orange-700;
+    @apply border-amber-700;
   }
 }
 
 .alert-important {
-  @apply bg-lime-100 text-lime-700;
+  @apply bg-lime-50 text-lime-700;
   code {
     @apply border-lime-700;
   }
 }
 
 .alert-caution {
-  @apply bg-yellow-100 text-yellow-700;
+  @apply bg-yellow-50 text-yellow-700;
   code {
     @apply border-yellow-700;
   }
 }
 
 .alert-warning {
-  @apply bg-red-100 text-red-700;
+  @apply bg-red-50 text-red-700;
   code {
     @apply border-red-700;
   }
@@ -357,6 +375,7 @@ hr {
   }
   code {
     @apply border-1;
+    margin: 0;
   }
 }
 
@@ -381,7 +400,8 @@ Dark Mode
 
 @media (prefers-color-scheme: dark) {
   code {
-    @apply border-neutral-600 font-mono text-amber-500;
+    border-color: var(--accent-color);
+    color: var(--accent-color);
   }
 
   img {
@@ -389,17 +409,20 @@ Dark Mode
   }
 
   tr {
-    @apply border-t-1 border-neutral-600;
+    @apply border-t-1;
+    border-color: var(--accent-color);
   }
 
   th {
-    @apply border-1 border-neutral-600;
+    @apply border-1;
+    border-color: var(--accent-color);
   }
 
   td {
-    @apply border-1 border-neutral-600;
+    @apply border-1;
+    border-color: var(--accent-color);
     code {
-      @apply border-1 border-neutral-600;
+      @apply border-1;
     }
   }
 
@@ -407,19 +430,23 @@ Dark Mode
   p,
   blockquote {
     code {
-      @apply border-1 border-neutral-600;
+      @apply border-1;
+      border-color: var(--accent-color);
     }
   }
 
   .labeled-highlight__label {
     translate: 0% -50%;
     code {
-      @apply border-neutral-600 bg-zinc-800;
+      /* @apply border-neutral-600 bg-zinc-800; */
+      @apply bg-zinc-800;
+      border-color: var(--accent-color);
     }
   }
 
   .highlight {
-    @apply border-1 rounded-sm border-neutral-600;
+    @apply border-1 rounded-sm;
+    border-color: var(--accent-color);
   }
 
   .tags {
@@ -427,7 +454,7 @@ Dark Mode
   }
 
   :is(.read-more, .pager) a {
-    @apply text-amber-500;
+    color: var(--accent-color);
   }
 
   nav a {
@@ -444,22 +471,29 @@ Light Mode
 */
 
 @media (prefers-color-scheme: light) {
+  :root {
+    --accent-color: var(--color-orange-700);
+  }
   code {
-    @apply font-mono text-orange-700;
+    color: var(--accent-color);
   }
 
   tr {
-    @apply border-t-1 border-neutral-600;
+    @apply border-t-1;
+    border-color: var(--accent-color);
   }
 
   th {
-    @apply border-1 border-neutral-600;
+    @apply border-1;
+    border-color: var(--accent-color);
   }
 
   td {
-    @apply border-1 border-neutral-600;
+    @apply border-1;
+    border-color: var(--accent-color);
     code {
-      @apply border-1 border-orange-700;
+      @apply border-1;
+      border-color: var(--accent-color);
     }
   }
 
@@ -471,14 +505,16 @@ Light Mode
   p,
   blockquote {
     code {
-      @apply border-1 border-orange-700;
+      @apply border-1;
+      border-color: var(--accent-color);
     }
   }
 
   .labeled-highlight__label {
     translate: 0;
     code {
-      @apply border-orange-500 bg-neutral-100;
+      @apply bg-neutral-100;
+      border-color: var(--accent-color);
     }
   }
 
@@ -491,6 +527,6 @@ Light Mode
   }
 
   :is(.read-more, .pager) a {
-    @apply text-orange-700;
+    color: var(--accent-color);
   }
 }

@@ -1,43 +1,44 @@
 {{- $page := .page -}}
 {{- $menuID := .menuID -}}
 {{- with index site.Menus $menuID -}}
-    <nav class="flex flex-1 flex-row-reverse">
-        <label for="menu" tabindex="0">
-        <span class="fa-stack">
-            <i class="fas fa-square fa-stack-2x"></i>
-            <i class="fas fa-bars fa-stack-1x fa-inverse"></i>
-        </span>
-        </label>
-        <input id="menu" type="checkbox"/>
-        <ul class="md:flex m-0 p-0 md:pr-4">
-            {{- partial "inline/menu/walk.html" (dict "page" $page "menuEntries" .) -}}
-        </ul>
-    </nav>
+<nav class="flex flex-1 flex-row-reverse">
+<label for="menu" tabindex="0">
+<span class="fa-stack">
+  <i class="fas fa-square fa-stack-2x"></i>
+  <i class="fas fa-bars fa-stack-1x fa-inverse"></i>
+</span>
+</label>
+<input id="menu" type="checkbox" />
+<ul class="md:flex m-0 p-0 md:pr-4">
+  {{- partial "inline/menu/walk.html" (dict "page" $page "menuEntries" .) -}}
+</ul>
+</nav>
 {{- end -}}
+
 {{- define "partials/inline/menu/walk.html" -}}
-    {{- $page := .page }}
-    {{- range .menuEntries }}
-        {{- $attrs := dict "href" .URL }}
-        {{- if $page.IsMenuCurrent .Menu . }}
-            {{- $attrs = merge $attrs (dict "class" "active" "aria-current" "page") }}
-        {{- else if $page.HasMenuCurrent .Menu . }}
-            {{- $attrs = merge $attrs (dict "class" "ancestor" "aria-current" "true") }}
-        {{- end -}}
-        {{- $name := .Name }}
-        {{- with .Identifier }}
-            {{- with T . }}
-                {{- $name = . }}
-            {{- end -}}
-        {{- end -}}
-        <li class="inline-flex nav-links pr-4 menu-{{- lower .Identifier }}">
-            <a {{- range $k, $v :=$attrs }} {{- with $v }}{{ printf " %s=%q" $k $v | safeHTMLAttr }}{{ end -}} {{- end -}}>{{
-                $name }}</a>
-            {{- with .Children }}
-                <ul>
-                    {{- partial "inline/menu/walk.html" (dict "page" $page "menuEntries" .) }}
-                </ul>
-            {{- end -}}
-        </li>
-    {{- end -}}
+{{- $page := .page }}
+{{- range .menuEntries }}
+{{- $attrs := dict "href" .URL }}
+{{- if $page.IsMenuCurrent .Menu . }}
+  {{- $attrs = merge $attrs (dict "class" "active" "aria-current" "page") }}
+{{- else if $page.HasMenuCurrent .Menu . }}
+  {{- $attrs = merge $attrs (dict "class" "ancestor" "aria-current" "true") }}
 {{- end -}}
+{{- $name := .Name }}
+{{- with .Identifier }}
+{{- with T . }}
+    {{- $name = . }}
+{{- end -}}
+{{- end -}}
+<li class="inline-flex nav-links pr-4 menu-{{- lower .Identifier }}">
+  <a {{- range $k, $v := $attrs }} {{- with $v }}{{ printf " %s=%q" $k $v | safeHTMLAttr }}{{ end -}} {{- end -}}>{{ $name }}</a>
+{{- with .Children }}
+<ul>
+  {{- partial "inline/menu/walk.html" (dict "page" $page "menuEntries" .) }}
+</ul>
+{{- end -}}
+</li>
+{{- end -}}
+{{- end -}}
+
 {{- /* Trim EOF */ -}}

@@ -2,14 +2,24 @@
     <ul class="bottom-8 flex list-none flex-wrap">
         <li class="mr-auto">
             {{ with $.PrevInSection }}
-                <a href="{{ .RelPermalink | absURL }}" aria-label="Previous" class="page-link" role="button"><span
-                            aria-hidden="true"> &larr; Previous Post</span></a>
+                <a
+                    href="{{ .RelPermalink | absURL }}"
+                    aria-label="Previous"
+                    class="page-link"
+                    role="button">
+                    <span aria-hidden="true">&larr; Previous Post</span>
+                </a>
             {{ end }}
         </li>
         <li class="ml-auto">
             {{ with $.NextInSection }}
-                <a href="{{ .RelPermalink | absURL }}" aria-label="Next" class="page-link" role="button"><span
-                            aria-hidden="true"></span>Next Post &rarr;</a>
+                <a
+                    href="{{ .RelPermalink | absURL }}"
+                    aria-label="Next"
+                    class="page-link"
+                    role="button">
+                    <span aria-hidden="true">Next Post &rarr;</span>
+                </a>
             {{ end }}
         </li>
     </ul>

@@ -3,6 +3,7 @@
 {{- $options := cond .IsNamedParams (.Get "options") (.Get 2) -}}
 {{- $inner := trim .Inner "\n\r" -}}
 {{- $highlight := "" -}}
+
 {{- if hasPrefix $inner "```" -}}
     {{- /* Inner is a code fence, so render with markdownify */ -}}
     {{- $highlight = $inner | markdownify -}}
@@ -10,6 +11,7 @@
     {{- /* Inner is not a code fence, so render with highlight */ -}}
     {{- $highlight = highlight $inner $lang $options -}}
 {{- end -}}
+
 {{- /* Output */ -}}
 <div class="labeled-highlight">
     {{- with $label }}

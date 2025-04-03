@@ -1,7 +1,7 @@
 {{- define "main" }}
-    {{ partial "post-meta.html" . }}
-    <article class="about mt-0 md:mt-4">
-        {{ .Content | emojify }}
-    </article>
-    <!-- "about/single.html" -->
+{{ partial "post-meta.html" . }}
+<article class="about mt-0 md:mt-4">
+  {{ .Content | emojify }}
+</article>
+<!-- "about/single.html" -->
 {{ end -}}
