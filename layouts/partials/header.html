@@ -5,7 +5,7 @@
   class="header-title no-underline md:pl-4 mt-2 max-sm:mb-0 md:font-extrabold"
   title="{{ .Title }}"
   href="{{ .Site.BaseURL | absURL }}">
-  {{ site.Title }}
+  {{ site.Title }} <span class="tight title_cursor"></span>
 </a>
 </h1>
 {{- else -}}
@@ -18,7 +18,7 @@
   </a>
 </h1>
 <h3 class="hidden md:contents">
-  &nbsp;&gt;&nbsp;{{ .Title | emojify }}
+  &nbsp;&nbsp;{{ .Title | emojify }}&nbsp;<span class="tight title_cursor"></span>
 </h3>
 {{- end -}}
 {{- partial "menu.html" (dict "menuID" "main" "page" .) -}}
