@@ -1,41 +1,41 @@
 {
-    "name": "simpl",
-    "version": "0.2.1",
-    "description": "A simpl(e) Hugo Theme",
-    "author": "@esacteksab",
-    "scripts": {
-        "postcss": "postcss ./assets/css/main.css --config ./postcss.config.js -r"
-    },
-    "devDependencies": {
-        "@tailwindcss/cli": "^4.1.2",
-        "@tailwindcss/nesting": "^0.0.0-insiders.565cd3e",
-        "@tailwindcss/postcss": "^4.1.2",
-        "@tailwindcss/typography": "^0.5.16",
-        "autoprefixer": "^10.4.21",
-        "install": "^0.13.0",
-        "npm": "^11.2.0",
-        "postcss": "^8.5.3",
-        "postcss-cli": "^11.0.1",
-        "postcss-color-converter": "^1.1.2",
-        "postcss-flexbugs-fixes": "^5.0.2",
-        "prettier": "^3.5.3",
-        "prettier-plugin-css-order": "^2.1.2",
-        "prettier-plugin-go-template": "^0.0.15",
-        "prettier-plugin-organize-attributes": "^1.0.0",
-        "prettier-plugin-pkg": "^0.18.1",
-        "prettier-plugin-sh": "^0.16.0",
-        "prettier-plugin-tailwindcss": "^0.6.11",
-        "prettier-plugin-toml": "^2.0.3",
-        "stylelint": "^16.17.0",
-        "stylelint-config-recommended": "^15.0.0",
-        "tailwindcss": "^4.1.2"
-    },
-    "postcss": {
-        "map": false,
-        "plugins": {
-            "css-declaration-sorter": {
-                "order": "smacss"
-            }
-        }
+  "name": "simpl",
+  "version": "0.2.4",
+  "description": "A simpl(e) Hugo Theme",
+  "author": "@esacteksab",
+  "scripts": {
+    "postcss": "postcss ./assets/css/main.css --config ./postcss.config.js -r"
+  },
+  "devDependencies": {
+    "@tailwindcss/cli": "^4.1.2",
+    "@tailwindcss/nesting": "^0.0.0-insiders.565cd3e",
+    "@tailwindcss/postcss": "^4.1.2",
+    "@tailwindcss/typography": "^0.5.16",
+    "autoprefixer": "^10.4.21",
+    "install": "^0.13.0",
+    "npm": "^11.2.0",
+    "postcss": "^8.5.3",
+    "postcss-cli": "^11.0.1",
+    "postcss-color-converter": "^1.1.2",
+    "postcss-flexbugs-fixes": "^5.0.2",
+    "prettier": "^3.5.3",
+    "prettier-plugin-css-order": "^2.1.2",
+    "prettier-plugin-go-template": "^0.0.15",
+    "prettier-plugin-organize-attributes": "^1.0.0",
+    "prettier-plugin-pkg": "^0.18.1",
+    "prettier-plugin-sh": "^0.16.0",
+    "prettier-plugin-tailwindcss": "^0.6.11",
+    "prettier-plugin-toml": "^2.0.3",
+    "stylelint": "^16.17.0",
+    "stylelint-config-recommended": "^15.0.0",
+    "tailwindcss": "^4.1.2"
+  },
+  "postcss": {
+    "map": false,
+    "plugins": {
+      "css-declaration-sorter": {
+        "order": "smacss"
+      }
     }
+  }
 }
