@@ -1,15 +1,15 @@
 {
     "name": "simpl",
-    "version": "0.0.1",
+    "version": "0.2.1",
     "description": "A simpl(e) Hugo Theme",
     "author": "@esacteksab",
     "scripts": {
         "postcss": "postcss ./assets/css/main.css --config ./postcss.config.js -r"
     },
     "devDependencies": {
-        "@tailwindcss/cli": "^4.0.17",
+        "@tailwindcss/cli": "^4.1.2",
         "@tailwindcss/nesting": "^0.0.0-insiders.565cd3e",
-        "@tailwindcss/postcss": "^4.0.17",
+        "@tailwindcss/postcss": "^4.1.2",
         "@tailwindcss/typography": "^0.5.16",
         "autoprefixer": "^10.4.21",
         "install": "^0.13.0",
@@ -28,7 +28,7 @@
         "prettier-plugin-toml": "^2.0.3",
         "stylelint": "^16.17.0",
         "stylelint-config-recommended": "^15.0.0",
-        "tailwindcss": "^4.0.12"
+        "tailwindcss": "^4.1.2"
     },
     "postcss": {
         "map": false,
