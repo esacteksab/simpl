@@ -383,10 +383,6 @@ footer p {
   margin-block: 0;
   padding-block: 0;
 }
-/* footer .list-inline {
-  margin-bottom: 1em;
-  padding-top: 10px;
-} */
 
 blockquote {
   @apply border-l-3 mb-4 mt-3 pl-3;
