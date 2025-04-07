@@ -381,10 +381,7 @@ hr {
 
 footer p {
   margin-block: 0;
-}
-footer .list-inline {
-  margin-bottom: 1em;
-  padding-top: 10px;
+  padding-block: 0;
 }
 
 blockquote {
