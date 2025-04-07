@@ -153,6 +153,47 @@ site.webmanifest
 
 You can put these in your `static` dir and they will exist where they should when the site is built and published.
 
+### Accent Colors
+
+> [!CAUTION]
+> This should be considered a beta feature, subject to change. Not likely to be deprecated though as I quite like it.
+
+You can enable this by passing `Params.accentColor = '$color'` where `$color` doesn't necessarily need to be a color, just a string, but I choose `$color`. You do you.
+
+```toml
+[Params]
+  accentColor = 'blue'
+```
+
+Then in `assets/css/blue.css` **notice** whatever `blue` is here is what you pass in the `Params.accentColor` above.
+
+```css
+@import "tailwindcss";
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --accent-color: var(--color-sky-500);
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --accent-color: var(--color-blue-700);
+  }
+}
+```
+
+Since this theme uses TailwindCSS, I choose to use their color patterns, but these values (`--color-blue-700` or `--color-sky-500`) don't need to be TailwindCSS values, you could pass any supported value here.
+
+### GitInfo
+
+You can display the [abbreviated hash](https://gohugo.io/methods/page/gitinfo/#abbreviatedhash) by setting `enableGitInfo = true` in `hugo.toml`. Additionally, you can pass `Params.gitURL = 'https://<your git repo here>'` like so to make this has a link to the commit:
+
+```toml
+[Params]
+  gitURL = 'https://github.com/esacteksab/simpl'
+```
+
 ### Deploying to Cloudflare Pages
 
 Hugo's documentation on [Host and deploy](https://gohugo.io/host-and-deploy/) is pretty extensive. Cloudflare also publishes a [Hugo](https://developers.cloudflare.com/pages/framework-guides/deploy-a-hugo-site/) specific guide.

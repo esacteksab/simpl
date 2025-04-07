@@ -37,8 +37,14 @@
 {{- end -}}
 <p>Built with <i class="fas fa-heart"></i> and
 <a class="powered-by" href="https://github.com/esacteksab/simpl" target="_blank">Simpl</a>.
-Powered by <a class="powered-by" href="https://gohugo.io/" target="_blank">Hugo</a>.
-{{- with .GitInfo }}{{ .AbbreviatedHash }}{{- end -}}
+Powered by <a class="powered-by" href="https://gohugo.io/" target="_blank">Hugo</a>.&nbsp;
 </p>
+</div>
+<div class="flex flex-col items-center invisible md:visible ">
+{{- if $.Site.Params.gitURL -}}
+<span class="text-xs">{{- with .GitInfo }}<a href="{{ $.Site.Params.gitURL}}/commit/{{ .Hash }}">[{{ .AbbreviatedHash -}}]</a>{{- end -}}</span>
+{{- else -}}
+<span class="text-xs">{{- with .GitInfo }}[{{ .AbbreviatedHash }}]{{- end -}}</span>
+{{- end -}}
 </div>
 {{- /* Trim EOF */ -}}
