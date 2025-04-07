@@ -27,7 +27,7 @@
     "prettier-plugin-tailwindcss": "^0.6.11",
     "prettier-plugin-toml": "^2.0.3",
     "stylelint": "^16.17.0",
-    "stylelint-config-recommended": "^15.0.0",
+    "stylelint-config-recommended": "^16.0.0",
     "tailwindcss": "^4.1.2"
   },
   "postcss": {
