@@ -1,6 +1,6 @@
 {{ define "main" }}
 {{ partial "post-meta.html" . }}
-<article class="post mb-16 mt-8">
+<article class="post">
   {{ .Content | emojify }}
 </article>
 {{- partial "pager.html" . }}
