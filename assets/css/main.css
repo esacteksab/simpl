@@ -170,8 +170,6 @@ code {
 
 .main :is(ul, ol) {
   @apply list-outside;
-  margin-bottom: 16px;
-  padding-left: 2em;
 }
 
 .main ul {
