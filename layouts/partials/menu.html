@@ -9,17 +9,23 @@
   {{- end -}}
 {{- end -}}
 {{- if $hasValidEntries -}}
-<nav class="flex flex-1 flex-row-reverse">
-<label for="menu" tabindex="0">
-<span class="fa-stack">
-  <i class="fas fa-square fa-stack-2x"></i>
-  <i class="fas fa-bars fa-stack-1x fa-inverse"></i>
-</span>
-</label>
-<input id="menu" type="checkbox" />
+<nav class="md:flex flex-1 flex-row-reverse">
+  <a href="#mobile-menu" class="hamburger fixed z-20 rounded">
+    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+    </svg>
+  </a>
+  <div id="mobile-menu" class="mobile-menu">
+    <div class="menu-content pt-8">
+    <a href="#" class="close-menu fixed z-20 rounded">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+      </svg>
+    </a>
 <ul class="md:flex m-0 p-0 md:pr-4">
   {{- partial "inline/menu/walk.html" (dict "page" $page "menuEntries" $menu) -}}
 </ul>
+</div></div>
 </nav>
 {{- end -}}
 
