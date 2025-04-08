@@ -1,6 +1,14 @@
 {{- $page := .page -}}
 {{- $menuID := .menuID -}}
-{{- with index site.Menus $menuID -}}
+{{- $menu := index site.Menus $menuID -}}
+{{- $hasValidEntries := false -}}
+{{- range $menu -}}
+  {{- if and .Name .URL -}}
+    {{- $hasValidEntries = true -}}
+    {{- break -}}
+  {{- end -}}
+{{- end -}}
+{{- if $hasValidEntries -}}
 <nav class="flex flex-1 flex-row-reverse">
 <label for="menu" tabindex="0">
 <span class="fa-stack">
@@ -10,7 +18,7 @@
 </label>
 <input id="menu" type="checkbox" />
 <ul class="md:flex m-0 p-0 md:pr-4">
-  {{- partial "inline/menu/walk.html" (dict "page" $page "menuEntries" .) -}}
+  {{- partial "inline/menu/walk.html" (dict "page" $page "menuEntries" $menu) -}}
 </ul>
 </nav>
 {{- end -}}
@@ -40,5 +48,4 @@
 </li>
 {{- end -}}
 {{- end -}}
-
 {{- /* Trim EOF */ -}}
