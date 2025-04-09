@@ -4,10 +4,10 @@
     {{- $opts := dict "inlineImports" true "minify" true "optimize" (not hugo.IsDevelopment) -}}
     {{- with . | css.TailwindCSS $opts }}
       {{- if hugo.IsDevelopment -}}
-        <link rel="stylesheet" href="{{ .RelPermalink | absURL }}" />
+        <link rel="stylesheet" href="{{ .RelPermalink }}" />
       {{- else -}}
         {{- with . | fingerprint }}
-          <link rel="stylesheet" href="{{ .RelPermalink | absURL }}" integrity="{{ .Data.Integrity }}" crossorigin="anonymous" />
+          <link rel="stylesheet" href="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}" crossorigin="anonymous" />
         {{- end -}}
       {{- end -}}
     {{- end -}}
@@ -20,10 +20,10 @@
 {{- $opts := dict "inlineImports" true "minify" true "optimize" (not hugo.IsDevelopment) -}}
 {{- with . | css.TailwindCSS $opts -}}
 {{- if hugo.IsDevelopment -}}
-  <link rel="stylesheet" href="{{ .RelPermalink | absURL }}" />
+  <link rel="stylesheet" href="{{ .RelPermalink }}" />
 {{- else -}}
 {{- with . | fingerprint }}
-  <link rel="stylesheet" href="{{ .RelPermalink | absURL }}" integrity="{{ .Data.Integrity }}" crossorigin="anonymous" />
+  <link rel="stylesheet" href="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}" crossorigin="anonymous" />
 {{- end -}}
 {{- end -}}
 {{- end -}}
@@ -32,10 +32,10 @@
 {{- end }}
 {{- with resources.Get "fontawesome/css/all.css" }}
 {{- if hugo.IsDevelopment -}}
-  <link rel="stylesheet" href="{{ .RelPermalink | absURL }}" />
+  <link rel="stylesheet" href="{{ .RelPermalink }}" />
 {{- else -}}
   {{- with . | postCSS | minify | fingerprint }}
-    <link rel="stylesheet" href="{{ .RelPermalink | absURL }}" integrity="{{ .Data.Integrity }}" crossorigin="anonymous" />
+    <link rel="stylesheet" href="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}" crossorigin="anonymous" />
   {{- end -}}
 {{- end -}}
 {{- end }}
@@ -47,10 +47,10 @@
     {{- $opts := dict "inlineImports" true "minify" true "optimize" (not hugo.IsDevelopment) -}}
     {{- with . | css.TailwindCSS $opts }}
       {{- if hugo.IsDevelopment -}}
-        <link rel="stylesheet" href="{{ .RelPermalink | absURL }}" />
+        <link rel="stylesheet" href="{{ .RelPermalink }}" />
       {{- else -}}
         {{- with . | fingerprint }}
-          <link rel="stylesheet" href="{{ .RelPermalink | absURL }}" integrity="{{ .Data.Integrity }}" crossorigin="anonymous" />
+          <link rel="stylesheet" href="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}" crossorigin="anonymous" />
         {{- end -}}
       {{- end -}}
     {{- end -}}

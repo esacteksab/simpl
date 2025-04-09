@@ -2,7 +2,7 @@
     {{ .Content | emojify }}
     <ul>
         {{ range .Pages.ByDate }}
-            <li class="list-none"><a href="{{ .RelPermalink | absURL }}">{{ .LinkTitle }}</a></li>
+            <li class="list-none"><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></li>
         {{ end }}
     </ul>
     <!-- "_default/term.html" -->

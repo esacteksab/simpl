@@ -17,7 +17,7 @@
   <ul class="list-none">
 {{ range . }}
     <li class="tags inline-flex pt-1 pr-2">
-      <a href="{{ .RelPermalink | absURL }}">[{{ .LinkTitle }}]</a>
+      <a href="{{ .RelPermalink }}">[{{ .LinkTitle }}]</a>
     </li>
 {{ end -}}
   </ul>
