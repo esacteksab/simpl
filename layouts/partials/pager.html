@@ -3,7 +3,7 @@
         <li class="mr-auto">
             {{ with $.PrevInSection }}
                 <a
-                    href="{{ .RelPermalink | absURL }}"
+                    href="{{ .RelPermalink }}"
                     aria-label="Previous"
                     class="page-link"
                     role="button">
@@ -14,7 +14,7 @@
         <li class="ml-auto">
             {{ with $.NextInSection }}
                 <a
-                    href="{{ .RelPermalink | absURL }}"
+                    href="{{ .RelPermalink }}"
                     aria-label="Next"
                     class="page-link"
                     role="button">
