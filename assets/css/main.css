@@ -151,6 +151,10 @@ code {
     margin: 1rem 0;
     text-align: center;
   }
+
+  .mobile-menu a {
+    @apply text-neutral-50;
+  }
 }
 
 .nav-links {
