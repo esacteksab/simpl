@@ -57,8 +57,8 @@ importers:
         specifier: ^0.19.0
         version: 0.19.0(prettier@3.5.3)
       prettier-plugin-sh:
-        specifier: ^0.16.0
-        version: 0.16.0(prettier@3.5.3)
+        specifier: ^0.17.1
+        version: 0.17.1(prettier@3.5.3)
       prettier-plugin-tailwindcss:
         specifier: ^0.6.11
         version: 0.6.11(prettier-plugin-css-order@2.1.2(postcss@8.5.3)(prettier@3.5.3))(prettier-plugin-organize-attributes@1.0.0(prettier@3.5.3))(prettier@3.5.3)
@@ -211,6 +211,9 @@ packages:
   '@parcel/watcher@2.5.1':
     resolution: {integrity: sha512-dfUnCxiN9H4ap84DvD2ubjw+3vUNpstxa0TneY/Paat8a3R4uQZDLSvWjmznAY/DoahqTHl9V46HF/Zs3F29pg==}
     engines: {node: '>= 10.0.0'}
+
+  '@reteps/dockerfmt@0.2.6':
+    resolution: {integrity: sha512-a3OYxLpIc6jbW1prbruEhRq9eYre9fKhcBD+boVwhri9L9ebdnKNy4LzaDa/tiu81P9phxA6Xi8r6jtV8I7Xsw==}
 
   '@tailwindcss/cli@4.1.2':
     resolution: {integrity: sha512-HaPFz9GNbBLgV9vsSD818HCvf598D24ZOZlCdth/Y3jk1BZY69UD99e4pcfifT8msFg4xYI+uxEv5N1MYao1Mg==}
@@ -751,9 +754,6 @@ packages:
   ms@2.1.3:
     resolution: {integrity: sha512-6FlzubTLZG3J2a/NVCAleEhjzq5oxgHyaCU9yYXvcLsvoVaHJq/s5xXI6/XXP6tz7R9xAOtHnSO/tXtF3WRTlA==}
 
-  mvdan-sh@0.10.1:
-    resolution: {integrity: sha512-kMbrH0EObaKmK3nVRKUIIya1dpASHIEusM13S4V1ViHFuxuNxCo+arxoa6j/dbV22YBGjl7UKJm9QQKJ2Crzhg==}
-
   nanoid@3.3.11:
     resolution: {integrity: sha512-N8SpfPUnUp1bK+PMYW8qSWdl9U+wwNWI4QKxOYDy9JAro3WMX7p2OeVRF9v+347pnakNevPmiHhNmZ2HbFA76w==}
     engines: {node: ^10 || ^12 || ^13.7 || ^14 || >=15.0.1}
@@ -987,8 +987,8 @@ packages:
     peerDependencies:
       prettier: ^3.0.3
 
-  prettier-plugin-sh@0.16.0:
-    resolution: {integrity: sha512-QaVH0X56IUy9niNczUQ0TxqVezcGzACz9XObbyxyAZ6NU/VCKnR9RUAcETyzCiPgcHKq/tjerCsqxn5nL3yo/w==}
+  prettier-plugin-sh@0.17.1:
+    resolution: {integrity: sha512-jbrB7MRlmgtSRx2+I3McQGdFb98VUtJTkQ5DiK6oSJSfCy6vSBxSsuyDZ1xIx13TqREUHTsMzlNrZBZScuJJXQ==}
     engines: {node: '>=16.0.0'}
     peerDependencies:
       prettier: ^3.0.3
@@ -1099,8 +1099,8 @@ packages:
   run-parallel@1.2.0:
     resolution: {integrity: sha512-5l4VyZR86LZ/lDxZTR6jqL8AFE2S0IFLMP26AbjsLVADxHdhB/c0GUsH+y39UfCi3dzz8OlQuPmnaJOMoDHQBA==}
 
-  sh-syntax@0.4.2:
-    resolution: {integrity: sha512-/l2UZ5fhGZLVZa16XQM9/Vq/hezGGbdHeVEA01uWjOL1+7Ek/gt6FquW0iKKws4a9AYPYvlz6RyVvjh3JxOteg==}
+  sh-syntax@0.5.6:
+    resolution: {integrity: sha512-hUprXSSgi3HLdIxufSsr0lceThj6vKsgOHcVVGujDGLWg9RD5Mt6j2m642qkTAU/7GFX65ed/g9h2jeURGuTlQ==}
     engines: {node: '>=16.0.0'}
 
   signal-exit@4.1.0:
@@ -1328,6 +1328,8 @@ snapshots:
       '@parcel/watcher-win32-arm64': 2.5.1
       '@parcel/watcher-win32-ia32': 2.5.1
       '@parcel/watcher-win32-x64': 2.5.1
+
+  '@reteps/dockerfmt@0.2.6': {}
 
   '@tailwindcss/cli@4.1.2':
     dependencies:
@@ -1785,8 +1787,6 @@ snapshots:
 
   ms@2.1.3: {}
 
-  mvdan-sh@0.10.1: {}
-
   nanoid@3.3.11: {}
 
   node-addon-api@7.1.1: {}
@@ -1934,11 +1934,11 @@ snapshots:
     dependencies:
       prettier: 3.5.3
 
-  prettier-plugin-sh@0.16.0(prettier@3.5.3):
+  prettier-plugin-sh@0.17.1(prettier@3.5.3):
     dependencies:
-      mvdan-sh: 0.10.1
+      '@reteps/dockerfmt': 0.2.6
       prettier: 3.5.3
-      sh-syntax: 0.4.2
+      sh-syntax: 0.5.6
 
   prettier-plugin-tailwindcss@0.6.11(prettier-plugin-css-order@2.1.2(postcss@8.5.3)(prettier@3.5.3))(prettier-plugin-organize-attributes@1.0.0(prettier@3.5.3))(prettier@3.5.3):
     dependencies:
@@ -1982,7 +1982,7 @@ snapshots:
     dependencies:
       queue-microtask: 1.2.3
 
-  sh-syntax@0.4.2:
+  sh-syntax@0.5.6:
     dependencies:
       tslib: 2.8.1
 
