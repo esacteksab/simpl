@@ -63,8 +63,8 @@ importers:
         specifier: ^0.6.11
         version: 0.6.11(prettier-plugin-css-order@2.1.2(postcss@8.5.3)(prettier@3.5.3))(prettier-plugin-organize-attributes@1.0.0(prettier@3.5.3))(prettier@3.5.3)
       prettier-plugin-toml:
-        specifier: ^2.0.3
-        version: 2.0.3(prettier@3.5.3)
+        specifier: ^2.0.4
+        version: 2.0.4(prettier@3.5.3)
       stylelint:
         specifier: ^16.17.0
         version: 16.17.0
@@ -302,11 +302,11 @@ packages:
     peerDependencies:
       tailwindcss: '>=3.0.0 || insiders || >=4.0.0-alpha.20 || >=4.0.0-beta.1'
 
-  '@taplo/core@0.1.1':
-    resolution: {integrity: sha512-BG/zLGf5wiNXGEVPvUAAX/4ilB3PwDUY2o0MV0y47mZbDZ9ad9UK/cIQsILat3bqbPJsALVbU6k3cskNZ3vAQg==}
+  '@taplo/core@0.2.0':
+    resolution: {integrity: sha512-r8bl54Zj1In3QLkiW/ex694bVzpPJ9EhwqT9xkcUVODnVUGirdB1JTsmiIv0o1uwqZiwhi8xNnTOQBRQCpizrQ==}
 
-  '@taplo/lib@0.4.0-alpha.2':
-    resolution: {integrity: sha512-DV/Re3DPVY+BhBtLZ3dmP4mP6YMLSsgq9qGLXwOV38lvNF/fBlgvQswzlXmzCEefL/3q2eMoefZpOI/+GLuCNA==}
+  '@taplo/lib@0.5.0':
+    resolution: {integrity: sha512-+xIqpQXJco3T+VGaTTwmhxLa51qpkQxCjRwezjFZgr+l21ExlywJFcDfTrNmL6lG6tqb0h8GyJKO3UPGPtSCWg==}
 
   ajv@8.17.1:
     resolution: {integrity: sha512-B/gBuNg5SiMTrPkC+A2+cW0RszwxYmn6VYxB/inlBStS5nx6xHIt/ehKRhIMhqusl7a8LjQoZnjCs5vhwxOQ1g==}
@@ -1048,8 +1048,8 @@ packages:
       prettier-plugin-svelte:
         optional: true
 
-  prettier-plugin-toml@2.0.3:
-    resolution: {integrity: sha512-2KSzvgWiyF+uaGvX6wK+UENNjhvuSh+HlJym9tY+OyIk3L+yjlDUd0wHP1ZHNC+u8su4UZj2QVjJhq5sZ16zrQ==}
+  prettier-plugin-toml@2.0.4:
+    resolution: {integrity: sha512-uOTNPClqnE3T9XJ8hCqAJek70Jnk3/ZuAG/aXRTmrWbVe8lJyuZ60KV7OtgWqF+iGZOPVpkh+giHhX9GZYRHGA==}
     engines: {node: '>=16.0.0'}
     peerDependencies:
       prettier: ^3.0.3
@@ -1414,11 +1414,11 @@ snapshots:
       postcss-selector-parser: 6.0.10
       tailwindcss: 4.1.2
 
-  '@taplo/core@0.1.1': {}
+  '@taplo/core@0.2.0': {}
 
-  '@taplo/lib@0.4.0-alpha.2':
+  '@taplo/lib@0.5.0':
     dependencies:
-      '@taplo/core': 0.1.1
+      '@taplo/core': 0.2.0
 
   ajv@8.17.1:
     dependencies:
@@ -1947,9 +1947,9 @@ snapshots:
       prettier-plugin-css-order: 2.1.2(postcss@8.5.3)(prettier@3.5.3)
       prettier-plugin-organize-attributes: 1.0.0(prettier@3.5.3)
 
-  prettier-plugin-toml@2.0.3(prettier@3.5.3):
+  prettier-plugin-toml@2.0.4(prettier@3.5.3):
     dependencies:
-      '@taplo/lib': 0.4.0-alpha.2
+      '@taplo/lib': 0.5.0
       prettier: 3.5.3
 
   prettier@3.5.3: {}
