@@ -55,7 +55,7 @@
   p {
     @apply block text-base/normal font-medium;
     margin-block: unset;
-    @apply py-2;
+    @apply py-2.5;
   }
 }
 
@@ -173,7 +173,7 @@ code {
 }
 
 .main :is(ul, ol) {
-  @apply list-outside;
+  @apply mb-4 ml-8 list-outside;
 }
 
 .main ul {
@@ -379,6 +379,9 @@ hr {
 
 #TableOfContents {
   @apply my-4;
+  ul {
+    @apply ml-4;
+  }
 }
 
 .highlight {
