@@ -80,6 +80,10 @@ a:hover .anchor-icon {
   visibility: visible;
 }
 
+a :is(h1, h2, h3, h4, h5, h6) {
+  @apply pt-1;
+}
+
 :is(h1, h2, h3, h4, h5, h6) code {
   @apply border-1;
 }
