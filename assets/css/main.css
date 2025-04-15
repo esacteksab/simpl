@@ -55,7 +55,7 @@
   p {
     @apply block text-base/normal font-medium;
     margin-block: unset;
-    @apply py-2;
+    @apply py-2.5;
   }
 }
 
@@ -78,6 +78,10 @@ a .anchor-icon {
 
 a:hover .anchor-icon {
   visibility: visible;
+}
+
+a :is(h1, h2, h3, h4, h5, h6) {
+  @apply pt-1;
 }
 
 :is(h1, h2, h3, h4, h5, h6) code {
@@ -173,7 +177,7 @@ code {
 }
 
 .main :is(ul, ol) {
-  @apply list-outside;
+  @apply mb-4 ml-8 list-outside;
 }
 
 .main ul {
@@ -379,6 +383,9 @@ hr {
 
 #TableOfContents {
   @apply my-4;
+  ul {
+    @apply ml-4;
+  }
 }
 
 .highlight {
