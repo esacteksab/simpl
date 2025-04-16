@@ -2,35 +2,33 @@
 @source "hugo_stats.json";
 
 /*
-Generated using: hugo gen chromastyles --style=github-dark -- then heavily modified toward's highlightJS a11y-dark
+Generated using: hugo gen chromastyles --style=github-dark -- then modified toward's a11y-dark theme
 */
-
 /* Background */
 .bg {
   @apply bg-zinc-800;
   @apply text-neutral-50;
 }
+/* code -- this allows `code` to be var (--accent-color) while making text in a
+ * ``` to not be the accent color ``` */
+.chroma code[class^="language-"] {
+  @apply text-neutral-50;
+  /* Styles for code elements with language classes within .chroma containers */
+}
 /* PreWrapper */
 .chroma {
-  @apply text-neutral-50;
   @apply bg-zinc-800;
+  @apply text-neutral-50;
 }
-/* Other
-/* .chroma .x {
-} */
 /* Error */
 .chroma .err {
   color: #f85149;
 }
-/* CodeLine */
-.chroma .cl {
-  @apply text-neutral-50;
-}
 /* LineLink */
 .chroma .lnlinks {
   outline: none;
-  text-decoration: none;
   @apply text-neutral-50;
+  text-decoration: none;
 }
 /* LineTableTD */
 .chroma .lntd {
@@ -44,42 +42,42 @@ Generated using: hugo gen chromastyles --style=github-dark -- then heavily modif
   margin: 0;
   padding: 0;
   border: 0;
-  @apply sm:block sm:overflow-x-clip md:overflow-x-auto;
+  border-spacing: 0;
 }
 /* LineHighlight */
 .chroma .hl {
-  background-color: #6e7681;
+  @apply bg-zinc-600;
 }
 /* LineNumbersTable */
 .chroma .lnt {
   margin-right: 0.4em;
   padding: 0 0.4em 0 0.4em;
+  @apply text-neutral-50;
   white-space: pre;
   -webkit-user-select: none;
   user-select: none;
-  @apply text-neutral-50;
 }
 /* LineNumbers */
 .chroma .ln {
   margin-right: 0.4em;
   padding: 0 0.4em 0 0.4em;
+  @apply text-neutral-50;
   white-space: pre;
   -webkit-user-select: none;
   user-select: none;
-  @apply text-neutral-50;
 }
 /* Line */
 .chroma .line {
-  @apply text-neutral-50;
   display: flex;
 }
 /* Keyword */
 .chroma .k {
   color: #abe338;
 }
-/* KeywordConstant
+/* KeywordConstant */
 .chroma .kc {
-} */
+  color: #abe338;
+}
 /* KeywordDeclaration */
 .chroma .kd {
   color: #abe338;
@@ -100,146 +98,42 @@ Generated using: hugo gen chromastyles --style=github-dark -- then heavily modif
 .chroma .kt {
   color: #abe338;
 }
-/* Name
-.chroma .n {
-  color: #ffa07a;
-} */
-
 /* NameAttribute */
 .chroma .na {
   @apply text-neutral-50;
 }
-
-/* NameBuiltin */
-.cl + .na + .nb {
-  @apply text-neutral-50;
-}
-.chroma .nb {
-  color: #f5ab35;
-}
-
-.na + .nb + .p + .nx {
-  @apply text-neutral-50;
-}
-
-.si + .nb {
-  color: #abe338;
-}
-.p + .nx {
-  color: #abe338;
-}
-
-.s2 + .nx {
-  color: #abe338;
-}
-.chroma .s2 + .nx {
-  color: #abe338;
-}
-
-.si + .nb + .p + .nx + .p + .nx {
-  color: #abe338;
-}
-
-.nb .nv {
-  @apply text-neutral-50;
-}
-
-/* NameBuiltinPseudo
-.chroma .bp {
-} */
 /* NameClass */
 .chroma .nc {
-  color: #ffa07a;
+  color: #FF8C38;
   font-weight: bold;
 }
 /* NameConstant */
 .chroma .no {
-  color: #ffa07a;
-  /* color: #79c0ff; */
+  color: #FF8C38;
   font-weight: bold;
 }
 /* NameDecorator */
 .chroma .nd {
-  color: #ffa07a;
-  /* color: #d2a8ff; */
+  color: #FF8C38;
   font-weight: bold;
-}
-/* NameEntity */
-.chroma .ni {
-  color: #ffa07a;
 }
 /* NameException */
 .chroma .ne {
-  color: #ffa07a;
+  color: #FF8C38;
   font-weight: bold;
 }
 /* NameFunction */
 .chroma .nf {
-  color: #ffa07a;
+  color: #FF8C38;
   font-weight: bold;
-}
-/* NameFunctionMagic */
-.chroma .fm {
-  color: #ffa07a;
-}
-/* NameLabel */
-.chroma .nl {
-  color: #ffa07a;
-  font-weight: bold;
-}
-/* NameNamespace */
-.chroma .nn {
-  color: #ffa07a;
 }
 /* NameOther */
-.ci + .nx {
+.chroma .nx {
   @apply text-neutral-100;
 }
-
-.na + .nx {
-  @apply text-neutral-100;
-}
-
-.nx + .p + .nx {
-  @apply text-neutral-100;
-}
-/* .chroma .nx {
-} */
-/* NameProperty */
-.chroma .py {
-  color: #ffa07a;
-}
-/* NameTag
+/* NameTag */
 .chroma .nt {
-} */
-
-/* NameVariable */
-.chroma .nv {
-  color: #ffa07a;
-}
-
-.nb + .nv {
-  @apply text-neutral-50;
-}
-
-.nb + .nv + .o + .m {
-  @apply text-neutral-50;
-}
-/* NameVariableClass */
-.chroma .vc {
-  color: #ffa07a;
-}
-/* NameVariableGlobal */
-.chroma .vg {
-  color: #ffa07a;
-}
-/* NameVariableInstance */
-.chroma .vi {
-  color: #ffa07a;
-}
-/* NameVariableMagic */
-.chroma .vm {
-  color: #ffa07a;
+  color: #FF8C38;
 }
 /* Literal */
 .chroma .l {
@@ -277,7 +171,6 @@ Generated using: hugo gen chromastyles --style=github-dark -- then heavily modif
 .chroma .s2 {
   color: #abe338;
 }
-
 /* LiteralStringEscape */
 .chroma .se {
   color: #abe338;
@@ -326,43 +219,23 @@ Generated using: hugo gen chromastyles --style=github-dark -- then heavily modif
 .chroma .mi {
   color: #f5ab35;
 }
-.mi + .kt {
-  color: #f5ab35;
-}
 /* LiteralNumberIntegerLong */
 .chroma .il {
   color: #f5ab35;
 }
-
 /* LiteralNumberOct */
 .chroma .mo {
   color: #f5ab35;
 }
 /* Operator */
 .chroma .o {
+  color: #abe338;
   font-weight: bold;
 }
-
-.o + .nt {
-  color: gold;
-}
-
-.nt + .o + .nt {
-  color: #ffa07a;
-}
-
 /* OperatorWord */
 .chroma .ow {
-  color: #ff7b72;
-  font-weight: bold;
-}
-/* Punctuation */
-.chroma .p {
   color: #abe338;
-}
-
-.cl + .nt {
-  @apply text-neutral-50;
+  font-weight: bold;
 }
 /* Comment */
 .chroma .c {
@@ -402,10 +275,6 @@ Generated using: hugo gen chromastyles --style=github-dark -- then heavily modif
   font-style: italic;
   font-weight: bold;
 }
-/* Generic
-.chroma .g {
-}
-*/
 /* GenericDeleted */
 .chroma .gd {
   background-color: #490202;
@@ -415,27 +284,10 @@ Generated using: hugo gen chromastyles --style=github-dark -- then heavily modif
 .chroma .ge {
   font-style: italic;
 }
-/* GenericError */
-.chroma .gr {
-  color: #ffa198;
-}
-/* GenericHeading */
-.chroma .gh {
-  color: #79c0ff;
-  font-weight: bold;
-}
 /* GenericInserted */
 .chroma .gi {
   background-color: #0f5323;
   color: #56d364;
-}
-/* GenericOutput */
-.chroma .go {
-  @apply text-neutral-50;
-}
-/* GenericPrompt */
-.chroma .gp {
-  @apply text-neutral-50;
 }
 /* GenericStrong */
 .chroma .gs {
@@ -443,17 +295,5 @@ Generated using: hugo gen chromastyles --style=github-dark -- then heavily modif
 }
 /* GenericSubheading */
 .chroma .gu {
-  color: #79c0ff;
-}
-/* GenericTraceback */
-.chroma .gt {
-  color: #ff7b72;
-}
-/* GenericUnderline */
-.chroma .gl {
-  text-decoration: underline;
-}
-/* TextWhitespace */
-.chroma .w {
-  @apply bg-zinc-800;
+  @apply text-neutral-200;
 }
