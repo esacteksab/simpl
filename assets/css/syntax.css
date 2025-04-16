@@ -9,7 +9,7 @@
   @apply text-neutral-50;
 }
 
-/* This exists to allow `code` to be var (--accent-color) and ``` to be them color ``` */
+/* This exists to allow `code` to be var (--accent-color) and ``` to be theme color ``` */
 .chroma code[class^="language-"] {
   @apply text-neutral-50;
 }
