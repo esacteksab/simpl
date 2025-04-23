@@ -1,22 +1,33 @@
-[tool.uv]
-    package = false
+[build-system]
+  build-backend = "poetry.core.masonry.api"
+  requires      = ["poetry-core>=2.0.0,<3.0.0"]
 
 [project]
-    name = "simpl"
-    version = "0.0.1"
-    description = ""
-    authors = [{ name = "Your Name", email = "you@example.com" }]
-    license = { text = "MIT" }
-    readme = "README.md"
-    requires-python = ">=3.10,<3.13"
-    dependencies = []
+  dependencies    = []
+  description     = ""
+  name            = "simpl"
+  readme          = "README.md"
+  requires-python = ">=3.10,<3.13"
+  version         = "0.0.1"
 
-[tool.poetry]
+  [[project.authors]]
+    email = "you@example.com"
+    name  = "Your Name"
+
+  [project.license]
+    text = "MIT"
+
+[tool]
+
+  [tool.poetry]
     package-mode = false
 
-    [tool.poetry.group.dev.dependencies]
-        pre-commit = "^4.1.0"
+    [tool.poetry.group]
 
-[build-system]
-    requires = ["poetry-core>=2.0.0,<3.0.0"]
-    build-backend = "poetry.core.masonry.api"
+      [tool.poetry.group.dev]
+
+        [tool.poetry.group.dev.dependencies]
+          pre-commit = "^4.1.0"
+
+  [tool.uv]
+    package = false

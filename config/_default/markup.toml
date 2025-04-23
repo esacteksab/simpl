@@ -1,13 +1,14 @@
-# https://json.schemastore.org/hugo.json
 [goldmark]
+
   [goldmark.parser]
+
     [goldmark.parser.attribute]
       block = true
       title = true
 
 [highlight]
   noClasses    = false
-  wrapperClass = 'highlight not-prose'
+  wrapperClass = "highlight not-prose"
 
 [tableOfContents]
   endLevel   = 6
