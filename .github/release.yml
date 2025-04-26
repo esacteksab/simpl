@@ -1,40 +1,33 @@
 changelog:
-  exclude:
-    labels:
-      - ignore-changelog
-
   categories:
-    - title: ":warning: Update considerations and deprecations"
-      labels:
+    - labels:
         - "type: breaking"
         - "type: deprecation"
         - "regression"
         - "type: revert"
-
-    - title: ":rocket: New features and improvements"
-      labels:
+      title: ":warning: Update considerations and deprecations"
+    - labels:
         - "type: feat"
-
-    - title: ":lady_beetle: Bug fixes"
-      labels:
+      title: ":rocket: New features and improvements"
+    - labels:
         - "type: fix"
-
-    - title: ":nail_polish: Style, UI, UX"
-      labels:
+      title: ":lady_beetle: Bug fixes"
+    - labels:
         - "type: style"
-
-    - title: ":book: Documentation"
-      labels:
+      title: ":nail_care: Style"
+    - labels:
         - "type: docs"
-
-    - title: ":hammer: Build/Test Dependency Upgrades"
-      labels:
+      title: ":book: Documentation"
+    - labels:
         - "dependencies"
         - "type: test"
         - "type: ci"
         - "type: build"
         - "type: chore"
-
-    - title: ":question: What's Changed"
-      labels:
+      title: ":hammer: Build/Test Dependency Upgrades"
+    - labels:
         - "type: refactor"
+      title: ":question: What's Changed"
+  exclude:
+    labels:
+      - ignore-changelog
