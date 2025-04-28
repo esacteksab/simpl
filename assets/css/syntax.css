@@ -380,3 +380,28 @@
 .chroma .w {
   color: #f0f1f2;
 }
+
+/* High-contrast media query support */
+@media screen and (-ms-high-contrast: active) {
+  .chroma .addition,
+  .chroma .attribute,
+  .chroma .built_in,
+  .chroma .bullet,
+  .chroma .comment,
+  .chroma .link,
+  .chroma .literal,
+  .chroma .meta,
+  .chroma .number,
+  .chroma .params,
+  .chroma .string,
+  .chroma .symbol,
+  .chroma .type,
+  .chroma .quote {
+    color: highlight;
+  }
+
+  .chroma .keyword,
+  .chroma .selector-tag {
+    font-weight: bold;
+  }
+}
