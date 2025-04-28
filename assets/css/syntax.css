@@ -47,7 +47,7 @@
 }
 /* LineHighlight */
 .chroma .hl {
-  background-color: #2a2c32e0;
+  @apply bg-zinc-800;
 }
 /* LineNumbersTable */
 .chroma .lnt {
@@ -330,7 +330,7 @@
 }
 /* GenericDeleted */
 .chroma .gd {
-  background-color: #ff88a820;
+  @apply bg-zinc-800;
   color: #ff88a8;
 }
 /* GenericEmph */
@@ -348,7 +348,7 @@
 }
 /* GenericInserted */
 .chroma .gi {
-  background-color: #90e06020;
+  @apply bg-zinc-800;
   color: #90e060;
 }
 /* GenericOutput */
