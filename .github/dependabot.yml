@@ -1,23 +1,48 @@
-# To get started with Dependabot version updates, you'll need to specify which
-# package ecosystems to update and where the package manifests are located.
-# Please see the documentation for all configuration options:
-# https://docs.github.com/code-security/dependabot/dependabot-version-updates/configuration-options-for-the-dependabot.yml-file
-
-version: 2
 updates:
-  - package-ecosystem: "pip" # See documentation for possible values
-    directory: "/" # Location of package manifests
+  - directory: "/"
+    groups:
+      python-minor-and-patch:
+        update-types:
+          - "minor"
+          - "patch"
+    package-ecosystem: "pip"
     schedule:
+      day: "saturday"
       interval: "weekly"
-  - package-ecosystem: "gomod" # See documentation for possible values
-    directory: "/" # Location of package manifests
+      time: "03:00"
+      timezone: "America/Chicago"
+
+  - directory: "/"
+    groups:
+      go-minor-and-patch:
+        update-types:
+          - "minor"
+          - "patch"
+    package-ecosystem: "gomod"
     schedule:
+      day: "saturday"
       interval: "weekly"
-  - package-ecosystem: "npm" # See documentation for possible values
-    directory: "/" # Location of package manifests
+      time: "03:00"
+
+      timezone: "America/Chicago"
+  - directory: "/"
+    groups:
+      node-minor-and-patch:
+        update-types:
+          - "minor"
+          - "patch"
+    package-ecosystem: "npm"
     schedule:
+      day: "saturday"
       interval: "weekly"
-  - package-ecosystem: "github-actions"
-    directory: "/"
+      time: "03:00"
+      timezone: "America/Chicago"
+
+  - directory: "/"
+    package-ecosystem: "github-actions"
     schedule:
+      day: "saturday"
       interval: "weekly"
+      time: "03:00"
+      timezone: "America/Chicago"
+version: 2

@@ -4,12 +4,12 @@
 <ul class="bottom-8 flex list-none flex-wrap">
 {{- with .Prev -}}
   <li class="mr-auto">
-    <a href="{{ .URL | absURL }}" aria-label="Previous" class="page-link" role="button"><span aria-hidden="true">&larr; Previous Page</span></a>
+    <a href="{{ .URL }}" aria-label="Previous" class="page-link" role="button"><span aria-hidden="true">&larr; Previous Page</span></a>
   </li>
 {{- end -}}
 {{- with .Next -}}
 <li class="ml-auto">
-  <a href="{{ .URL | absURL }}" aria-label="Next" class="page-link" role="button"><span aria-hidden="true">Next Page &rarr;</span></a>
+  <a href="{{ .URL }}" aria-label="Next" class="page-link" role="button"><span aria-hidden="true">Next Page &rarr;</span></a>
 </li>
 {{- end }}
 </ul>

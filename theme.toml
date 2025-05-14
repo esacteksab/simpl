@@ -1,20 +1,12 @@
-# https://json.schemastore.org/hugo-theme.json
-name        = 'simpl'
-license     = 'MIT'
-licenselink = 'https://github.com/esacteksab/simpl/LICENSE'
-description = 'An attempt at a barebones theme.'
+demosite    = "https://esacteksab.com"
+description = "An attempt at a barebones theme."
+features    = ["dark", "tailwindcss", "dark-a11y"]
+homepage    = "https://github.com/esacteksab/simpl"
+license     = "MIT"
+licenselink = "https://github.com/esacteksab/simpl/LICENSE"
+name        = "simpl"
+tags        = ["blog"]
 
-# The home page of the theme, where the source can be found
-homepage = 'https://github.com/esacteksab/simpl'
-
-# If you have a running demo of the theme
-demosite = 'https://esacteksab.com'
-
-# Taxonomy terms
-tags     = ['blog']
-features = ['dark', 'tailwindcss', 'dark-a11y']
-
-# If the theme has a single author
 [author]
-  name     = 'Barry Morrison'
-  homepage = 'https://esacteksab.com'
+  homepage = "https://esacteksab.com"
+  name     = "Barry Morrison"
