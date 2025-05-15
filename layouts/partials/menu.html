@@ -1,5 +1,5 @@
-{{- $page := .page -}}
-{{- $menuID := .menuID -}}
+{{- $page := . -}} {{/* Changed from .page to . */}}
+{{- $menuID := "main" -}} {{/* Assuming main menu is still used */}}
 {{- $menu := index site.Menus $menuID -}}
 {{- $hasValidEntries := false -}}
 {{- range $menu -}}
@@ -8,49 +8,86 @@
     {{- break -}}
   {{- end -}}
 {{- end -}}
-{{- if $hasValidEntries -}}
-<nav class="md:flex flex-1 flex-row-reverse">
-  <a href="#mobile-menu" class="hamburger fixed z-20 rounded">
-    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-    </svg>
-  </a>
-  <div id="mobile-menu" class="mobile-menu">
-    <div class="menu-content pt-8">
-    <a href="#" class="close-menu fixed z-20 rounded">
-      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-      </svg>
-    </a>
-<ul class="md:flex m-0 p-0 md:pr-4">
-  {{- partial "inline/menu/walk.html" (dict "page" $page "menuEntries" $menu) -}}
-</ul>
-</div></div>
-</nav>
-{{- end -}}
 
+{{- $logo := site.Params.sidebarLogo | default "sticker.png" -}}
+{{- $github_icon := site.Params.githubIcon | default "octocat-1.png" -}}
+{{- $github_url := site.Params.githubURL | default "#" -}}
+{{- $copyright_holder := site.Params.Author.name | default "Your Name/Company LLC" -}}
+{{- $made_with := site.Params.madeWith | default "Made with 🧡 in the MidWest" -}}
+
+{{/* Use nav element with classes/ID from the target HTML's sidebar */}}
+<nav id="mobile-nav" class="hidden md:flex bg-gray-100 text-gray-900 dark:bg-zinc-800 dark:text-neutral-50 pt-5 px-5 pb-2 flex-col border-l-2 border-r-2 border-orange-600 w-full md:w-3/4 lg:max-w-80 fixed md:static inset-0 z-10 items-center">
+
+  {{/* Logo section from target */}}
+  <div class="logo mb-5 items-center">
+    {{- if $logo -}}
+    <a href="{{ site.BaseURL }}" title="{{ site.Title }}">
+      <img src="{{ $logo | relURL }}" alt="Logo" class="max-w-full h-auto w-32 md:w-auto">
+    </a>
+    {{- end -}}
+  </div>
+
+  {{/* Main navigation list container from target */}}
+  {{- if $hasValidEntries -}}
+  <div class="nav-bar flex flex-col justify-center items-center border-t-2 border-b-2 border-orange-600 w-full">
+    {{/* Keep using walk.html for menu items, adjust UL classes */}}
+    <ul class="py-2 list-none m-0 p-0 text-center">
+      {{- partial "inline/menu/walk.html" (dict "page" $page "menuEntries" $menu) -}}
+    </ul>
+  </div>
+  {{- end -}}
+
+  {{/* Bottom navigation section from target - Hardcoded structure, dynamic content */}}
+  <div class="mt-auto nav-bar-bottom flex flex-col justify-center md:items-center md:border-t-2 md:border-orange-600 text-sm w-full pt-2">
+    <ul class="pt-4 list-none m-0 p-0 text-center md:text-left">
+      {{- if $github_url -}}
+      <li>
+          <a href="{{ $github_url }}" class="text-gray-700 dark:text-neutral-300 hover:underline flex items-center justify-center md:justify-start">
+              {{- if $github_icon -}}
+              <img src="{{ $github_icon | relURL }}" alt="GitHub" class="w-6 h-auto mr-2">
+              {{- end -}}
+              GitHub
+          </a>
+      </li>
+      {{- end }}
+      <li class="text-xs pt-2">© {{ now.Format "2006" }} {{ $copyright_holder }}</li>
+      {{- if $made_with -}}
+      <li class="text-xs">{{ $made_with | safeHTML }}</li>
+      {{- end -}}
+    </ul>
+  </div>
+
+</nav>
+
+{{/* Keep the walk definition, but update li classes slightly if needed */}}
 {{- define "partials/inline/menu/walk.html" -}}
 {{- $page := .page }}
 {{- range .menuEntries }}
-{{- $attrs := dict "href" .URL }}
-{{- if $page.IsMenuCurrent .Menu . }}
-  {{- $attrs = merge $attrs (dict "class" "active" "aria-current" "page") }}
-{{- else if $page.HasMenuCurrent .Menu . }}
-  {{- $attrs = merge $attrs (dict "class" "ancestor" "aria-current" "true") }}
+{{- $attrs := dict "href" (.URL | relLangURL) }} {{/* Use relLangURL */}}
+{{- $active := false -}}
+{{- if $page.IsMenuCurrent .Menu . -}}
+  {{- $active = true -}}
+{{- else if $page.HasMenuCurrent .Menu . -}}
+  {{- $active = true -}}
 {{- end -}}
+
 {{- $name := .Name }}
 {{- with .Identifier }}
-{{- with T . }}
+  {{- with T . }}
     {{- $name = . }}
+  {{- end -}}
 {{- end -}}
-{{- end -}}
-<li class="inline-flex nav-links pr-4 menu-{{- lower .Identifier }}">
-  <a {{- range $k, $v := $attrs }} {{- with $v }}{{ printf " %s=%q" $k $v | safeHTMLAttr }}{{ end -}} {{- end -}}>{{ $name }}</a>
-{{- with .Children }}
-<ul>
-  {{- partial "inline/menu/walk.html" (dict "page" $page "menuEntries" .) }}
-</ul>
-{{- end -}}
+{{/* Adjust LI classes to match target's hover style and structure */}}
+<li class="nav-links hover:border hover:border-orange-600 px-3 py-2 {{ if $active }} active-nav-item {{ end }} menu-{{- lower .Identifier | urlize }}">
+  <a class="text-gray-700 dark:text-neutral-300 block no-underline" {{- range $k, $v := $attrs }} {{- with $v }}{{ printf " %s=%q" $k $v | safeHTMLAttr }}{{ end -}} {{- end -}} {{ if $active }} aria-current="page" {{ end }}>
+    {{- $name -}}
+  </a>
+  {{/* Handle children if needed, though target example doesn't show submenus */}}
+  {{- with .Children }}
+  <ul class="list-none m-0 p-0 hidden"> {{/* Simple hidden sublist example */}}
+    {{- partial "inline/menu/walk.html" (dict "page" $page "menuEntries" .) -}}
+  </ul>
+  {{- end -}}
 </li>
 {{- end -}}
 {{- end -}}

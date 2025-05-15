@@ -1,25 +1,35 @@
+{{/* NOTE: This partial is not called by the updated baseof.html */}}
+{{/* You might include this logic within specific templates inside the "main" block */}}
+
 {{- $lastmod := .Lastmod | time.Format ":date_long" -}}
 {{- if .IsHome -}}
-<h1>
-<a
-  class="header-title no-underline md:pl-4 mt-2 max-sm:mb-0 md:font-extrabold"
-  title="{{ .Title }}"
-  href="{{ .Site.BaseURL }}">
-  {{ site.Title }} <span class="tight title_cursor"></span>
-</a>
-</h1>
-{{- else -}}
-<h1>
+{{/* Display H1 on Home page? Maybe move inside main block */}}
+<h1 class="text-xl pb-2 font-semibold mb-0"> {{/* Example class - adjust as needed */}}
   <a
-    class="header-title no-underline md:pl-4 mt-2 max-sm:mb-0 md:font-extrabold"
+    class="no-underline" {{/* Remove header specific classes */}}
     title="{{ .Title }}"
-    href="{{ .Site.BaseURL }}">
+    href="{{ .Site.BaseURL | relLangURL }}">
     {{ site.Title }}
+    {{/* <span class="tight title_cursor"></span> */}} {{/* Cursor might not fit design */}}
   </a>
 </h1>
-<h3 class="hidden md:contents">
-  &nbsp;&nbsp;{{ .Title | emojify }}&nbsp;<span class="tight title_cursor"></span>
-</h3>
+{{- else -}}
+{{/* Display Site Title Link and Page Title on other pages? Maybe move inside main block */}}
+<div class="mb-2"> {{/* Example wrapper */}}
+  <a
+    class="text-lg font-semibold no-underline" {{/* Example class */}}
+    title="Back to Home"
+    href="{{ .Site.BaseURL | relLangURL }}">
+    {{ site.Title }}
+  </a>
+  <h1 class="text-xl pb-2 font-semibold inline"> {{/* Example class */}}
+     · {{ .Title | emojify }}
+     {{/* <span class="tight title_cursor"></span> */}}
+  </h1>
+</div>
 {{- end -}}
-{{- partial "menu.html" (dict "menuID" "main" "page" .) -}}
+
+{{/* Menu call is removed, as it's now directly in baseof.html -> sidebar */}}
+{{/* {{- partial "menu.html" (dict "menuID" "main" "page" .) -}} */}}
+
 {{- /* Trim EOF */ -}}

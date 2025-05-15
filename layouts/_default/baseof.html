@@ -5,16 +5,47 @@
     dir="{{ or site.Language.LanguageDirection `ltr` }}">
 <head>
   {{- partial "head.html" . }}
+  {{/* Target example inline style for mobile menu functionality - included in main.css now */}}
+  {{/*
+  <style>
+    .menu-open #mobile-nav {
+      display: flex;
+    }
+    .menu-open .hamburger {
+      position: fixed;
+      z-index: 30;
+    }
+  </style>
+  */}}
 </head>
-<body id="body" class="@container min-h-screen flex flex-col w-full overflow-x-hidden relative">
-<header class="flex flex-row items-baseline m-0 p-0 px-2 md:pb-2 lg:mx-32 bg-neutral-100 dark:bg-neutral-900">
-  {{- partial "header.html" . }}
-</header>
-<main class="main flex flex-col flex-1 m-0 p-2 md:px-8 md:pt-4 lg:mx-32 bg-white dark:bg-zinc-800 border-1">
-  {{- block "main" . }}{{ end -}}
-</main>
-<footer class="m-0 p-0 mb-2 md:pt-4 flex flex-col items-center mt-auto">
-  {{ partial "footer.html" . -}}
-</footer>
+{{/* Added id="body", md:mx-16, removed lg:mx-32, @container. Kept flex flex-col min-h-screen */}}
+<body id="body" class="min-h-screen flex flex-col flex-wrap mx-0 md:mx-16 text-sm md:text-base">
+
+  {{/* Hamburger Button from target HTML - Toggles "menu-open" class on body */}}
+  <button onclick="document.getElementById('body').classList.toggle('menu-open')" class="hamburger md:hidden fixed top-4 right-4 z-20 p-2 bg-orange-600 text-white rounded">
+    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+    </svg>
+  </button>
+
+  {{/* Main row container from target HTML */}}
+  <div class="flex flex-row flex-1 border-l-2 border-b-2 border-orange-600">
+
+    {{/* Main content area - classes adapted from target's <main> */}}
+    <main class="main bg-gray-100 dark:bg-zinc-800 p-5 flex flex-col flex-auto">
+      {{/* Hugo block for page content */}}
+      {{- block "main" . }}{{ end -}}
+    </main>
+
+    {{/* Navigation sidebar - Call menu.html partial here */}}
+    {{- partial "menu.html" . -}}
+
+  </div> {{/* End main row container */}}
+
+  {{/* Footer - classes adapted from target's <footer> and original footer */}}
+  <footer class="mt-auto m-0 p-0 mb-2 flex flex-col md:flex-row items-center text-center justify-center md:pt-4">
+    {{ partial "footer.html" . -}}
+  </footer>
+
 </body>
 </html>

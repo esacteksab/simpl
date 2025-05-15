@@ -2,6 +2,7 @@
 @source "hugo_stats.json";
 
 :root {
+  /* Keep original accent color for now */
   --accent-color: var(--color-amber-500);
 }
 
@@ -59,6 +60,7 @@
   }
 }
 
+/* Keep original border color rule for header/main for now */
 header,
 main {
   border-color: var(--accent-color);
@@ -96,6 +98,20 @@ code {
   @apply rounded-sm no-underline;
 }
 
+/* --- NEW Mobile Menu Styles --- */
+/* From target example - Show nav when body has .menu-open */
+.menu-open #mobile-nav {
+  display: flex;
+}
+/* From target example - Keep hamburger on top when menu open */
+.menu-open .hamburger {
+  z-index: 30;
+  position: fixed;
+}
+/* --- End NEW Mobile Menu Styles --- */
+
+/* --- REMOVE Old Mobile Menu Styles --- */
+/*
 .menu-home {
   @apply block md:hidden;
 }
@@ -106,16 +122,16 @@ code {
   top: 0.375rem;
   right: 0.375rem;
   border-radius: 0.25rem;
-  background-color: var(--accent-color);
+  background-color: var(--accent-color); // Old hamburger style
 }
 
 @media (max-width: 576px) {
   .hamburger,
   .close-menu {
-    display: block; /* Show on mobile */
+    display: block; // Old hamburger display logic
   }
 
-  .mobile-menu {
+  .mobile-menu { // Old menu container
     display: none;
     z-index: 40;
     position: fixed;
@@ -129,7 +145,7 @@ code {
     background-color: rgba(0, 0, 0, 0.9);
   }
 
-  .menu-content {
+  .menu-content { // Old menu content wrapper
     display: flex;
     flex-direction: column;
     align-content: center;
@@ -139,11 +155,11 @@ code {
     padding-top: 2rem;
   }
 
-  .mobile-menu:target {
+  .mobile-menu:target { // Old :target logic
     display: flex;
   }
 
-  .mobile-menu ul {
+  .mobile-menu ul { // Old mobile ul styles
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -151,16 +167,19 @@ code {
     padding: 0;
   }
 
-  .mobile-menu ul li {
+  .mobile-menu ul li { // Old mobile li styles
     margin: 1rem 0;
     text-align: center;
   }
 
-  .mobile-menu a {
+  .mobile-menu a { // Old mobile link color
     @apply text-neutral-50;
   }
 }
+*/
+/* --- End REMOVE Old Mobile Menu Styles --- */
 
+/* Keep original nav-links styles */
 .nav-links {
   @apply md:text-xl md:font-bold;
   a {
@@ -168,61 +187,57 @@ code {
   }
 }
 
+/* Keep original post preview/metadata styles */
 .post-preview > span > p {
   @apply mt-2;
 }
-
 .post-metadata p {
   text-decoration-color: var(--accent-color);
 }
 
+/* Keep original list styles */
 .main :is(ul, ol) {
   @apply mb-4 ml-8 list-outside;
 }
-
 .main ul {
   @apply list-disc;
 }
 .main ol {
   @apply list-decimal;
 }
-
 .main ul li ul {
   list-style-type: circle;
 }
-
 .main ol li ol {
   list-style-type: lower-alpha;
 }
 
+/* Keep original read-more/pager styles */
 .read-more a {
   @apply md:font-semibold md:no-underline;
 }
-
 .read-more a:hover {
   @apply underline underline-offset-2;
 }
-
 .pager {
   @apply mb-4;
 }
-
 .pager a {
   @apply md:font-semibold lg:no-underline;
 }
-
 .pager a:hover {
   @apply underline underline-offset-2;
 }
-
 .pager li {
   @apply list-none;
 }
 
+/* Keep original tight class */
 .tight {
   @apply m-0 p-0;
 }
 
+/* Keep original Table styles */
 main table {
   width: 100%;
   max-width: 100%;
@@ -233,17 +248,14 @@ main table {
   font-variant: tabular-nums;
   text-indent: 0;
 }
-
 thead {
   display: table-header-group;
   vertical-align: middle;
 }
-
 tr {
   display: table-row;
   vertical-align: inherit;
 }
-
 th {
   display: table-cell;
   font-variant: tabular-nums;
@@ -251,66 +263,56 @@ th {
   vertical-align: inherit;
   unicode-bidi: isolate;
 }
-
 td {
   display: table-cell;
   text-align: unset;
   vertical-align: inherit;
 }
-
 main table th {
   box-sizing: border-box;
   padding: 6px 13px;
 }
-
 main table td {
   box-sizing: border-box;
   padding: 3px 6px;
 }
 
+/* Keep original article structure styles */
 article .about {
   @apply mt-8;
 }
-
 article .til {
   @apply mt-4;
 }
-
 article .post {
   @apply mt-4;
 }
-
 article a {
   @apply underline underline-offset-2;
 }
-
 .summary p a {
   @apply underline underline-offset-2;
 }
-
 .til-ls a {
   @apply no-underline;
 }
-
 .post-ls a {
   @apply no-underline;
 }
-
 article h2 {
   @apply py-2;
 }
-
 .post-metadata {
   @apply mb-2;
   a {
     @apply no-underline;
   }
 }
-
 .tags {
   @apply ml-2 p-1;
 }
 
+/* Keep original heading spacing styles */
 p + a + h1,
 p + a + h2,
 p + a + h3,
@@ -325,51 +327,46 @@ ol + a + h3,
 ol + a + h4 {
   @apply md:mb-2 md:mt-3;
 }
-
 :is(h1, h2, h3, h4, h5, h6) + p {
   @apply md:mt-2 md:pt-2;
 }
-
 h2 + h3 {
   @apply mt-2;
 }
 
+/* Keep original pagination list style */
 .pagination li {
   display: inline;
 }
 
+/* Keep original Alert styles */
 .alert p {
   @apply pb-1 font-medium;
 }
-
 .alert-note {
   @apply bg-blue-50 text-blue-700;
   code {
     @apply border-blue-700;
   }
 }
-
 .alert-tip {
   @apply bg-amber-50 text-amber-700;
   code {
     @apply border-amber-700;
   }
 }
-
 .alert-important {
   @apply bg-lime-50 text-lime-700;
   code {
     @apply border-lime-700;
   }
 }
-
 .alert-caution {
   @apply bg-yellow-50 text-yellow-700;
   code {
     @apply border-yellow-700;
   }
 }
-
 .alert-warning {
   @apply bg-red-50 text-red-700;
   code {
@@ -377,10 +374,12 @@ h2 + h3 {
   }
 }
 
+/* Keep original HR style */
 hr {
   @apply border-t-1 m-4;
 }
 
+/* Keep original TOC styles */
 #TableOfContents {
   @apply my-4;
   ul {
@@ -388,6 +387,7 @@ hr {
   }
 }
 
+/* Keep original Highlight styles */
 .highlight {
   @apply my-4 py-3;
   .chroma {
@@ -395,10 +395,10 @@ hr {
   }
 }
 
+/* Keep original Labeled Highlight styles */
 .labeled-highlight {
   @apply mt-8;
 }
-
 .labeled-highlight__label {
   @apply italic;
   position: absolute;
@@ -411,11 +411,13 @@ hr {
   }
 }
 
+/* Keep original Footer paragraph style */
 footer p {
   margin-block: 0;
   padding-block: 0;
 }
 
+/* Keep original Blockquote styles */
 blockquote {
   @apply border-l-3 mb-4 mt-3 pl-3;
   pre {
@@ -423,22 +425,20 @@ blockquote {
   }
 }
 
+/* Keep original Title Cursor style */
 .title_cursor {
   display: inline-block;
   width: 10px;
   height: 1.25rem;
-  /* margin-left: 1px; */
   border-radius: 1px;
   background: var(--accent-color);
   animation: cursor 1s infinite;
 }
-
 @media (prefers-reduced-motion: reduce) {
   .title_cursor {
     animation: none;
   }
 }
-
 @keyframes cursor {
   0% {
     opacity: 0;
@@ -452,9 +452,8 @@ blockquote {
 }
 
 /*
-Dark Mode
+Dark Mode (Using original media query)
 */
-
 @media (prefers-color-scheme: dark) {
   code {
     border-color: var(--accent-color);
@@ -514,21 +513,21 @@ Dark Mode
     color: var(--accent-color);
   }
 
+  /* Keep original dark mode nav link colors */
   nav a {
     @apply text-neutral-50;
   }
-  nav,
   footer .fa-inverse {
     @apply text-neutral-900;
   }
 }
 
 /*
-Light Mode
+Light Mode (Using original media query and rules)
 */
-
 @media (prefers-color-scheme: light) {
   :root {
+    /* Keep original light mode accent override */
     --accent-color: var(--color-orange-700);
   }
   code {
@@ -576,7 +575,7 @@ Light Mode
   }
 
   .highlight {
-    /* This overwrites the global .highlight because we don't need this padding */
+    /* Keep original light mode highlight style */
     @apply my-0;
     .chroma {
       @apply rounded-sm py-5;
