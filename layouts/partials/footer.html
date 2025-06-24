@@ -6,7 +6,8 @@
       {{ if .rel }}rel="{{ .rel }}" {{- end -}}
       href="{{ printf .url (index $.Site.Params.Author .id) }}"
       title="{{ .title }}"
-      target="_blank">
+      target="_blank"
+      aria-label="{{ .title }}">
       <span class="fa-stack md:fa-lg">
         <i class="fas fa-square fa-stack-2x"></i>
         <i class="{{ .icon }} fa-stack-1x fa-inverse"></i>
@@ -18,7 +19,7 @@
 {{ if $.Site.Params.rss }}
 {{- with $.OutputFormats.Get "RSS" }}
   <li>
-    <a href="{{ .RelPermalink }}" title="RSS">
+    <a href="{{ .RelPermalink }}" title="RSS" aria-label="rss feed">
       <span class="fa-stack md:fa-lg">
         <i class="fas fa-square fa-stack-2x"></i>
         <i class="fas fa-rss fa-stack-1x fa-inverse"></i>

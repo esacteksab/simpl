@@ -3,7 +3,7 @@
   "version": "0.8.0",
   "description": "A simpl(e) Hugo Theme",
   "author": "@esacteksab",
-  "packageManager": "pnpm@10.11.1",
+  "packageManager": "pnpm@10.12.3",
   "scripts": {
     "postcss": "postcss ./assets/css/main.css --config ./postcss.config.js -r"
   },
@@ -17,9 +17,9 @@
     "npm": "^11.4.2",
     "postcss": "^8.5.6",
     "postcss-cli": "^11.0.1",
-    "postcss-color-converter": "^1.1.2",
+    "postcss-color-converter": "^1.2.0",
     "postcss-flexbugs-fixes": "^5.0.2",
-    "prettier": "^3.5.3",
+    "prettier": "^3.6.0",
     "prettier-plugin-css-order": "^2.1.2",
     "prettier-plugin-go-template": "^0.0.15",
     "prettier-plugin-organize-attributes": "^1.0.0",
@@ -38,5 +38,8 @@
         "order": "smacss"
       }
     }
+  },
+  "dependencies": {
+    "html-validate": "^9.7.0"
   }
 }
