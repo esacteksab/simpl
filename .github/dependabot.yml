@@ -9,7 +9,7 @@ updates:
     schedule:
       day: "saturday"
       interval: "weekly"
-      time: "03:00"
+      time: "17:00"
       timezone: "America/Chicago"
 
   - directory: "/"
@@ -22,7 +22,7 @@ updates:
     schedule:
       day: "saturday"
       interval: "weekly"
-      time: "03:00"
+      time: "17:00"
 
       timezone: "America/Chicago"
   - directory: "/"
@@ -35,7 +35,7 @@ updates:
     schedule:
       day: "saturday"
       interval: "weekly"
-      time: "03:00"
+      time: "17:00"
       timezone: "America/Chicago"
 
   - directory: "/"
@@ -43,6 +43,6 @@ updates:
     schedule:
       day: "saturday"
       interval: "weekly"
-      time: "03:00"
+      time: "17:00"
       timezone: "America/Chicago"
 version: 2
