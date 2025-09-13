@@ -1,13 +1,16 @@
+---
+version: 2
 updates:
   - directory: "/"
     groups:
       python-minor-and-patch:
+        dependency-type: "development"
         update-types:
           - "minor"
           - "patch"
     package-ecosystem: "pip"
     schedule:
-      day: "saturday"
+      day: "friday"
       interval: "weekly"
       time: "17:00"
       timezone: "America/Chicago"
@@ -20,7 +23,7 @@ updates:
           - "patch"
     package-ecosystem: "gomod"
     schedule:
-      day: "saturday"
+      day: "friday"
       interval: "weekly"
       time: "17:00"
 
@@ -28,12 +31,13 @@ updates:
   - directory: "/"
     groups:
       node-minor-and-patch:
+        dependency-type: "development"
         update-types:
           - "minor"
           - "patch"
     package-ecosystem: "npm"
     schedule:
-      day: "saturday"
+      day: "friday"
       interval: "weekly"
       time: "17:00"
       timezone: "America/Chicago"
@@ -41,8 +45,7 @@ updates:
   - directory: "/"
     package-ecosystem: "github-actions"
     schedule:
-      day: "saturday"
+      day: "friday"
       interval: "weekly"
       time: "17:00"
       timezone: "America/Chicago"
-version: 2
