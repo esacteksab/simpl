@@ -14,7 +14,7 @@
     "@tailwindcss/typography": "^0.5.19",
     "autoprefixer": "^10.4.21",
     "install": "^0.13.0",
-    "npm": "^11.6.1",
+    "npm": "^11.6.2",
     "postcss": "^8.5.6",
     "postcss-cli": "^11.0.1",
     "postcss-color-converter": "^1.2.1",
