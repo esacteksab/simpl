@@ -198,7 +198,7 @@ You can display the [abbreviated hash](https://gohugo.io/methods/page/gitinfo/#a
 
 Hugo's documentation on [Host and deploy](https://gohugo.io/host-and-deploy/) is pretty extensive. Cloudflare also publishes a [Hugo](https://developers.cloudflare.com/pages/framework-guides/deploy-a-hugo-site/) specific guide.
 
-I develop almost excusively on GitHub, so I use Cloudflare's [Git integration](https://developers.cloudflare.com/pages/get-started/git-integration/).
+I develop almost exclusively on GitHub, so I use Cloudflare's [Git integration](https://developers.cloudflare.com/pages/get-started/git-integration/).
 
 A few things to note that I learned by trial and error:
 
