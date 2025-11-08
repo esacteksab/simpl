@@ -44,6 +44,12 @@ updates:
 
   - directory: "/"
     package-ecosystem: "github-actions"
+    groups:
+      github-actions:
+        dependency-type: "development"
+        update-types:
+          - "minor"
+          - "patch"
     schedule:
       day: "friday"
       interval: "weekly"
