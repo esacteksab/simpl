@@ -14,7 +14,7 @@
     "@tailwindcss/typography": "^0.5.19",
     "autoprefixer": "^10.4.22",
     "install": "^0.13.0",
-    "npm": "^11.6.2",
+    "npm": "^11.6.3",
     "postcss": "^8.5.6",
     "postcss-cli": "^11.0.1",
     "postcss-color-converter": "^1.2.1",
@@ -27,7 +27,7 @@
     "prettier-plugin-sh": "^0.18.0",
     "prettier-plugin-tailwindcss": "^0.7.1",
     "prettier-plugin-toml": "^2.0.6",
-    "stylelint": "^16.25.0",
+    "stylelint": "^16.26.0",
     "stylelint-config-recommended": "^17.0.0",
     "tailwindcss": "^4.1.17"
   },
