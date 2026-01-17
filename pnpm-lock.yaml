@@ -42,29 +42,29 @@ importers:
         specifier: ^5.0.2
         version: 5.0.2(postcss@8.5.6)
       prettier:
-        specifier: ^3.7.4
-        version: 3.7.4
+        specifier: ^3.8.0
+        version: 3.8.0
       prettier-plugin-css-order:
         specifier: ^2.2.0
-        version: 2.2.0(postcss@8.5.6)(prettier@3.7.4)
+        version: 2.2.0(postcss@8.5.6)(prettier@3.8.0)
       prettier-plugin-go-template:
         specifier: ^0.0.15
-        version: 0.0.15(prettier@3.7.4)
+        version: 0.0.15(prettier@3.8.0)
       prettier-plugin-organize-attributes:
         specifier: ^1.0.0
-        version: 1.0.0(prettier@3.7.4)
+        version: 1.0.0(prettier@3.8.0)
       prettier-plugin-pkg:
         specifier: ^0.21.2
-        version: 0.21.2(prettier@3.7.4)
+        version: 0.21.2(prettier@3.8.0)
       prettier-plugin-sh:
         specifier: ^0.18.0
-        version: 0.18.0(prettier@3.7.4)
+        version: 0.18.0(prettier@3.8.0)
       prettier-plugin-tailwindcss:
         specifier: ^0.7.2
-        version: 0.7.2(prettier-plugin-css-order@2.2.0(postcss@8.5.6)(prettier@3.7.4))(prettier-plugin-organize-attributes@1.0.0(prettier@3.7.4))(prettier@3.7.4)
+        version: 0.7.2(prettier-plugin-css-order@2.2.0(postcss@8.5.6)(prettier@3.8.0))(prettier-plugin-organize-attributes@1.0.0(prettier@3.8.0))(prettier@3.8.0)
       prettier-plugin-toml:
         specifier: ^2.0.6
-        version: 2.0.6(prettier@3.7.4)
+        version: 2.0.6(prettier@3.8.0)
       stylelint:
         specifier: ^16.26.1
         version: 16.26.1
@@ -1098,8 +1098,8 @@ packages:
     peerDependencies:
       prettier: ^3.0.3
 
-  prettier@3.7.4:
-    resolution: {integrity: sha512-v6UNi1+3hSlVvv8fSaoUbggEM5VErKmmpGA7Pl3HF8V6uKY7rvClBOJlH6yNwQtfTueNkGVpOv/mtWL9L4bgRA==}
+  prettier@3.8.0:
+    resolution: {integrity: sha512-yEPsovQfpxYfgWNhCfECjG5AQaO+K3dp6XERmOepyPDVqcJm+bjyCVO3pmU+nAPe0N5dDvekfGezt/EIiRe1TA==}
     engines: {node: '>=14'}
     hasBin: true
 
@@ -2002,47 +2002,47 @@ snapshots:
       picocolors: 1.1.1
       source-map-js: 1.2.1
 
-  prettier-plugin-css-order@2.2.0(postcss@8.5.6)(prettier@3.7.4):
+  prettier-plugin-css-order@2.2.0(postcss@8.5.6)(prettier@3.8.0):
     dependencies:
       css-declaration-sorter: 7.3.1(postcss@8.5.6)
       postcss-less: 6.0.0(postcss@8.5.6)
       postcss-scss: 4.0.9(postcss@8.5.6)
-      prettier: 3.7.4
+      prettier: 3.8.0
     transitivePeerDependencies:
       - postcss
 
-  prettier-plugin-go-template@0.0.15(prettier@3.7.4):
+  prettier-plugin-go-template@0.0.15(prettier@3.8.0):
     dependencies:
-      prettier: 3.7.4
+      prettier: 3.8.0
       ulid: 2.4.0
 
-  prettier-plugin-organize-attributes@1.0.0(prettier@3.7.4):
+  prettier-plugin-organize-attributes@1.0.0(prettier@3.8.0):
     dependencies:
-      prettier: 3.7.4
+      prettier: 3.8.0
 
-  prettier-plugin-pkg@0.21.2(prettier@3.7.4):
+  prettier-plugin-pkg@0.21.2(prettier@3.8.0):
     dependencies:
-      prettier: 3.7.4
+      prettier: 3.8.0
 
-  prettier-plugin-sh@0.18.0(prettier@3.7.4):
+  prettier-plugin-sh@0.18.0(prettier@3.8.0):
     dependencies:
       '@reteps/dockerfmt': 0.3.6
-      prettier: 3.7.4
+      prettier: 3.8.0
       sh-syntax: 0.5.8
 
-  prettier-plugin-tailwindcss@0.7.2(prettier-plugin-css-order@2.2.0(postcss@8.5.6)(prettier@3.7.4))(prettier-plugin-organize-attributes@1.0.0(prettier@3.7.4))(prettier@3.7.4):
+  prettier-plugin-tailwindcss@0.7.2(prettier-plugin-css-order@2.2.0(postcss@8.5.6)(prettier@3.8.0))(prettier-plugin-organize-attributes@1.0.0(prettier@3.8.0))(prettier@3.8.0):
     dependencies:
-      prettier: 3.7.4
+      prettier: 3.8.0
     optionalDependencies:
-      prettier-plugin-css-order: 2.2.0(postcss@8.5.6)(prettier@3.7.4)
-      prettier-plugin-organize-attributes: 1.0.0(prettier@3.7.4)
+      prettier-plugin-css-order: 2.2.0(postcss@8.5.6)(prettier@3.8.0)
+      prettier-plugin-organize-attributes: 1.0.0(prettier@3.8.0)
 
-  prettier-plugin-toml@2.0.6(prettier@3.7.4):
+  prettier-plugin-toml@2.0.6(prettier@3.8.0):
     dependencies:
       '@taplo/lib': 0.5.0
-      prettier: 3.7.4
+      prettier: 3.8.0
 
-  prettier@3.7.4: {}
+  prettier@3.8.0: {}
 
   pretty-hrtime@1.0.3: {}
 
