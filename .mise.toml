@@ -1,0 +1,12 @@
+[env]
+  [env._]
+
+    [env._.python]
+
+      [env._.python.venv]
+        create = true
+        path   = ".venv"
+
+[tools]
+pnpm = "latest"
+hugo-extended = "v0.156.0"
