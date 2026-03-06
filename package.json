@@ -15,7 +15,7 @@
     "autoprefixer": "^10.4.27",
     "install": "^0.13.0",
     "npm": "^11.11.0",
-    "postcss": "^8.5.6",
+    "postcss": "^8.5.8",
     "postcss-cli": "^11.0.1",
     "postcss-color-converter": "^1.2.1",
     "postcss-flexbugs-fixes": "^5.0.2",
