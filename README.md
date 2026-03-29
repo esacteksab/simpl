@@ -18,6 +18,16 @@ Not a unique name I know.
 - There has been some attention paid to a11y, but it may still fall short while I work through things.
 - Early attempts at i18n.
 
+### Prettier and Stylesheets
+
+This repo configures Tailwind-aware formatting through `.prettierrc` using `tailwindStylesheet`, which points to `assets/css/prettier-tailwind.css`.
+
+This is editor/build-tool metadata for formatting only. It is not part of the Hugo runtime stylesheet pipeline and is not shipped to browsers.
+
+That file currently imports both `assets/css/main.css` and `assets/css/syntax.css`.
+
+When adding additional stylesheets under `assets/css/`, update `assets/css/prettier-tailwind.css` to include them. If the location or filename of the combined stylesheet changes, also update the `tailwindStylesheet` value in `.prettierrc`.
+
 ## Installation
 
 ```bash

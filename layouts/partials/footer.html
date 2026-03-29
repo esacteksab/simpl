@@ -1,18 +1,21 @@
 <ul class="list-inline footer-links inline-flex mt-2 mb-1">
-{{- range .Site.Data.social.social_icons }}
-{{- if isset $.Site.Params.Author .id }}
+{{- with $.Site.Params.Author }}
+{{- $author := . }}
+{{- range $icon := hugo.Data.social.social_icons }}
+{{- with index $author $icon.id }}
   <li>
     <a
-      {{ if .rel }}rel="{{ .rel }}" {{- end -}}
-      href="{{ printf .url (index $.Site.Params.Author .id) }}"
-      title="{{ .title }}"
+      {{ if $icon.rel }}rel="{{ $icon.rel }}" {{- end -}}
+      href="{{ printf $icon.url . }}"
+      title="{{ $icon.title }}"
       target="_blank">
       <span class="fa-stack md:fa-lg">
         <i class="fas fa-square fa-stack-2x"></i>
-        <i class="{{ .icon }} fa-stack-1x fa-inverse"></i>
+        <i class="{{ $icon.icon }} fa-stack-1x fa-inverse"></i>
       </span>
     </a>
   </li>
+{{- end -}}
 {{- end -}}
 {{- end -}}
 {{ if $.Site.Params.rss }}
