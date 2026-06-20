@@ -8,5 +8,5 @@
         path   = ".venv"
 
 [tools]
-  pnpm          = "latest"
+  pnpm          = "11.8.0"
   hugo-extended = "v0.159.1"
