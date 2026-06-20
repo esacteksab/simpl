@@ -6,23 +6,23 @@
   "workspaces": [
     "packages/hugoautogen"
   ],
-  "packageManager": "pnpm@10.33.0+sha512.10568bb4a6afb58c9eb3630da90cc9516417abebd3fabbe6739f0ae795728da1491e9db5a544c76ad8eb7570f5c4bb3d6c637b2cb41bfdcdb47fa823c8649319",
+  "packageManager": "pnpm@11.8.0+sha512.c1f5e7c4cb241c8f174b743851d82f42b802324afc8b0f116b96adb15aa06664948dde36960a3ba1079ba5b4b29dd0140135b94b5b5f5263592249d68e555f26",
   "scripts": {
     "postcss": "postcss ./assets/css/main.css --config ./postcss.config.js -r"
   },
   "devDependencies": {
-    "@tailwindcss/cli": "^4.3.0",
+    "@tailwindcss/cli": "^4.3.1",
     "@tailwindcss/nesting": "0.0.0-insiders.565cd3e",
-    "@tailwindcss/postcss": "^4.3.0",
-    "@tailwindcss/typography": "^0.5.19",
+    "@tailwindcss/postcss": "^4.3.1",
+    "@tailwindcss/typography": "^0.5.20",
     "autoprefixer": "^10.5.0",
     "install": "^0.13.0",
-    "npm": "^11.14.1",
-    "postcss": "^8.5.14",
+    "npm": "^11.17.0",
+    "postcss": "^8.5.15",
     "postcss-cli": "^11.0.1",
     "postcss-color-converter": "^1.2.1",
     "postcss-flexbugs-fixes": "^5.0.2",
-    "prettier": "^3.8.3",
+    "prettier": "^3.8.4",
     "prettier-plugin-css-order": "^2.2.0",
     "prettier-plugin-go-template": "^0.0.15",
     "prettier-plugin-organize-attributes": "^1.0.0",
@@ -30,9 +30,9 @@
     "prettier-plugin-sh": "^0.18.1",
     "prettier-plugin-tailwindcss": "^0.8.0",
     "prettier-plugin-toml": "^2.0.6",
-    "stylelint": "^17.11.0",
+    "stylelint": "^17.13.0",
     "stylelint-config-recommended": "^18.0.0",
-    "tailwindcss": "^4.3.0"
+    "tailwindcss": "^4.3.1"
   },
   "postcss": {
     "map": false,
