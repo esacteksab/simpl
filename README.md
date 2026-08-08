@@ -65,7 +65,7 @@ path = "github.com/esacteksab/simpl"
 This theme requires [TailwindCSS](https://gohugo.io/functions/css/tailwindcss/), and [PostCSS](https://gohugo.io/functions/css/postcss/) copy the `package.json`, `tailwind.config.js` and `postcss.config.js` from GitHub [esacteksab/simpl](https://github.com/esacteksab/simpl) to `my-new-blog`. Before we install packages, **_there may be things you don't_** want. Edit `package.json` accordingly. When ready, install the packages:
 
 ```bash
-npm i
+pnpm install
 ```
 
 Then build/serve with `hugo`
