@@ -28,6 +28,18 @@ That file currently imports both `assets/css/main.css` and `assets/css/syntax.cs
 
 When adding additional stylesheets under `assets/css/`, update `assets/css/prettier-tailwind.css` to include them. If the location or filename of the combined stylesheet changes, also update the `tailwindStylesheet` value in `.prettierrc`.
 
+### Hugo 0.165 Migration Note
+
+If your site config still uses `languageCode`, rename it to `locale`.
+
+```toml
+# before
+languageCode = 'en-us'
+
+# after
+locale = 'en-us'
+```
+
 ## Installation
 
 ```bash
@@ -41,7 +53,7 @@ hugo mod init github.com/org/repo
 Edit `hugo.toml`
 
 ```toml
-languageCode = 'en-us'
+locale = 'en-us'
 baseURL = 'https://example.com/'
 title = 'My Simpl Themed Site'
 
@@ -60,6 +72,10 @@ _merge = 'deep'
 [module]
 [[module.imports]]
 path = "github.com/esacteksab/simpl"
+
+[security]
+  [security.exec]
+    allow = ['^(dart-)?sass$', '^go$', '^git$', '^node$', '^postcss$', '^tailwindcss$']
 ```
 
 This theme requires [TailwindCSS](https://gohugo.io/functions/css/tailwindcss/), and [PostCSS](https://gohugo.io/functions/css/postcss/) copy the `package.json`, `tailwind.config.js` and `postcss.config.js` from GitHub [esacteksab/simpl](https://github.com/esacteksab/simpl) to `my-new-blog`. Before we install packages, **_there may be things you don't_** want. Edit `package.json` accordingly. When ready, install the packages:
@@ -70,9 +86,39 @@ pnpm install
 
 Then build/serve with `hugo`
 
+If Hugo warns that npm dependencies are out of sync, run `hugo mod npm pack` (and `pnpm install`) to refresh generated dependency metadata.
+
 ```bash
 hugo
 hugo serve -D
+```
+
+### Troubleshooting
+
+If you see an error like `access denied: "tailwindcss" is not whitelisted in policy "security.exec.allow"`, add the following to your site config:
+
+```toml
+[security]
+  [security.exec]
+    allow = ['^(dart-)?sass$', '^go$', '^git$', '^node$', '^postcss$', '^tailwindcss$']
+```
+
+Then run:
+
+```bash
+hugo mod npm pack
+pnpm install
+hugo
+```
+
+If you see `binary "tailwindcss" is not a Node.js script`, Hugo is usually picking up a package-manager shim instead of the CLI entry script. Ensure `@tailwindcss/cli` is installed, then recreate direct links for Hugo:
+
+```bash
+pnpm add -D tailwindcss @tailwindcss/cli
+rm -f node_modules/.bin/tailwindcss node_modules/.bin/postcss
+ln -s ../@tailwindcss/cli/dist/index.mjs node_modules/.bin/tailwindcss
+ln -s ../postcss-cli/index.js node_modules/.bin/postcss
+hugo
 ```
 
 ### Menu
@@ -82,7 +128,7 @@ By default, the site displays `Home`, `Posts` and `Tags`. You can override this 
 If you want no items in the menu simply define an empty TOML table:
 
 ```toml
-languageCode = 'en-us'
+locale = 'en-us'
 baseURL = 'https://example.com/'
 title = 'My Simpl Themed Site'
 
@@ -93,7 +139,7 @@ If you just want `Home` and `Posts`, you can do so like below:
 
 ```toml
 baseURL = 'https://example.com/'
-languageCode = 'en-us'
+locale = 'en-us'
 title = 'My Simpl Themed Site'
 
 [[menus.main]]
