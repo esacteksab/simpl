@@ -29,7 +29,7 @@
 {{- range .AlternativeOutputFormats }}
 {{- printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .RelPermalink $.Site.Title | emojify | safeHTML -}}
 {{- end }}
-{{ partialCached "head/css.html" . }}
+{{ partial "head/css.html" . }}
 {{- partialCached "fonts.html" . }}
 {{- partialCached "head/js.html" . }}
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />

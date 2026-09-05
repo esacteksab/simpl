@@ -12,3 +12,15 @@ enableEmoji = true
 
   [build.buildStats]
     enable = true
+
+[security]
+  [security.exec]
+    # Keep Hugo defaults and add TailwindCSS binary so css.TailwindCSS can run.
+    allow = [
+      "^(dart-)?sass$",
+      "^go$",
+      "^git$",
+      "^node$",
+      "^postcss$",
+      "^tailwindcss$",
+    ]
