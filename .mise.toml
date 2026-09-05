@@ -8,5 +8,6 @@
         path   = ".venv"
 
 [tools]
-  pnpm          = "11.20.0"
-  hugo-extended = "v0.159.1"
+  pnpm          = "11.25.0"
+  hugo-extended = "v0.165.0"
+  node          = "22.23.0"
