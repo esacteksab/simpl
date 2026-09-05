@@ -1,6 +1,6 @@
 {
-  "name": "simpl",
-  "version": "0.10.0",
   "dependencies": {},
-  "devDependencies": {}
+  "devDependencies": {},
+  "name": "simpl",
+  "version": "0.1.0"
 }
