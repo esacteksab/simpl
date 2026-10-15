@@ -12,5 +12,5 @@
   hugo-extended = "v0.165.0"
   node          = "22.23.0"
   uv            = "latest"
-  golang        = "1.26.9"
+  golang        = "1.27.2"
   python        = "3.14.7"
