@@ -11,3 +11,6 @@
   pnpm          = "11.25.0"
   hugo-extended = "v0.165.0"
   node          = "22.23.0"
+  uv            = "latest"
+  golang        = "1.26.9"
+  python        = "3.14.7"
