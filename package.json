@@ -24,7 +24,7 @@
     "prettier-plugin-go-template": "^0.0.15",
     "prettier-plugin-organize-attributes": "^1.0.0",
     "prettier-plugin-pkg": "^0.22.1",
-    "prettier-plugin-sh": "^0.19.0",
+    "prettier-plugin-sh": "^0.20.2",
     "prettier-plugin-tailwindcss": "^0.8.1",
     "prettier-plugin-toml": "^2.0.6",
     "stylelint": "^17.15.0",
