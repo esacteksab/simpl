@@ -17,4 +17,4 @@ permissions:
 
 jobs:
   precommit-reusable:
-    uses: esacteksab/.github/.github/workflows/pre-commit.yml@2c080de277fcc94fb3ddbdb9f6da0bc08e5af390 # v0.87.8
+    uses: esacteksab/.github/.github/workflows/pre-commit.yml@746be295afa39ac77d77943911a408dcd8e744d5 # v0.88.0
