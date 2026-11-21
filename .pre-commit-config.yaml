@@ -8,7 +8,6 @@ repos:
           - --markdown-linebreak-ext=md
       - id: end-of-file-fixer
         name: "EOF Fixer"
-        exclude: ^testdata/
       - id: check-json
         name: "Check JSON"
       - id: check-yaml
@@ -16,11 +15,15 @@ repos:
       - id: check-merge-conflict
         name: "Check Merge Conflicts"
 
+  - repo: https://github.com/google/keep-sorted
+    rev: v0.11.0
+    hooks:
+      - id: keep-sorted
+
   - repo: https://github.com/python-jsonschema/check-jsonschema
-    rev: 0.36.2
+    rev: 0.39.0
     hooks:
       - id: check-github-workflows
-      - id: check-dependabot
       - id: check-jsonschema
         name: "Validate Pre-Commit"
         files: ^\.pre-commit-config.yaml+$
@@ -46,7 +49,6 @@ repos:
     rev: 0.7.22
     hooks:
       - id: mdformat
-        exclude: ^testdata/
         name: "Markdown Formatter"
         additional_dependencies:
           - mdformat-gfm
@@ -54,16 +56,18 @@ repos:
           - mdformat-gfm-alerts
           - mdformat-tables
           - mdformat-footnote
+        args:
+          - "--no-codeformatters"
 
   - repo: https://github.com/crate-ci/typos
-    rev: v1.43.5
+    rev: v1.52.2
     hooks:
       - id: typos
         args: [--force-exclude]
         name: "Typos"
 
   - repo: https://github.com/DavidAnson/markdownlint-cli2
-    rev: v0.21.0
+    rev: v0.24.1
     hooks:
       - id: markdownlint-cli2
         name: "Markdown Lint"
