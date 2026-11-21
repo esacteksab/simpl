@@ -13,6 +13,8 @@ updates:
       day: "friday"
       time: "17:00"
       timezone: "America/Chicago"
+    cooldown:
+      default-days: 7
 
   - package-ecosystem: "gomod"
     directory: "/"
@@ -25,8 +27,10 @@ updates:
       interval: "weekly"
       day: "friday"
       time: "17:00"
-      timezone: "America/Chicago"
 
+      timezone: "America/Chicago"
+    cooldown:
+      default-days: 7
   - package-ecosystem: "npm"
     directory: "/"
     groups:
@@ -34,11 +38,18 @@ updates:
         update-types:
           - "minor"
           - "patch"
+        exclude-patterns:
+          - "stylelint*"
+      stylelint-packages:
+        patterns:
+          - "stylelint*"
     schedule:
       interval: "weekly"
       day: "friday"
       time: "17:00"
       timezone: "America/Chicago"
+    cooldown:
+      default-days: 7
 
   - package-ecosystem: "github-actions"
     directory: "/"
@@ -52,3 +63,20 @@ updates:
       day: "friday"
       time: "17:00"
       timezone: "America/Chicago"
+    cooldown:
+      default-days: 7
+
+  - package-ecosystem: "pre-commit"
+    directory: "/"
+    groups:
+      github-actions:
+        update-types:
+          - "minor"
+          - "patch"
+    schedule:
+      interval: "weekly"
+      day: "friday"
+      time: "17:00"
+      timezone: "America/Chicago"
+    cooldown:
+      default-days: 7
